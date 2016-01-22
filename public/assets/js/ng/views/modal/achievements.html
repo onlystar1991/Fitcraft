@@ -1,0 +1,233 @@
+      <div class="modal-header">
+        <button type="button" class="icon__modal_close" ng-click="close($event)"></button>
+        <h4 class="modal-title" id="myModalLabel">ACHIEVEMENTS</h4>
+      </div><!--/ end modal-header  -->
+        <div class="modal-body modal-body-ng clearfix " style="padding-bottom: 0px !Important;">
+          <div class="col-md-12 achievements__header">
+              <div class="profile_statistics profile_statistics--achievements profile_statistics--achievements-score clearfix">
+                  <div class="icon icon__21"></div>
+                  <div class="pull-left">
+                      <div class="profile_statistics__label profile_statistics__label--achievements text-center pad-l-0 mar-l-0">ACHIEVEMENT SCORE</div>
+                      <div class="meter meter--achievements meter--achievements-score">
+                          <span ng-style="{ 'width' : statistic.score.progress + '%'  }"></span> 
+                          <i ng-bind="(statistic.score.completed)+'/'+(statistic.score.total)">0</i>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="clearfix">
+
+              <div class="col-md-6">
+                  <div class="profile_statistics profile_statistics--achievements clearfix">
+                      <!-- <div class="icon icon__43"></div> -->
+                      <div class="pull-left">
+                          <div class="meter meter--rides meter--achievements-item widder">
+                              <span ng-style="{ 'width' : statistic.rides.progress + '%'  }"></span> 
+                              <i ng-bind="(statistic.rides.completed)+'/'+(statistic.rides.total)">0</i>
+                              <div class="profile_statistics__label profile_statistics__label--achievements">RIDES</div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="profile_statistics profile_statistics--achievements clearfix">
+                      <!-- <div class="icon icon__48"></div> -->
+                      <div class="pull-left">
+                          <div class="meter meter--rides meter--achievements-item widder">
+                              <span ng-style="{ 'width' : statistic.social.progress + '%'  }"></span> 
+                              <i ng-bind="(statistic.social.completed)+'/'+(statistic.social.total)">0</i>
+                              <div class="profile_statistics__label  profile_statistics__label--achievements">SOCIAL</div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="profile_statistics profile_statistics--achievements clearfix">
+                      <!-- <div class="icon icon__44"></div> -->
+                      <div class="pull-left">
+                          <div class="meter meter--experience meter--achievements-item widder">
+                              <span ng-style="{ 'width' : statistic.experience.progress + '%'  }"></span> 
+                              <i ng-bind="(statistic.experience.completed)+'/'+(statistic.experience.total)">0</i>
+                              <div class="profile_statistics__label  profile_statistics__label--achievements">EXPERIENCE</div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="profile_statistics profile_statistics--achievements clearfix">
+                      <!-- <div class="icon icon__45"></div> -->
+                      <div class="pull-left">
+                          <div class="meter meter--experience meter--achievements-item widder">
+                              <span ng-style="{ 'width' : statistic.exploration.progress + '%'  }"></span> 
+                              <i ng-bind="(statistic.exploration.completed)+'/'+(statistic.exploration.total)">0</i>
+                              <div class="profile_statistics__label  profile_statistics__label--achievements">EXPLORATION</div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- <div class="col-md-6">
+                  <div class="profile_statistics profile_statistics--achievements clearfix">
+                      <div class="icon icon__46"></div>
+                      <div class="pull-left">
+                          <div class="meter meter--rivals meter--achievements-item widder">
+                              <span ng-style="{ 'width' : statistic.rivals.progress + '%'  }"></span> 
+                              <i ng-bind="(statistic.rivals.completed)+'/'+(statistic.rivals.total)">0</i>
+                              <div class="profile_statistics__label  profile_statistics__label--achievements">RIVALS</div>
+                          </div>
+                      </div>
+                  </div>
+              </div> -->
+              <div class="col-md-6">
+                  <div class="profile_statistics profile_statistics--achievements clearfix">
+                      <!-- <div class="icon icon__47"></div> -->
+                      <div class="pull-left">
+                          <div class="meter meter--rivals meter--achievements-item widder">
+                              <span ng-style="{ 'width' : statistic.career.progress + '%'  }"></span> 
+                              <i ng-bind="(statistic.career.completed)+'/'+(statistic.career.total)">0</i>
+                              <div class="profile_statistics__label  profile_statistics__label--achievements">CAREER</div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- <div class="col-md-6">
+                  <div class="profile_statistics profile_statistics--achievements clearfix">
+                      <div class="icon icon__49"></div>
+                      <div class="pull-left">
+                          <div class="meter meter--tournaments meter--achievements-item widder">
+                              <span ng-style="{ 'width' : statistic.tournaments.progress + '%'  }"></span> 
+                              <i ng-bind="(statistic.tournaments.completed)+'/'+(statistic.tournaments.total)">0</i>
+                              <div class="profile_statistics__label  profile_statistics__label--achievements">TOURNAMENTS</div>
+                          </div>
+                      </div>
+                  </div>
+              </div> -->
+              <div class="col-md-6">
+                  <div class="profile_statistics profile_statistics--achievements clearfix">
+                      <!-- <div class="icon icon__50"></div> -->
+                      <div class="pull-left">
+                          <div class="meter meter--tournaments meter--achievements-item widder">
+                              <span ng-style="{ 'width' : statistic.legacy.progress + '%'  }"></span> 
+                              <i ng-bind="(statistic.legacy.completed)+'/'+(statistic.legacy.total)">0</i>
+                              <div class="profile_statistics__label  profile_statistics__label--achievements">LEGACY</div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+            <div class="clearfix">
+              <div class="library_header_info">
+                
+                <div class="achive_popup_header clearfix">
+                  
+                  <div class="achive_popup_header_name">ACHIEVEMENT NAME</div>
+                  <div class="achive_popup_header_diff">DIFFICULTY</div>
+                  <div class="achive_popup_header_compl">COMPLETED</div>
+                  <div class="achive_popup_header_reward">REWARD</div>
+
+                </div>
+
+              </div>
+            </div>
+
+            <div class="clearfix  table_objectives">
+
+                  <div class="left_table left_table--black">
+                      <ul class="objectives_menu">
+                          <li class="objectives_li objectives_li--achievements">
+                              <a href="" ng-click="getDetailsCategory(0)" class="ng-binding active" >MOST RECENT</a>
+                          </li>                      
+                          <li class="objectives_li objectives_li--achievements " ng-repeat="(key, category) in categories">
+                              <a href="" class="" ng-click="getDetailsCategory(category.id)"><% category.title %></a>
+                                  <ul class="objectives_menu objectives_menu--submeniu">
+
+                                      <li class="objectives_li" ng-repeat="(subcategory_key, subcategory) in category.child">
+                                          <a href="javascript:;" ng-click="getDetailsCategory(subcategory.id)"><% subcategory.title %></a>
+                                      </li>
+                                  </ul>
+                          </li>
+
+
+                      </ul>
+
+                  </div>
+                  <div class="pull-left achievements-right">
+
+                    <perfect-scrollbar class="scroller objectives-right-scroll scroll-pane-moz" wheel-propagation="true" wheel-speed="10" min-scrollbar-length="20">                      
+
+                      <div class="clearfix padl-10" ng-repeat="(key, achievement) in achievements" ng-hide="achievement.is_show==0">
+                        <div class="" ng-class="{inactive_block:achievement.completed == 0 }" >
+                            <div class="ridesearch_item">
+                                <div class="pull-left ">
+                                    <div class="pull-left icon-img">
+                                        <img ng-src="<%achievement.icon%>" alt="" class="img-responsive"/>
+                                    </div>
+                                    <div class="ridesearch_item_ridename achievement_list_item pull-left achievements__name">
+
+                                        <div class="achive_popup_header_name"><% achievement.title %></div>
+                                        <div class="achive_popup_header_diff">
+                                          <span class="achievement_star achievement_star_<% achievement.difficulty %>"></span>
+                                        </div>
+                                        <div class="achive_popup_header_compl"><% achievement.complete_date %></div>
+                                        <i class="icon__arrow arrow__down arrow__down--ap users__arrow_down ridedetails_info_show arrow__down" ng-class="{arrow__down__inactive:achievement.completed == 0, arrow__up:$first }" ></i>
+
+                                    </div>
+                                </div>
+
+                                <div class="reward pull-left">
+                                    <div class="reward__text">
+                                        <div>&nbsp;</div>
+                                        <div class="reward__value">
+                                            <% achievement.points %><span class="ap">AP</span>
+                                        </div>
+                                    </div>
+                                    <div class="reward__icon pull-left">
+                                        <div class="pull-left icon-img">
+                                            <img ng-src="<%achievement.icon_player_card%>" alt="" class="img-responsive"/>
+                                        </div>
+                                        <div class="pull-left icon-img ml10">
+                                            <img ng-src="<%achievement.icon_trophy%>" alt="" class="img-responsive"/>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+     
+
+                            </div>
+                            <div class="ridesearch_details achievements__info clearfix " ng-style="$first && {'display':'block'}">
+                                    <div class="achievements__info__description border-right pull-left">
+                                        <% achievement.criteria_text %>
+                                    </div>
+                                    <div class="pull-left achievements__info__progress">
+                                        <div class="profile_statistics__label profile_statistics__label--achievements text-center">PROGRESS</div>
+
+                                        <div class="meter meter--rides meter--achievements-progress">
+                                            <span ng-style="{ 'width' : achievement.percents + '%'  }"></span>
+                                            <i ng-init=""><% achievement.percents %>%</i>
+                                            <i class="meter-parts"><% achievement.completed ==1 ? achievement.criteria_value : achievement.result? achievement.result: 0 %>/<% achievement.criteria_value %></i>
+                                        </div>
+
+                                    </div>
+                            </div>
+                        </div>  
+                      </div>
+
+
+                    </perfect-scrollbar>  
+                      
+                  </div>
+
+
+            </div>
+
+        </div><!--/ end modal-body  -->  
+      
+        
+      <div class="modal-footer">
+      </div><!--/ end modal-footer  -->
+
+      <div ng-show="!tooltip_shown" class="tooltip_message achievements_popup_left_1"></div>
+      <div ng-show="!tooltip_shown" class="tooltip_message achievements_popup_right_1"></div>
+      <div ng-show="!tooltip_shown" class="tooltip_message achievements_popup_left_2"></div>
+      <div ng-show="!tooltip_shown" class="tooltip_message achievements_popup_right_2"><span ng-click="exit_tutorial()"></span></div>

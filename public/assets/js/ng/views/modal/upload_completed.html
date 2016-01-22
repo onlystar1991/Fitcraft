@@ -1,0 +1,144 @@
+<div class="clearfix upload_file_modal">
+      <div class="modal-header">
+        <button type="button" class="icon__modal_close" ng-click="close($event)"></button>
+        <h4 class="modal-title" id="myModalLabel">UPLOAD COMPLETE!</h4>
+      </div>
+      <div class="modal-body  clearfix ">
+        <div class="earned-modal">
+    
+                <div class="clearfix activities_feed">
+
+                    <!-- feed_separate_logic -->
+                    <div class="feed_separate_logic">
+                        <!-- visible part -->
+                        <div class="feeed_visible clearfix">
+                            
+                            <div class="pull-left">
+                                <span class="icon"><img src="<%ride.cardicon%>" alt=""></span>
+                                <span class="feed_visible_name">
+                                    <%ride.nickname%>
+                                </span>
+                            </div>
+                            
+                            <div class="feed_visible_date pull-right"><%ride.feed.formate_date%></div>
+
+
+                            <i class="icon__arrow arrow__down arrow__up"></i>
+
+                        </div>
+                        <!-- /visible part -->
+                        
+                        <!-- hidden part -->
+                        <div class="feeed_hidden" style="display: block;">
+                            <ul>
+                                <!-- total ride info -->
+                                <li class="clearfix">
+
+                                    <div class="icon icon__20 pull-right"></div>
+                                    
+                                    <!-- table -->
+                                    <div class="feeed_hidden_table">
+                                        <div>
+                                            <span>TIME</span>
+                                            <%ride.lap.time%>
+                                        </div>
+                                        <div>
+                                            <span>DISTANCE</span>
+                                            <%ride.lap.distance%> MILES
+                                        </div>
+                                        <div>
+                                            <span>AVG SPEED</span>
+                                            <%ride.lap.avg_speed%> MPH
+                                        </div>
+                                        <div>
+                                            <span>EFFORT</span>
+                                            <%ride.lap.avg_effort%> %
+                                        </div>
+                                    </div>
+                                    <!-- /table -->
+                                    
+                                    <!-- feeed_hidden_earned -->
+                                    <div class="feeed_hidden_earned text-center">
+                                         <%ride.lap.xp%><span class="green">XP</span>
+                                        <div>EARNED</div>
+                                    </div>
+                                    <!-- /feeed_hidden_earned -->
+                                    
+                                </li>
+                                <!-- /total ride info -->
+                                
+                                <!-- each achievement -->
+                                    <li class="clearfix" ng-repeat="earned in ride.feed.data" >
+                                        
+                                        <div class="icon icon--cards pull-right">
+                                            <img src="/uploads/icons/<%earned.icon%>" alt="">
+                                        </div>
+                                    
+                                        <!-- table -->
+                                        <div class="feeed_hidden_table">
+                                            <div class="feeed_hidden_table_earned_data">
+
+                                                <div ng-if="earned.type == 1"> <!-- level -->
+                                                    <%ride.nickname%> HAS EARNED <span class="green">LEVEL <%earned.earned%></span>
+                                                </div>
+                                                <div ng-if="earned.type == 2"> <!-- card -->
+                                                    <%ride.nickname%> HAS EARNED THE PLAYER CARD <span class="yellow"><%earned.name%></span>
+                                                </div>
+                                                <div ng-if="earned.type == 3"> <!-- award -->
+                                                    <%ride.nickname%> HAS EARNED THE AWARD <span class="orange"><%earned.name%></span>
+                                                </div>
+                                                <div ng-if="earned.type == 4"> <!-- achievement -->
+                                                    <%ride.nickname%> HAS EARNED THE ACHIEVEMENT <span class="deep_orange"><%earned.name%></span>
+                                                </div>
+                                                <div ng-if="earned.type == 5"> <!-- objective -->
+                                                    <%ride.nickname%> HAS EARNED THE OBJECTIVE <span class="green"><%earned.name%></span>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                        <!-- /table -->
+                                        
+                                        <!-- feeed_hidden_earned -->
+                                        <div class="feeed_hidden_earned text-center">
+
+                                            <div ng-if="earned.type == 1"> <!-- level -->
+                                                <span class="green">lvl</span><%earned.earned%>
+                                                <div>EARNED</div>
+                                            </div>
+                                            <div ng-if="earned.type == 2"> <!-- card -->
+                                                <span class="yellow">CARD</span>
+                                                <div>EARNED</div>
+                                            </div>
+                                            <div ng-if="earned.type == 3"> <!-- award -->
+                                                <span class="orange">AWARD</span>
+                                                <div>EARNED</div>
+                                            </div>
+                                            <div ng-if="earned.type == 4"> <!-- achievement -->
+                                                <%earned.earned%><span class="deep_orange">AP</span>
+                                                <div>EARNED</div>
+                                            </div>
+                                            <div ng-if="earned.type == 5"> <!-- objective -->
+                                                <%earned.earned%><span class="green">XP</span>
+                                                <div>EARNED</div>
+                                            </div>
+
+                                        </div>
+                                        <!-- /feeed_hidden_earned -->
+
+                                    </li>
+                                <!-- /each achievement -->
+
+                            </ul>
+                        </div>
+                        <!-- /hidden part -->
+
+
+                    </div>
+                    <!-- /feed_separate_logic -->
+
+                </div>
+
+        </div>
+      </div>
+      <div ng-show="!tooltip_shown" class="tooltip_message upload_popup_3"><span ng-click="exit_tutorial()"></span></div>
+</div>

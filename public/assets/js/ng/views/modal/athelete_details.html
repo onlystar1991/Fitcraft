@@ -1,0 +1,277 @@
+<div class="clearfix">
+    <div class="modal-header">
+        <button type="button" class="icon__modal_close" ng-click="close($event)"></button>
+        <h4 class="modal-title" id="myModalLabel">ATHLETE PROFILE</h4>
+    </div>
+
+    <perfect-scrollbar class="scroller scroll-pane-moz modal-ride-search " wheel-propagation="true" wheel-speed="10" min-scrollbar-length="20">
+     <div class="modal-body modal-body-ng clearfix " style="padding-bottom: 0px !Important;">
+
+    <div class="clearfix">
+        <div class="col-md-2 p-none profile_sidebar__container">
+            <div class="profileSidebar--modal">
+                <h2 class="category__level">
+                <img ng-src="/assets/img/category/cat<% profile.category_id %>.jpg" class="img-responsive"></h2>
+                <div class="profile__photo">
+                    <img ng-src="<% profile.avatar %>" class="img-responsive">
+                    <div class="profile__photo__placeholder">
+                        <div class="level__label">Level </div>
+                        <div class="level__number" ng-bind="profile.level" >0</div>
+                    </div>
+                </div>
+                <div class="profile__name" ng-bind="profile.nickname">                    
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-7 row-p-5 profile_center__container profile_center__container--modal">
+            
+            <div class="clearfix">
+                
+                <!-- header -->
+                <div class="col-md-12 p-none athlete_profile_header">
+                    
+                    <ul class="athlete_communication">
+                        <li class="athlete_communication_cheat" ng-hide="profile.report_enable==0">
+                            <div>
+                                <a href="#" ng-click="athleteCommunication('user_cheating',profile.id)">FLAG FOR CHEATING</a>
+                                <a href="#" ng-click="athleteCommunication('user_conduct',profile.id)">FLAG FOR CONDUCT</a>
+                            </div>
+                        </li>
+                        <li class="athlete_communication_forum">
+                            <div>
+                                <a href="/forum/search.php?sr=posts&author=<%profile.forum_nickname%>">VIEW FORUM POSTS</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- /header -->
+
+                <!-- /col 1 -->
+                <div class="col-md-6 pt-6">
+
+                    <div class="profile_rating">
+                        <div class="profile_rating__level"></div>
+                    </div>
+                    <div class="profile_statistics clearfix">
+                        <div class="icon icon__30"></div>
+                        <div class="pull-left">
+                            <div class="profile_statistics__label">SEASON</div>
+                            <div class="meter meter--season">
+                                <span  ng-style="{ 'width' : season.progress + '%'  }" ></span>
+                                <i  class="centered_i" ng-bind="(season.days)+'/'+(season.days_all)" ></i>
+                                <i ng-bind="(season.percent_round)+'%'"></i>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile_rating">
+                        <div class="profile_rating__level"></div>
+                    </div>
+                    <div class="profile_statistics clearfix" >
+                        <div class="icon icon__level"></div>
+                        <div class="pull-left">
+                            <div class="profile_statistics__label">LEVEL</div>
+                            <div class="meter">
+                                <span ng-style="{ 'width' : profile.progress_level + '%'  }" ></span>
+                                <i  class="centered_i" ng-bind="(profile.xp)+'/'+(profile.levels_xp)" ></i>
+                                <i ng-bind="(profile.progress_level)+'%'"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile_rating">
+                        <div class="profile_rating__level"></div>
+                    </div>
+                    <div class="profile_statistics clearfix">
+                        <div class="icon icon__21"></div>
+                        <div class="pull-left">
+                            <div class="profile_statistics__label">ACHIEVEMENTS</div>
+                            <div class="meter meter--achive">
+                                <span  ng-style="{ 'width' : achievements.progress + '%'  }" ></span>
+                                <i  class="centered_i" ng-bind="(achievements.achievements_user)+'/'+(achievements.achievements_all)" ></i>
+                                <i ng-bind="(achievements.percent_round)+'%'"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- non icon stats -->
+                    <div class="profile_statistics clearfix">
+                        <div class="pull-left">
+                            <div class="meter widder">
+                                <span class="power" ng-style="{ 'width' : statistic.power_percent + '%'  }" ></span> <i ng-bind="statistic.power_percent" ></i>
+                                <div class="profile_statistics__label">POWER</div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="profile_statistics clearfix">
+                        <div class="pull-left">
+                            <div class="meter widder">
+                                <span class="speed"  ng-style="{ 'width' : statistic.speed_percent + '%'  }"></span> <i ng-bind="statistic.speed_percent"></i>
+                                <div class="profile_statistics__label">SPEED</div>
+                            </div>
+                        </div>  
+                    </div>
+                    <div class="profile_statistics clearfix">
+                        <div class="pull-left">
+                            <div class="meter widder">
+                                <span class="stamina"  ng-style="{ 'width' : statistic.distance_percent + '%'  }"></span> <i ng-bind="statistic.distance_percent"></i>
+                                <div class="profile_statistics__label">DISTANCE</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile_statistics clearfix">
+                        <div class="pull-left">
+                            <div class="meter widder">
+                                <span class="tenacity"  ng-style="{ 'width' : statistic.time_percent + '%'  }" ></span> <i ng-bind="statistic.time_percent"></i>
+                                <div class="profile_statistics__label">TIME</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /non icon stats -->
+
+
+                </div>
+                <!-- /col 1 -->
+
+                <!-- col 2 -->
+                <div class="col-md-6 p-none">
+
+                    <div class="p-relative" >
+                        <div class="last30days__header" data-toggle="dropdown" aria-expanded="false">
+                           <span ng-bind="statistic_label">LAST 30 DAYS</span> 
+                           <i class="icon__arrow arrow__down"></i>
+                        </div>
+                        <!-- <perfect-scrollbar class="scroller " wheel-propagation="true" wheel-speed="10" min-scrollbar-length="20"> -->
+                            <ul class="dropdown-menu dropdown-last30days dropdown-custom" role="menu">
+                               <li><a href="javascript:void(0)"  ng-click="getStatistics('7','LAST 7 DAYS')" >LAST 7 DAYS</a></li>
+                               <li><a href="javascript:void(0)"  ng-click="getStatistics('30','LAST 30 DAYS')" >LAST 30 DAYS</a></li>
+                               <li><a href="javascript:void(0)"  ng-click="getStatistics('60','LAST 60 DAYS')" >LAST 60 DAYS</a></li>                               
+                               <li><a href="javascript:void(0)"  ng-click="getStatistics('120','LAST 120 DAYS')" >LAST 120 DAYS</a></li>
+                               <li><a href="javascript:void(0)"  ng-click="getStatistics('180','LAST 6 MONTHS')" >LAST 6 MONTHS</a></li>
+                               <li><a href="javascript:void(0)"  ng-click="getStatistics('360','LAST YEAR')" >LAST YEAR</a></li>
+                               <li><a href="javascript:void(0)"  ng-click="getStatistics('365','CURRENT SEASON')" >CURRENT SEASON</a></li>
+                               <li><a href="javascript:void(0)"  ng-click="getStatistics('all','ALL TIME')" >ALL TIME</a></li>
+                            </ul>
+                        <!-- </perfect-scrollbar> -->
+                    </div>
+
+                    <div class="clearfix last30days__statistics">
+                            <div class="last30days__statistics__label">
+                                <div class="last30days__statistics__label_key" >TIME</div>
+                                <div class="last30days__statistics__label_value" ng-bind="statistic.time" >0</div>
+                            </div>
+                             <div class="last30days__statistics__label">
+                                <div class="last30days__statistics__label_key">AVG TIME PER RIDE</div>
+                                <div class="last30days__statistics__label_value" ng-bind="statistic.avg_time_per_ride" >0</div>
+                            </div>
+                            <div class="last30days__statistics__label">
+                                <div class="last30days__statistics__label_key">TOP SPEED</div>
+                                <div class="last30days__statistics__label_value" ng-bind="statistic.top_speed" >0</div>
+                            </div>
+                            <div class="last30days__statistics__label">
+                                <div class="last30days__statistics__label_key">AVG SPEED</div>
+                                <div class="last30days__statistics__label_value" ng-bind="statistic.avg_speed" >0</div>
+                            </div>
+                             <div class="last30days__statistics__label">
+                                <div class="last30days__statistics__label_key">AVG DIST. PER RIDE</div>
+                                <div class="last30days__statistics__label_value" ng-bind="statistic.avg_dist_per_ride" >0</div>
+                            </div>
+                            <div class="last30days__statistics__label">
+                                <div class="last30days__statistics__label_key">PEAK POWER</div>
+                                <div class="last30days__statistics__label_value" ng-bind="statistic.peak_power" >0</div>
+                            </div>
+                             <div class="last30days__statistics__label">
+                                <div class="last30days__statistics__label_key">AVG POWER</div>
+                                <div class="last30days__statistics__label_value" ng-bind="statistic.power" >0</div>
+                            </div>
+                            <div class="last30days__statistics__label">
+                                <div class="last30days__statistics__label_key">AVG CADENCE</div>
+                                <div class="last30days__statistics__label_value" ng-bind="statistic.avg_cadence" >0</div>
+                            </div>
+                            <div class="last30days__statistics__label">
+                                <div class="last30days__statistics__label_key">AVG HEART RATE</div>
+                                <div class="last30days__statistics__label_value" ng-bind="statistic.avg_heart_rate" >0</div>
+                            </div>
+                             <div class="last30days__statistics__label">
+                                <div class="last30days__statistics__label_key">CALORIES BURNED</div>
+                                <div class="last30days__statistics__label_value" ng-bind="statistic.calories_burned" >0</div>
+                            </div>
+                            <div class="last30days__statistics__label">
+                                <div class="last30days__statistics__label_key">AVG CALORIES PER RIDE</div>
+                                <div class="last30days__statistics__label_value" ng-bind="statistic.avg_calories_per_ride" >0</div>
+                            </div>
+                             <div class="last30days__statistics__label">
+                                <div class="last30days__statistics__label_key">AVG EFFORT</div>
+                                <div class="last30days__statistics__label_value" ng-bind="statistic.avg_effort" >0</div>
+                            </div>
+                            <div class="last30days__statistics__label">
+                                <div class="last30days__statistics__label_key">DAYS RIDDEN</div>
+                                <div class="last30days__statistics__label_value" ng-bind="statistic.days_ridden" >0</div>
+                            </div>
+                            <div class="last30days__statistics__label">
+                                <div class="last30days__statistics__label_key">TOTAL RIDES</div>
+                                <div class="last30days__statistics__label_value" ng-bind="statistic.total_rides" >0</div>
+                            </div>
+                             <div class="last30days__statistics__label">
+                                <div class="last30days__statistics__label_key">ELEVATION GAINED</div>
+                                <div class="last30days__statistics__label_value" ng-bind="statistic.elev_gained" >0</div>
+                            </div>
+                            <div class="last30days__statistics__label">
+                                <div class="last30days__statistics__label_key">LARGEST CLIMB</div>
+                                <div class="last30days__statistics__label_value" ng-bind="statistic.largest_climb" >0</div>
+                            </div>
+                        </div>
+
+                </div>
+                <!-- /col 2 -->
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="clearfix ridedetails__model__trophy">
+        <div class="last_trophy last_trophy--nborder pl-5 mt-28 pull-left profile_sidebar__container">
+            <div class="icon icon__10"></div> <span class="last_trophy__label">GEAR</span>
+        </div>
+        <div class="last_trophy--nborder pr-5 clearfix pull-left">
+            
+            <!-- <div class="holder-empty icon--cards" ng-repeat="item in trophies | orderBy: sorterArray">
+                <img src="<% item.available == 0 ? item.icon_grey : item.icon %>" alt="">
+            </div> -->
+
+            <div class="pull-left trophy-left">
+                <h4 class="trophy-block__header trophy-block__header--top3">TOP 3 TROPHIES</h4>
+                <div class="clearfix trophy-block__content" >
+                    <div class="holder-empty" ng-repeat="item in topTrophies" ng-model='topTrophies'>
+                        <div class="icon icon--cards"ng-model="topTrophies"ng-hide="!item.icon"><img src="<% item.available == 0 ? item.icon_grey : item.icon %>" alt=""></div>
+                    </div>
+                </div>
+            </div>
+            <div class="pull-left trophy-right">
+                <h4 class="trophy-block__header">FAVORITES</h4>
+                <div class="clearfix trophy-block__content">
+                    <div class="holder-empty" ng-repeat="item in favoriteTrophies" ng-model='favoriteTrophies'>
+                        <div class="icon icon--cards" ng-model="favoriteTrophies" ng-hide="!item.icon"><img src="<% item.available == 0 ? item.icon_grey : item.icon %>" alt=""></div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div ng-include="'/assets/js/ng/views/modal/ridelibrary_search.html'"></div>
+
+    <div class="empty"></div>
+    </div>
+    </perfect-scrollbar>
+    <div class="modal-footer">
+
+    </div>
+</div>

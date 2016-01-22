@@ -1,0 +1,402 @@
+
+ 
+
+           <div class="clearfix  modal-ride-search ">
+                <div class="library_header_info">RIDE SEARCH</div>
+                <div class="clearfix ride_search_container">
+                    <div ng-show="!tooltip_shown" class="tooltip_message ride_popup_search"></div>
+                    <div class="pull-left">
+                        <div class="ride_search_item clearfix">
+                            <div class="clearfix ride_search_col pull-left p-relative">
+                                <div class="pull-left ride_search_col_label">DISTANCE</div>
+                                 <div class="pull-left text-right ride_search_col_value green" data-toggle="dropdown" aria-expanded="false" >
+                                     <% distance_label %><i class="icon__arrow arrow__down"></i>
+                                 </div>
+                                <ul class="dropdown-menu dropdown-last30days dropdown-custom--noscroll" role="menu">
+                                     <li><a href="javascript:;" ng-click="selectFilter('distance','>=','GREATER THAN')" >GREATER THAN</a></li>
+                                     <li><a href="javascript:;" ng-click="selectFilter('distance','<=','LESS THAN')" >LESS THAN</a></li>
+                                     <li><a href="javascript:;" ng-click="selectFilter('distance','=','EQUAL TO')">EQUAL TO</a></li>
+                                </ul>
+                                 <div class="form-control-container form-control-container__ridesearch pull-left">
+                                     <input class="form-control" type="text" ng-model="search.distance"/>
+                                 </div>
+                                 <div class="ride_search_col_value_label white">MI</div>
+                            </div>
+                            <div class="clearfix ride_search_col pull-left p-relative">
+                                <div class="pull-left ride_search_col_label">AVG POWER</div>
+                                 <div class="pull-left text-right ride_search_col_value green" data-toggle="dropdown" aria-expanded="false">
+                                     <% avg_power_label %><i class="icon__arrow arrow__down"></i>
+                                 </div>
+                                 <ul class="dropdown-menu dropdown-last30days dropdown-custom--noscroll" role="menu">
+                                     <li><a href="javascript:;" ng-click="selectFilter('avg_power','>=','GREATER THAN')" >GREATER THAN</a></li>
+                                     <li><a href="javascript:;" ng-click="selectFilter('avg_power','<=','LESS THAN')" >LESS THAN</a></li>
+                                     <li><a href="javascript:;" ng-click="selectFilter('avg_power','=','EQUAL TO')">EQUAL TO</a></li>
+                                 </ul>
+                                 <div class="form-control-container form-control-container__ridesearch pull-left">
+                                     <input class="form-control" type="text" ng-model="search.avg_power"/>
+                                 </div>
+                                 <div class="ride_search_col_value_label white">
+                                    W
+                                 </div>
+                            </div>
+                        </div>
+                        <div class="ride_search_item clearfix">
+                            <div class="clearfix ride_search_col pull-left p-relative">
+                                <div class="pull-left ride_search_col_label">TIME</div>
+                                 <div class="pull-left text-right ride_search_col_value green" data-toggle="dropdown" aria-expanded="false">
+                                     <% time_label %><i class="icon__arrow arrow__down"></i>
+                                 </div>
+                                 <ul class="dropdown-menu dropdown-last30days dropdown-custom--noscroll" role="menu">
+                                       <li><a href="javascript:;" ng-click="selectFilter('time','>=','GREATER THAN')">GREATER THAN</a></li>
+                                       <li><a href="javascript:;" ng-click="selectFilter('time','<=','LESS THAN')">LESS THAN</a></li>
+                                       <li><a href="javascript:;" ng-click="selectFilter('time','=','EQUAL TO')">EQUAL TO</a></li>
+                                  </ul>
+                                 <div class="form-control-container form-control-container__ridesearch pull-left">
+                                     <input class="form-control" type="text" ng-model="search.time"/>
+                                 </div>
+                                 <div class="ride_search_col_value_label white">MIN</div>
+                            </div>
+                            <div class="clearfix ride_search_col pull-left p-relative">
+                                <div class="pull-left ride_search_col_label">
+                                    ELV GAIN
+                                </div>
+                                 <div class="pull-left text-right ride_search_col_value green" data-toggle="dropdown" aria-expanded="false">
+                                     <% elv_gain_label %><i class="icon__arrow arrow__down"></i>
+                                 </div>
+                                 <ul class="dropdown-menu dropdown-last30days dropdown-custom--noscroll" role="menu">
+                                     <li><a href="javascript:;" ng-click="selectFilter('elv_gain','>=','GREATER THAN')">GREATER THAN</a></li>
+                                     <li><a href="javascript:;" ng-click="selectFilter('elv_gain','<=','LESS THAN')">LESS THAN</a></li>
+                                     <li><a href="javascript:;" ng-click="selectFilter('elv_gain','=','EQUAL TO')">EQUAL TO</a></li>
+                                 </ul>
+                                 <div class="form-control-container form-control-container__ridesearch pull-left">
+                                     <input class="form-control" type="text" ng-model="search.elv_gain"/>
+                                 </div>
+                                 <div class="ride_search_col_value_label white">
+                                    FT
+                                 </div>
+                            </div>
+                        </div>
+                        <div class="ride_search_item clearfix ">
+                            <div class="clearfix ride_search_col pull-left p-relative">
+                                <div class="pull-left ride_search_col_label">
+                                    AVG SPEED
+                                </div>
+                                 <div class="pull-left text-right ride_search_col_value green" data-toggle="dropdown" aria-expanded="false">
+                                     <% avg_speed_label %><i class="icon__arrow arrow__down"></i>
+                                 </div>
+                                 <ul class="dropdown-menu dropdown-last30days dropdown-custom--noscroll" role="menu">
+                                     <li><a href="javascript:;" ng-click="selectFilter('avg_speed','>=','GREATER THAN')">GREATER THAN</a></li>
+                                     <li><a href="javascript:;" ng-click="selectFilter('avg_speed','<=','LESS THAN')">LESS THAN</a></li>
+                                     <li><a href="javascript:;" ng-click="selectFilter('avg_speed','=','EQUAL TO')">EQUAL TO</a></li>
+                                 </ul>
+                                 <div class="form-control-container form-control-container__ridesearch pull-left">
+                                     <input class="form-control" type="text" ng-model="search.avg_speed"/>
+                                 </div>
+                                 <div class="ride_search_col_value_label white">
+                                    MPH
+                                 </div>
+                            </div>
+                            <div class="clearfix ride_search_col pull-left p-relative">
+                                <div class="pull-left ride_search_col_label">
+                                    EFFORT LVL
+                                </div>
+                                 <div class="pull-left text-right ride_search_col_value green" data-toggle="dropdown" aria-expanded="false">
+                                     <% effort_lvl_label %><i class="icon__arrow arrow__down"></i>
+                                 </div>
+                                 <ul class="dropdown-menu dropdown-last30days dropdown-custom--noscroll" role="menu">
+                                     <li><a href="javascript:;" ng-click="selectFilter('effort_lvl','>=','GREATER THAN')">GREATER THAN</a></li>
+                                     <li><a href="javascript:;" ng-click="selectFilter('effort_lvl','<=','LESS THAN')">LESS THAN</a></li>
+                                     <li><a href="javascript:;" ng-click="selectFilter('effort_lvl','=','EQUAL TO')">EQUAL TO</a></li>
+                                  </ul>
+                                 <div class="form-control-container form-control-container__ridesearch pull-left">
+                                     <input class="form-control" type="text" ng-model="search.effort_lvl"/>
+                                 </div>
+                                 <div class="ride_search_col_value_label white">%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pull-left">
+                        <br/>
+                        <div class="clearfix">
+                            <buttton class="btn btn-st-2 btn-green" ng-click="doSearch()" >SEARCH</buttton>
+                        </div>
+                        <br/>
+                        <br/>
+                        <div class="cleafix">
+                            <buttton class="btn btn-st-2 btn-grey" ng-click="doReset()">RESET</buttton>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="clearfix ride_search_advanced_label">
+                        ADVANCED SEARCH <i class="icon__arrow arrow__down"></i>
+                </div>
+                <div class="clearfix ride_search_advanced_container">
+                     <div class="pull-left">
+                        <div class="ride_search_item clearfix">
+                            <div class="clearfix ride_search_col pull-left p-relative">
+                                <div class="pull-left ride_search_col_label">
+                                    MAX SPEED
+                                </div>
+                                 <div class="pull-left text-right ride_search_col_value green" data-toggle="dropdown" aria-expanded="false">
+                                     <% max_speed_label %><i class="icon__arrow arrow__down"></i>
+                                 </div>
+                                <ul class="dropdown-menu dropdown-last30days dropdown-custom--noscroll" role="menu">
+                                    <li><a href="javascript:;" ng-click="selectFilter('max_speed','>=','GREATER THAN')">GREATER THAN</a></li>
+                                    <li><a href="javascript:;" ng-click="selectFilter('max_speed','<=','LESS THAN')">LESS THAN</a></li>
+                                    <li><a href="javascript:;" ng-click="selectFilter('max_speed','=','EQUAL TO')">EQUAL TO</a></li>
+                                </ul>
+                                 <div class="form-control-container form-control-container__ridesearch pull-left">
+                                     <input class="form-control" type="text" ng-model="search.max_speed"/>
+                                 </div>
+                                 <div class="ride_search_col_value_label white">MPH</div>
+                            </div>
+                            <div class="clearfix ride_search_col pull-left">
+                                <div class="pull-left ride_search_col_label ride_search_col_label__dates">DATES</div>
+                                 <div class="form-control-container form-control-container__ridesearch form-control-container__ridesearch__date pull-left">
+                                     <input class="form-control" type="text" ng-model="search.date_start" id="dpd1" my-datepicker data-date-format="mm/dd/yyyy"/>
+                                 </div>
+                                 <div class="pull-left ride_search_col_value_label white">TO</div>
+                                 <div class="form-control-container form-control-container__ridesearch form-control-container__ridesearch__date pull-left">
+                                      <input class="form-control" type="text" ng-model="search.date_end" id="dpd2" my-datepicker data-date-format="mm/dd/yyyy"/>
+                                  </div>
+
+                            </div>
+                        </div>
+                        <div class="ride_search_item clearfix">
+                            <div class="clearfix ride_search_col pull-left p-relative">
+                                <div class="pull-left ride_search_col_label">
+                                    MAX POWER
+                                </div>
+                                 <div class="pull-left text-right ride_search_col_value green" data-toggle="dropdown" aria-expanded="false">
+                                     <% max_power_label %><i class="icon__arrow arrow__down"></i>
+                                 </div>
+                                <ul class="dropdown-menu dropdown-last30days dropdown-custom--noscroll" role="menu">
+                                    <li><a href="javascript:;" ng-click="selectFilter('max_power','>=','GREATER THAN')">GREATER THAN</a></li>
+                                    <li><a href="javascript:;" ng-click="selectFilter('max_power','<=','LESS THAN')">LESS THAN</a></li>
+                                    <li><a href="javascript:;" ng-click="selectFilter('max_power','=','EQUAL TO')">EQUAL TO</a></li>
+                                </ul>
+                                 <div class="form-control-container form-control-container__ridesearch pull-left">
+                                     <input class="form-control" type="text" ng-model="search.max_power"/>
+                                 </div>
+                                 <div class="ride_search_col_value_label white">
+                                    W
+                                 </div>
+                            </div>
+                            <div class="clearfix ride_search_col pull-left">
+                                <div class="pull-left ride_search_col_label ride_search_col_label__namezip">
+                                    RIDE NAME
+                                </div>
+                                 <div class="form-control-container form-control-container__ridesearch form-control-container__ridesearch__namezip pull-left">
+                                     <input class="form-control" type="text" ng-model="search.ride_name"/>
+                                 </div>
+
+                            </div>
+                        </div>
+                        <div class="ride_search_item clearfix">
+                            <div class="clearfix ride_search_col pull-left p-relative">
+                                <div class="pull-left ride_search_col_label ride_search_col_label__heartrate ">
+                                    AVG HR
+                                </div>
+                                 <div class="pull-left text-right ride_search_col_value ride_search_col_value__less_avg_hr green" data-toggle="dropdown" aria-expanded="false">
+                                     <% avg_heart_rate_label %><i class="icon__arrow arrow__down"></i>
+                                 </div>
+                                <ul class="dropdown-menu dropdown-last30days dropdown-custom--noscroll" role="menu">
+                                    <li><a href="javascript:;" ng-click="selectFilter('avg_heart_rate','>=','GREATER THAN')">GREATER THAN</a></li>
+                                    <li><a href="javascript:;" ng-click="selectFilter('avg_heart_rate','<=','LESS THAN')">LESS THAN</a></li>
+                                    <li><a href="javascript:;" ng-click="selectFilter('avg_heart_rate','=','EQUAL TO')">EQUAL TO</a></li>
+                                </ul>
+                                 <div class="form-control-container form-control-container__ridesearch pull-left">
+                                     <input class="form-control" type="text" ng-model="search.avg_heart_rate"/>
+                                 </div>
+                                 <div class="ride_search_col_value_label white">
+                                    BPM
+                                 </div>
+                            </div>
+                            <div class="clearfix ride_search_col pull-left">
+                                <div class="pull-left ride_search_col_label ride_search_col_label__namezip">
+                                    ZIP CODE
+                                </div>
+                                 <div class="form-control-container form-control-container__ridesearch form-control-container__ridesearch__namezip pull-left">
+                                     <input class="form-control" type="text" ng-model="search.zip_code"/>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pull-left">
+                        <br/>
+                            <br/><br/>
+                        <div class="cleafix">
+                            <buttton class="btn btn-st-2 btn-grey" ng-click="doResetAdvanced()">RESET</buttton>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix ridesearch_header_info ">
+                    <div class="pull-left ridesearch_header_info_name">RIDE NAME</div>
+                    <div class="pull-right ridesearch_header_info_date">DATE</div>
+                </div>
+
+
+                <div class="clearfix search_rides_res"  ng-repeat="(key, ride) in rides" on-last-repeat >
+                    <div class="ridesearch_item"  >
+                        <div class="pull-left border-right ridesearch_item_ridename_container" >
+
+                            <ul class="athlete_communication" ng-hide="ride.report_enable==0">
+                                <li class="athlete_communication_cheat">
+                                    <div>
+                                        <a href="#" ng-click="athleteCommunication('ride_cheating',profile.id,ride.id )">FLAG FOR CHEATING</a>
+                                        <a href="#" ng-click="athleteCommunication('ride_data',profile.id,ride.id )">FLAG FOR CONDUCT</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="icon icon__20 pull-left"></div>
+                            <div class="ridesearch_item_ridename pull-left"><% ride.name %>
+                                <i class="arrow_detail_ride_time icon__arrow arrow__down users__arrow_down ridedetails_info_show" ng-click="rideDetails(ride.id)"></i>
+                            </div>
+
+                        </div>
+                        <div class="pull-left ridesearch_item_timedistance border-right">
+                            <div class="clearfix">
+                                <div class="pull-left ridesearch_item_timedistance_col1">MOVING TIME</div>
+                                <div class="pull-right"><% ride.time %></div> 
+                            </div>
+                            <div class="clearfix">
+                                <div class="pull-left ridesearch_item_timedistance_col1">DISTANCE</div>
+                                <div class="pull-right"><% ride.total_distance %> MI</div>
+                            </div>
+                        </div>
+                        <div class="pull-left ridesearch_item_timedistance border-right">
+                              <div class="clearfix">
+                                 <div class="pull-left ridesearch_item_timedistance_col1">ELEVATION </div>
+                                 <div class="pull-right"><% ride.elevation %> FT</div>
+                             </div>
+                             <div class="clearfix">
+                                 <div class="pull-left ridesearch_item_timedistance_col1">AVG SPEED</div>
+                                 <div class="pull-right"><%ride.avg_speed%> MPH</div>
+                             </div>
+                        </div>
+                        <div class="pull-left ridesearch_item_date">
+                            <% ride.date %>
+                        </div>
+                    </div>
+                    <div class="ridesearch_details clearfix">
+                            <div class="pull-left ridesearch_details_left">
+                                <div class="clearfix ridesearch_details_left_header">RIDE STATS</div>
+                                <div class="clearfix ridedetails_infotext">
+                                    <div class="pull-left">ELAPSED TIME</div>
+                                    <div class="text-right"><% ride.total_elapsed_time%></div>
+                                </div>
+                                <div class="clearfix ridedetails_infotext">
+                                    <div class="pull-left">MAX SPEED</div>
+                                    <div class="text-right"><% ride.max_speed %> MPH</div>
+                                </div>
+                                <div class="clearfix ridedetails_infotext">
+                                    <div class="pull-left">AVG POWER</div>
+                                    <div class="text-right"><% ride.avg_power %> W</div>
+                                </div>
+                                <div class="clearfix ridedetails_infotext">
+                                    <div class="pull-left">PEAK POWER</div>
+                                    <div class="text-right"><% ride.peak_power %> W</div>
+                                </div>
+                                <div class="clearfix ridedetails_infotext">
+                                    <div class="pull-left">CALORIES</div>
+                                    <div class="text-right"><% ride.total_calories %> CALORIES</div>
+                                </div>
+                                <div class="clearfix ridedetails_infotext">
+                                    <div class="pull-left">AVG CADENCE</div>
+                                    <div class="text-right"><% ride.avg_cadence %> RPM</div>
+                                </div>
+                                <div class="clearfix ridedetails_infotext">
+                                    <div class="pull-left">MAX CADENCE</div>
+                                    <div class="text-right"><% ride.max_cadence %> RPM</div>
+                                </div>
+                                <div class="clearfix ridedetails_infotext">
+                                    <div class="pull-left">AVG HEART RATE</div>
+                                    <div class="text-right"><% ride.avg_heart_rate %> BPM</div>
+                                </div>
+                                <div class="clearfix ridedetails_infotext">
+                                    <div class="pull-left">MAX HEART RATE</div>
+                                    <div class="text-right"><% ride.max_heart_rate %> BPM</div>
+                                </div>
+                                <div class="clearfix ridedetails_infotext">
+                                    <div class="pull-left">START TIME</div>
+                                    <div class="text-right"><% ride.ride_start_time %></div>
+                                </div>
+                                <div class="clearfix ridedetails_infotext">
+                                    <div class="pull-left">FINISH TIME</div>
+                                    <div class="text-right"><% ride.ride_end_time %></div>
+                                </div>
+                                <div class="cleafix ridedetails_stars">
+
+                                    <div class="ridedetails_stars_item clearfix">
+                                        <div class="pull-left ridedetails_stars_item_star">
+                                        <div class="icon_star icon_star1_empty"></div>
+                                        </div><div class="pull-left ridedetails_percent"><%ride.zones_percentages[0]%>%</div><div class="pull-left"><%ride.zone_1%>XP</div>
+                                    </div>
+                                    <div class="ridedetails_stars_item clearfix">
+                                        <div class="pull-left ridedetails_stars_item_star"><div class="icon_star icon_star2_empty"></div></div><div class="pull-left ridedetails_percent"><%ride.zones_percentages[1]%>%</div><div class="pull-left"><%ride.zone_2%>XP</div>
+                                    </div>
+                                    <div class="ridedetails_stars_item clearfix">
+                                        <div class="pull-left ridedetails_stars_item_star"><div class="icon_star icon_star3_empty"></div></div><div class="pull-left ridedetails_percent"><%ride.zones_percentages[2]%>%</div><div class="pull-left"><%ride.zone_3%>XP</div>
+                                    </div>
+                                    <div class="ridedetails_stars_item clearfix">
+                                        <div class="pull-left ridedetails_stars_item_star"><div class="icon_star icon_star4_empty"></div></div><div class="pull-left ridedetails_percent"><%ride.zones_percentages[3]%>%</div><div class="pull-left"><%ride.zone_4%>XP</div>
+                                    </div>
+                                    <div class="ridedetails_stars_item clearfix">
+                                        <div class="pull-left ridedetails_stars_item_star"><div class="icon_star icon_star5_full"></div></div><div class="pull-left ridedetails_percent"><%ride.zones_percentages[4]%>%</div><div class="pull-left"><%ride.zone_5%>XP</div>
+                                    </div>
+                                </div>
+                                <div class="clearfix">
+                                    <div class="ridedetails_trophy ridedetails_trophy--ride-item">
+                                        <div class="icon icon__level clearfix"></div>
+                                        <div class="ridedetails_trophy_label clearfix"></div>
+                                        <div class="clearfix text-center">
+                                            <span><%ride.total_xp%></span> <span class="green">XP</span>
+                                        </div>
+                                    </div>
+                                    <div class="ridedetails_trophy ridedetails_trophy--ride-item">
+                                        <div class="icon icon__level clearfix"></div>
+                                        <div class="ridedetails_trophy_label clearfix"></div>
+                                        <div class="clearfix text-center">
+                                            <span><%ride.total_bonus_xp%></span><span class="green">XP</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="pull-left ridesearch_details_right">
+                                <!-- <div class="ridesearch_details_map googlemap" id="ride_map_<% ride.id %>" style="width: 705px; height: 288px; visibility:visible"></div> -->
+                                <div ng-show="!$parent.tooltip_shown" class="tooltip_message ride_popup_map"><span ng-click="exit_tutorial()"></span></div>
+                                <div class="ridesearch_details_map mapbox_map" id="ride_mapbox_map_<% ride.id %>" style="width: 705px; height: 288px; visibility:visible"></div>
+                                <div class="clearfix">
+                                    <div class="pull-left ridesearch_details_filter ">
+                                        <a href="javascript:;" ng-click="setTab('elevation',ride.id)" ng-class="{active:tabs.elevation[ride.id]}" >ELEVATION</a>
+                                        <a href="javascript:;" ng-click="setTab('speed',ride.id)" ng-class="{active:tabs.speed[ride.id] || getFooUndef(tabs.speed[ride.id]) }" >SPEED</a>
+                                        <a href="javascript:;" ng-click="setTab('power',ride.id)" ng-class="{active:tabs.power[ride.id]}">POWER</a>
+                                        <a href="javascript:;" ng-click="setTab('heart',ride.id)" ng-class="{active:tabs.heart[ride.id]}">HEART RATE</a>
+                                    </div>
+                                    <div class="pull-left ridesearch_details_graphic">
+                                        <div class="chart-item chart-speed-<% ride.id %>" ng-class="{ active:tabs.speed[ride.id] || getFooUndef(tabs.speed[ride.id]) }" ></div>
+                                        <div class="chart-item chart-elevation-<% ride.id %>" ng-class="{active:tabs.elevation[ride.id]}" ></div>
+                                        <div class="chart-item chart-heart-<% ride.id %>" ng-class="{active:tabs.heart[ride.id]}"></div>
+                                        <div class="chart-item chart-power-<% ride.id %>" ng-class="{active:tabs.power[ride.id]}"></div>
+                                    </div>
+
+                                </div>
+                                <div class="clearfix">
+                                    <div class="ridesearch_details_filter_current pull-left">CURRENT</div>
+                                    <div>
+                                        <div class="current-items"><span class="chart-current-bmp chart-current-bmp-<% ride.id %>">0</span> BPM</div>
+                                        <div class="current-items"><span class="chart-current-elevation chart-current-elevation-<% ride.id %>">0</span> FT</div>
+                                        <div class="current-items"><span class="chart-current-speed chart-current-speed-<% ride.id %>">0</span> MPH</div>
+                                        <div class="current-items"><span class="chart-current-power chart-current-power-<% ride.id %>">0</span> W</div>
+                                        <div class="current-items"><span class="chart-current-cadence chart-current-cadence-<% ride.id %>">0</span> RPM</div>
+                                    </div>
+                                </div>
+                                <div ng-show="!$parent.tooltip_shown" class="tooltip_message ride_popup_current"></div>
+                            </div>
+                    </div>
+                </div> <!--/ end row-ride  -->  
+                 <div class="empty"></div>
+           </div> 

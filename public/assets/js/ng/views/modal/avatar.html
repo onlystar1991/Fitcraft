@@ -1,0 +1,52 @@
+<div class="clearfix upload_file_modal">
+
+    <div class="modal-header">
+      <button type="button" class="icon__modal_close" ng-click="close($event)"></button>
+      <h4 class="modal-title">PLAYER CARDS</h4>
+    </div>
+
+      <div class="cards-list-body scroller">
+        <div class="clearfix cards">
+            <div class="pull-left cards-left">
+                <img ng-src="<% card %>" alt="" class="img-responsive"/>
+                <div class="clearfix text-center mt-10">
+                    <button class="btn btn-bk btn-green" ng-click="loadCard()" ng-disabled="!selected.available">LOAD CARD</button>
+                </div>
+            </div>
+            <div class="pull-left cards-right scroller">
+                <perfect-scrollbar class="scroller cards-right-scroll scroll-pane-moz" wheel-propagation="true" wheel-speed="10" min-scrollbar-length="20">
+                    <div class="cards-list-title">COLLECTION</div>
+
+                    <div class="clards-list table__users__item">
+                        <div class="div" ng-repeat="card in listCards track by $index">
+                            <div class="icon-cards" ng-class="{active:card.id == selected.id,disabled:card.available == 0}" ng-click="cardDetails($index)">
+                                <img  ng-src="/uploads/icons/<% card.available == 0 ? card.icon_grey : card.icon %>"  alt="" class="img-responsive">
+                            </div>
+                        </div>
+                </div>
+                </perfect-scrollbar>
+            </div>
+        </div>
+    </div>
+    <div class="cards-selected text-uppercase" ng-show="selected">
+        <div class="cards-selected__title">SELECTED</div>
+        <div class="cards-selected__item clearfix">
+            <!-- <div class="icon-cards active" ng-click="cardDetails($index)"> -->
+            <div class="icon-cards active">
+                <img  ng-src="/uploads/icons/<% selected.available == 0 ? selected.icon_grey : selected.icon %>"  alt="" class="img-responsive">
+            </div>
+            <div class="cards-selected__name pull-left" ><%selected.title%></div>
+            
+            <div class="cards-selected__source pull-right">SOURCE:  <span class="color-achievement"> <%selected.source%></span></div>
+            <div class="cards-selected__rating">
+                <img ng-src="/assets/img/stars_<% selected.difficulty %>.png" alt=""/>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+    </div>
+
+    <div ng-show="!tooltip_shown" class="tooltip_message card_popup_left"><span ng-click="exit_tutorial()"></span></div>
+    <div ng-show="!tooltip_shown" class="tooltip_message card_popup_right"></div>
+
+</div>

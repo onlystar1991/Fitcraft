@@ -1,0 +1,66 @@
+<div class="clearfix upload_file_modal">
+
+    <div class="modal-header">
+        <button type="button" class="icon__modal_close" ng-click="close($event)"></button>
+        <h4 class="modal-title" id="myModalLabel">GEAR</h4>
+    </div>
+    <div class="clearfix">
+        <div class="scroller">
+
+
+            <div class="clearfix mt-10">
+
+
+            <div class="pull-left trophy-left">
+                <h4 class="trophy-block__header trophy-block__header--top3">TOP 3 TROPHIES</h4>
+                <div class="clearfix trophy-block__content" >
+                    <div class="holder-empty" ng-repeat="item in topTrophies" data-drop="true" ng-model='topTrophies'  jqyoui-droppable="{index: <%$index%>, onDrop:'dropCallback'}">
+                        <div class="icon icon--cards" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="topTrophies" jqyoui-draggable="{index: <%$index%>,placeholder:true,animate:true}" ng-hide="!item.icon" ng-click="detailsTrophies(item.id)"><img src="/uploads/icons/<% item.available == 0 ? item.icon_grey : item.icon %>" alt=""></div>
+                    </div>
+                </div>
+            </div>
+            <div class="pull-left trophy-right">
+                <h4 class="trophy-block__header">FAVORITES</h4>
+                <div class="clearfix trophy-block__content">
+                    <div class="holder-empty" ng-repeat="item in favoriteTrophies" data-drop="true" ng-model='favoriteTrophies'  jqyoui-droppable="{index: <%$index%>, onDrop:'dropCallback'}">
+                        <div class="icon icon--cards" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="favoriteTrophies" jqyoui-draggable="{index: <%$index%>,placeholder:true,animate:true}" ng-hide="!item.icon" ng-click="detailsTrophies(item.id)"><img src="/uploads/icons/<% item.available == 0 ? item.icon_grey : item.icon %>" alt=""></div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="clearfix">
+                <div class="cards-selected text-uppercase" ng-show="selected">
+                    <h4 class="trophy_collection">SELECTED</h4>
+                    <div class="cards-selected__item clearfix">
+                        <div class="icon icon--cards active icon__3 pull-left">
+                            <img src="/uploads/icons/<%selected.icon%>" alt="">
+                        </div>
+                        <div class="cards-selected__source pull-right">SOURCE:  <span class="color-<%selected.source%>"><%selected.name_source%> <%selected.source%></span></div>
+                        <div class="cards-selected__name pull-left" ><%selected.title%></div>
+                        <div class="cards-selected__rating"><div class="start_wrapper" style="width:<%selected.difficulty*20%>px"><img src="/assets/img/stars.png" alt=""/></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix">
+                <h4 class="trophy_collection">COLLECTION</h4>
+
+                    <div class="clearfix text-center">
+                        <div class="clearfix mh69" data-drop="true" ng-model="collectionTrophies"  jqyoui-droppable="{multiple:true, onDrop:'dropCallback'}">
+                            <div class="icon icon--cards" ng-class="{'active':item.id == selected.id,'icon-enabled':item.available !== 0}" ng-repeat="item in collectionTrophies" ng-show="item.icon" data-drag="<% item.available == 0 ? false : true %>" data-jqyoui-options="{revert: 'invalid'}"  ng-model="collectionTrophies" jqyoui-draggable="{index: <%$index%>,animate:true}" ng-click="detailsTrophies(item.id)">
+                                <img src="/uploads/icons/<% item.available == 0 ? item.icon_grey : item.icon %>" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+            </div>
+
+
+        </div>
+        <div class="modal-footer">
+
+        </div>
+
+        <div ng-show="!tooltip_shown" class="tooltip_message gear_popup_left"><span ng-click="exit_tutorial()"></span></div>
+        <div ng-show="!tooltip_shown" class="tooltip_message gear_popup_right"></div>
+    </div>
+</div>

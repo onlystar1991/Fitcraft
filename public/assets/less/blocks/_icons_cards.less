@@ -1,0 +1,47 @@
+.icon-cards {
+  width: 57px;
+  height: 57px;
+  margin: 3px;
+  border: 3px solid transparent;
+  float: left;
+  // @media only screen
+  // and (min-width : 1920px) {
+    width: 68px;
+    height: 68px;
+    margin: 4px;
+  // }
+  // @media only screen
+  // and (min-width : 2556px) {
+  //   width: 68px;
+  //   height: 68px;
+  //   margin: 4px;
+  // }
+
+  &:hover, &.active  {
+    border: 3px solid #73cf15;
+    border-radius: 7px;
+    cursor: pointer;
+    // @media only screen
+    // and (min-width : 1920px) {
+      border-radius: 11px;
+    // }
+    // @media only screen
+    // and (min-width : 2556px) {
+    //   border-radius: 11px;
+    // }
+  }
+  &.disabled{
+    cursor: default;
+    &:hover, &.active  {
+      cursor: default;
+  }
+  }
+}
+
+.mh69 .icon--cards{
+  border-radius: 7px;
+  overflow: hidden;
+  &.active{
+    border: 3px solid #73cf15;
+  }
+}

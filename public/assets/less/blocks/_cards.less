@@ -1,0 +1,108 @@
+.cards {
+  &-left {
+    width: 183px;
+    // @media only screen
+    // and (min-width: 1920px) {
+      width: 215px;
+    // }
+    // @media only screen
+    // and (min-width : 2556px) {
+    //   width: 215px;
+    // }
+  }
+
+  &-right {
+    background-color: #111111;
+    width: 395px;
+    margin-left: 5px;
+    // @media only screen
+    // and (min-width: 1920px) {
+      width: 452px;
+    // }
+    // @media only screen
+    // and (min-width : 2556px) {
+    //   width: 763px;
+    // }
+  }
+}
+.cards-list-body {
+  padding: 0px 0px 0px 15px;
+}
+.cards-right-scroll {
+  height: 340px;
+  // @media only screen
+  // and (min-width: 1920px) {
+    height: 400px;
+  // }
+  // @media only screen
+  // and (min-width : 2556px) {
+  //     height: 400px;
+  // }
+
+}
+.cards-list-title{
+  color: #fff;
+  text-align: center;
+  font-size: 15px;
+  padding: 10px 0;
+  // @media only screen
+  // and (min-width: 1920px) {
+    font-size: 17px;
+  // }
+  // @media only screen
+  // and (min-width : 2556px) {
+  //   font-size: 17px;
+  // }
+}
+.cards-selected{
+  background-color: #000000;
+  padding-top: 4px;
+  &__title {
+    text-align: center;
+    color: #fff;
+    font-size:15px;
+  }
+  &__item {
+    border-top: 3px solid #73cf15;
+    border-bottom: 3px solid #73cf15;
+    background-color: #252525;
+    line-height: 62px;
+    position: relative;
+    color: #fff;
+    font-size: 11px;
+    padding: 4px 10px;
+    // @media only screen
+    // and (min-width: 1920px) {
+      line-height: 70px;
+      font-size: 13px;
+    // }
+    // @media only screen
+    // and (min-width : 2556px) {
+    //   line-height: 70px;
+    //   font-size: 13px;
+    //   padding-top: 8px;
+    // }
+  }
+  &__name {
+    width: 195px;
+    overflow: hidden;
+    // @media only screen
+    // and (min-width: 1920px) {
+      width: 222px;
+      padding-left: 5px;
+    // }
+    // @media only screen
+    // and (min-width : 2556px) {
+    //   width: 225px;
+    // }
+  }
+  &__rating {
+    line-height: 62px;
+    text-align: center;
+    height: 70px;
+    position: absolute;
+    left: 50%;
+    width: 100px;
+    margin-left: -50px;
+  }
+}

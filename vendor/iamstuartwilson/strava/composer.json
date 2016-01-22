@@ -1,0 +1,20 @@
+{
+    "name": "iamstuartwilson/strava",
+    "description": "PHP implementation of the Strava V3 API",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Stuart Wilson",
+            "email": "bonjour@iamstuartwilson.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "~5.5"
+    },
+    "autoload": {
+        "psr-0" : {
+            "Iamstuartwilson" : "src"
+        }
+    }
+}

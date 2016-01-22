@@ -1,0 +1,98 @@
+<div class="clearfix upload_file_modal">
+      <div class="modal-header">
+        <button type="button" class="icon__modal_close" ng-click="close($event)"></button>
+        <h4 class="modal-title" id="myModalLabel">UPLOAD RIDES</h4>
+      </div>
+      <div class="modal-body  clearfix ">
+        <div class="cleafix">
+
+            <div class="upload_file_modal_header">
+                <div class="clearfix">
+                  <div class="left">
+                    <ul class="upload__menu">
+                        <!--<li class="upload__menu_li"><a href="javascript:;" ng-click="setTab('device')" ng-class="{active:tabs.device}"  >DEVICE</a></li>-->
+                        <li class="upload__menu_li" ng-click="setTab('file')" ><a href="javascript:;"  >FROM FILE</a></li>
+                        <!--<li class="upload__menu_li"><a href="javascript:;" ng-click="setTab('strava')" ng-class="{active:tabs.strava}">SYNC TO STRAVA</a></li>-->
+                        <li class="upload__menu_li upload__menu_li--ride">RIDE NAME</li>
+                        <li class="upload__menu_li upload__menu_li--ride">DATE</li>
+                        <li class="upload__menu_li upload__menu_li--ride">TIME</li>
+                    </ul>
+                  </div>
+                  <!--<div id="tab-device" class="upload_tab_item" ng-class="{active:tabs.device}">-->
+                      <!--<div class="center bg-phone">-->
+                          <!--<div class="device_container">-->
+                              <!--<div class="device__name">GARMIN 800</div>-->
+                              <!--<div class="device__id">DEVICE ID: 4567413249687</div>-->
+                          <!--</div>-->
+                      <!--</div>-->
+                  <!--</div>-->
+                  <div id="tab-file" class="upload_tab_item" ng-class="{active:tabs.file}">
+                      <form class="form_upload_files"  method="post" enctype="multipart/form-data">
+                        <div class="center">
+                            <div class="upload-file-container">
+                                <input id="uploadFile" placeholder="Choose File" disabled="disabled" class="input-upload" />
+                                <div class="fileUpload btn btn-upload-file" id="blea">
+                                    <span>BROWSE</span>
+                                    <input id="uploadFileInput" type="file" name="file" class="upload" data-url="/upload/file"  />
+                                </div>
+                            </div>
+                            <div class="clearfix">
+                                <div class="row-item__content row-item__content--upload pull-left">
+                                    <input class="form-control form-input text-center"  type="text" name="name" value="" ng-model="file.title"  ng-disabled="disabled.title">
+                                    <small class="help-block error ng-binding ng-hide" >false</small>
+                                </div>
+                                <div class="row-item__btn pull-left">
+                                    <button class="btn btn-st-2 btn-green btn-block" ng-hide="disabled.title"  ng-click="save('title')">SAVE</button>
+                                    <button class="btn btn-st-2 btn-save btn-block" ng-hide="!disabled.title"   ng-click="change('title')"></button>
+                                </div>
+                            </div>
+                            <div class="clearfix">
+                                <div class="row-item__content row-item__content--upload pull-left">
+                                    <input class="form-control form-input text-center"  type="text" name="name" value="" ng-model="file.date" ng-disabled="true">
+                                </div>
+                            </div>
+                            <div class="clearfix">
+                                <div class="row-item__content row-item__content--upload pull-left">
+                                    <input class="form-control text-center form-input"  type="text" name="name" value="" ng-model="file.time" ng-disabled="true">
+                                </div>
+                            </div>
+                            <div class="clearfix">
+                                <div class="row-item__content row-item__content--upload pull-left">
+                                    <div class="checkbox">
+                                      <input type="checkbox" ng-model="file.indoor" id="indoorActivity" disabled>
+                                      <label for="indoorActivity">indoor activity <span class="check-vis"></span></label>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                      </form>
+                  </div>
+                  <!--<div id="tab-strava" class="upload_tab_item" ng-class="{active:tabs.strava}">-->
+                      <!--<div class="center">-->
+                         <!--<div class="form-group text-center">-->
+                          <!--<a href="<%stravaLogin%>" class="btn btn-medium btn-green btn-sync-strava">SYNC RIDES</a>-->
+                         <!--</div>-->
+                      <!--</div>-->
+                  <!--</div>-->
+                  <div class="right">
+                      <div class="label_progress">PROGRESS</div>
+                      <div class="progress__container text-center">
+                          <div class="progress vertical bottom">
+                              <div class="progress-bar" role="progressbar" data-transitiongoal-backup="75" data-transitiongoal="75" aria-valuenow="75" style="height: 0%;"></div>
+                          </div>
+                      </div>
+                      <button class="btn btn-upload text-center btn-upload-processing" ng-click="processing()" ng-disabled="disabled.upload">UPLOAD</button>
+                  </div>
+              </div>
+        </div>
+          <div class="clearfix" style="background-color: #111; height: 32px; display: block">
+          </div>
+        </div>
+      </div>
+
+      <div ng-show="!tooltip_shown_1" class="tooltip_message upload_popup_1"></div>
+      <div ng-show="!tooltip_shown_2" class="tooltip_message upload_popup_2"></div>
+
+
+</div>

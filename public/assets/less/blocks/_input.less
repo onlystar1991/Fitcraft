@@ -1,0 +1,130 @@
+.form-input {
+  background:#111;
+  border: none;
+  border-radius: 0;
+  color: #fff;
+  height: 30px;
+  font-size: 12px;
+  // @media only screen
+  // and (min-width : 1920px) {
+    height: 34px;
+    font-size: 14px;
+  // }
+  // @media only screen
+  // and (min-width : 2556px) {
+
+  // }
+  &--height-ft-inc {
+    width: 40px;
+    text-align: center;
+  }
+  &--height-ft-inc-reg {
+    width: 60px;
+    text-align: center;
+  }  
+  &--register-year {
+    width: 68px;
+    text-align: center;
+  }  
+  &--register-gender {
+    width: 150px;
+    text-align: center;
+  }   
+  &--athlete-name {
+    width: 100%;
+    text-align: center;
+  }   
+  &--bpm {
+    width: 50px;
+    text-align: center;
+  }
+}
+
+.styled-select { 
+     overflow: hidden;
+     select {
+       font-size: 12px;
+       line-height: 1;
+       padding-left: 8px;
+       border: 0;
+       border-radius: 0;
+       height: 34px;
+       -webkit-appearance: none;
+       background: url(/assets/img/sprites.png) no-repeat; 
+       background-position: -155px -289px;
+       background-color: #111;
+       cursor:pointer;
+    }
+     &__height {
+        width: 60px;         
+     } 
+     &__year {
+        width: 80px;
+        background-position: -131px -289px !important;         
+     }     
+     &__gender {
+        width: 161px;       
+        background-position: -53px -288px !important;
+     }    
+    option {
+      cursor:pointer;
+    }
+}    
+
+.cs-select {
+    span {
+      min-width: 60px;
+      height: 34px;
+      padding-left: 20px;
+      padding-top: 9px;      
+      &::after {
+         background: url(/assets/img/arr_down.png) no-repeat;         
+         right: 1em;
+         height: 34px;
+      }      
+    }  
+    &__year {
+      span {
+         width: 80px;
+         height: 34px;       
+      }
+    }
+    &__gender {
+      span {
+         width: 161px;
+         height: 34px;       
+      }
+    }   
+   .cs-options {
+      ul {
+        overflow-x: hidden;
+        // overflow-y: scroll;
+        max-height: 247px;
+        border: 1px solid #73cf15;
+        border-top: none;
+        @media only screen
+        and (max-height : 768px) {
+          max-height: 250px; 
+        }        
+          li:first-child{
+             display: none;
+          } 
+          li {
+            border-top: 1px solid #73cf15;
+             span {
+               padding-left: 0;
+               text-align: center;
+               padding-right: 0px;
+             }
+          }
+      } 
+   }      
+}
+
+.form-control[disabled] {
+  background-color: #111;
+}
+
+.cs-select .cs-options{
+  min-width: 80px;
+}

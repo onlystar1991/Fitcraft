@@ -1,0 +1,248 @@
+<div class="clearfix upload_file_modal">
+
+    <div class="modal-header">
+      <button type="button" class="icon__modal_close" ng-click="close($event)"></button>
+      <h4 class="modal-title" id="myModalLabel">ACCOUNT OPTIONS</h4>
+    </div>
+    <div class="modal-body  clearfix">
+      <form name="accountSetupForm" class="accountSetupForm">
+          <div class="clearfix row-item">
+              <div class="row-item__label row-item__label--account-setup pull-left">NAME</div>
+              <div class="row-item__content row-item__content--account-setup pull-left">
+                  <input class="form-control form-input" type="text" ng-model="user.name" name="field[name]" ng-disabled="disabled.name" value="" >
+              </div>
+              <div class="row-item__btn pull-left">
+                  <button class="btn btn-st-2 btn-green btn-block" ng-hide="disabled.name"  ng-click="save('name')" ng-disabled="!user.name.length">SAVE</button>
+                  <button class="btn btn-st-2 btn-save btn-block" ng-hide="!disabled.name"   ng-click="change('name')"></button>
+              </div>
+          </div>
+          <div class="clearfix row-item">
+              <div class="row-item__label row-item__label--account-setup pull-left">EMAIL </div>
+              <div class="row-item__content row-item__content--account-setup pull-left">
+                  <input class="form-control form-input" type="email" ng-model="user.email" name="email" ng-pattern="/^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,4}$/i" ng-disabled="disabled.email" value="">
+                  <small class="help-block error" ng-show="error.email"><%error.email%></small>
+              </div>
+
+              <div class="row-item__btn pull-left">
+                  <button class="btn btn-st-2 btn-green btn-block" ng-hide="disabled.email"  ng-click="save('email')" ng-disabled="!user.email.length || !accountSetupForm.email.$valid">SAVE</button>
+                  <button class="btn btn-st-2 btn-save btn-block" ng-hide="!disabled.email"   ng-click="change('email')"></button>
+              </div>
+
+          </div>
+          <div class="clearfix row-item">
+              <div class="row-item__label row-item__label--account-setup pull-left">PASSWORD</div>
+              <div class="row-item__content row-item__content--account-setup pull-left">
+                  <input class="form-control form-input" ng-model='no_spaces' type="password" ng-model="user.password" name="field[password]" ng-disabled="disabled.password"  value="">
+                  <small class="help-block error" ng-show="error.password"><%error.password%></small>
+              </div>
+              <div class="row-item__btn pull-left">
+                  <button class="btn btn-st-2 btn-green btn-block" ng-hide="disabled.password"  ng-click="save('password')">SAVE</button>
+                  <button class="btn btn-st-2 btn-save btn-block" ng-hide="!disabled.password"   ng-click="change('password')"></button>
+              </div>
+          </div>
+          <div class="clearfix row-item">
+              <div class="row-item__label row-item__label--account-setup pull-left">CONFIRM PASSWORD</div>
+              <div class="row-item__content row-item__content--account-setup pull-left">
+                  <input class="form-control form-input" type="password" ng-model="user.confirm_password" name="field[confirm_password]" ng-disabled="disabled.password" value="" >
+                  <small class="help-block error" ng-show="error.password"><%error.password%></small>
+              </div>
+          </div>
+
+          <div class="clearfix row-item">
+
+              <div class="row-item__label row-item__label--account-setup pull-left">HOME ZIPCODE</div>
+              <div class="row-item__content row-item__content--account-setup pull-left">
+                  <input class="form-control form-input" type="text" ng-model="user.zip" name="zip" ng-disabled="disabled.zip" value="" wiz-val-zipcode>
+              </div>
+              <div class="row-item__btn pull-left">
+                  <button class="btn btn-st-2 btn-green btn-block" ng-hide="disabled.zip"   ng-disabled="accountSetupForm.zip.$error.wizValZipcode" ng-click="save('zip')">SAVE</button>
+                  <button class="btn btn-st-2 btn-save btn-block"  ng-hide="!disabled.zip"  ng-click="change('zip')"></button>
+              </div>
+          </div>
+
+          <div class="clearfix row-item">
+              <div class="row-item__label row-item__label--account-setup pull-left">ATHLETE NAME</div>
+              <div class="row-item__content row-item__content--account-setup pull-left">
+                  <input class="form-control form-input" type="text" ng-model="user.nickname" name="field[nickname]" ng-disabled="disabled.nickname" value="" >
+                  <small class="help-block error" ng-show="error.nickname"><%error.nickname%></small>
+              </div>
+              <div class="row-item__btn pull-left">
+                  <button class="btn btn-st-2 btn-green btn-block" ng-hide="disabled.nickname"  ng-click="save('nickname')" ng-disabled="!user.nickname">SAVE</button>
+                  <button class="btn btn-st-2 btn-save btn-block" ng-hide="!disabled.nickname"   ng-click="change('nickname')"></button>
+              </div>
+          </div>
+
+          <div class="clearfix row-item">
+              <div class="row-item__label row-item__label--account-setup pull-left">GENDER</div>
+              <div class="row-item__content row-item__content--account-setup pull-left">
+                  <select class="form-control form-input" ng-change="save('gender')" name="field[gender]" ng-model="user.gender" ng-disabled="disabled.gender">
+                      <option value="m">MALE</option>
+                      <option value="f">FEMALE</option>
+                  </select>
+              </div>
+              <div class="row-item__btn pull-left">
+                  <button class="btn btn-st-2 btn-green btn-block" ng-hide="disabled.gender"  ng-click="save('gender')" ng-disabled="!user.gender.length">SAVE</button>
+                  <button class="btn btn-st-2 btn-save btn-block" ng-hide="!disabled.gender"   ng-click="change('gender')"></button>
+              </div>
+          </div>
+
+                    <div class="clearfix row-item">
+              <div class="row-item__label row-item__label--account-setup  pull-left">BIRTH DATE</div>
+              
+
+
+
+
+              <div class="row-item__content row-item__content--register-modal row-item__content--register-modal_wide pull-left">
+                
+                <!-- date row -->
+                <div class="account_date_row">
+                         <select class="form-control form-input" name="day" ng-model="user.birth_day" class="form-input cs-select cs-skin-border">
+                            <option value=""></option>
+                            <option value='01' >1</option><option value='02' >2</option><option value='03' >3</option><option value='04' >4</option><option value='05' >5</option><option value='06' >6</option><option value='07' >7</option><option value='08' >8</option><option value='09' >9</option><option value='10' >10</option><option value='11' >11</option><option value='12' >12</option><option value='13' >13</option><option value='14' >14</option><option value='15' >15</option><option value='16' >16</option><option value='17' >17</option><option value='18' >18</option><option value='19' >19</option><option value='20' >20</option><option value='21' >21</option><option value='22' >22</option><option value='23' >23</option><option value='24' >24</option><option value='25' >25</option><option value='26' >26</option><option value='27' >27</option><option value='28' >28</option><option value='29' >29</option><option value='30' >30</option><option value='31' >31</option>                                   </select>             
+                  <span>
+                      DAY
+                  </span>
+                </div>
+                <!-- date row -->
+                
+                <!-- date row -->
+                <div class="account_date_row">
+                         <select class="form-control form-input" name="month" ng-model="user.birth_month" class="form-input cs-select cs-skin-border">
+                            <option value=""></option>
+                            <option value='01' >1</option><option value='02' >2</option><option value='03' >3</option><option value='04' >4</option><option value='05' >5</option><option value='06' >6</option><option value='07' >7</option><option value='08' >8</option><option value='09' >9</option><option value='10' >10</option><option value='11' >11</option><option value='12' >12</option>                                   </select>
+                  <span>
+                      MONTH
+                  </span>
+                </div>
+                <!-- date row -->
+
+                <!-- date row -->
+                <div class="account_date_row">
+                         <select class="form-control form-input form-control-year" name="year" ng-model="user.birth_year" class="form-input cs-select cs-skin-border cs-select__year">                                     
+                            <option value=""></option>
+                            <option value='1925' >1925</option><option value='1926' >1926</option><option value='1927' >1927</option><option value='1928' >1928</option><option value='1929' >1929</option><option value='1930' >1930</option><option value='1931' >1931</option><option value='1932' >1932</option><option value='1933' >1933</option><option value='1934' >1934</option><option value='1935' >1935</option><option value='1936' >1936</option><option value='1937' >1937</option><option value='1938' >1938</option><option value='1939' >1939</option><option value='1940' >1940</option><option value='1941' >1941</option><option value='1942' >1942</option><option value='1943' >1943</option><option value='1944' >1944</option><option value='1945' >1945</option><option value='1946' >1946</option><option value='1947' >1947</option><option value='1948' >1948</option><option value='1949' >1949</option><option value='1950' >1950</option><option value='1951' >1951</option><option value='1952' >1952</option><option value='1953' >1953</option><option value='1954' >1954</option><option value='1955' >1955</option><option value='1956' >1956</option><option value='1957' >1957</option><option value='1958' >1958</option><option value='1959' >1959</option><option value='1960' >1960</option><option value='1961' >1961</option><option value='1962' >1962</option><option value='1963' >1963</option><option value='1964' >1964</option><option value='1965' >1965</option><option value='1966' >1966</option><option value='1967' >1967</option><option value='1968' >1968</option><option value='1969' >1969</option><option value='1970' >1970</option><option value='1971' >1971</option><option value='1972' >1972</option><option value='1973' >1973</option><option value='1974' >1974</option><option value='1975' >1975</option><option value='1976' >1976</option><option value='1977' >1977</option><option value='1978' >1978</option><option value='1979' >1979</option><option value='1980' >1980</option><option value='1981' >1981</option><option value='1982' >1982</option><option value='1983' >1983</option><option value='1984' >1984</option><option value='1985' >1985</option><option value='1986' >1986</option><option value='1987' >1987</option><option value='1988' >1988</option><option value='1989' >1989</option><option value='1990' >1990</option><option value='1991' >1991</option><option value='1992' >1992</option><option value='1993' >1993</option><option value='1994' >1994</option><option value='1995' >1995</option><option value='1996' >1996</option><option value='1997' >1997</option><option value='1998' >1998</option><option value='1999' >1999</option><option value='2000' >2000</option>                                   </select>             
+                  <span>
+                      YEAR
+                  </span>
+                </div>
+                <!-- date row -->
+
+              </div>
+
+
+
+
+              <!-- <div class="row-item__btn pull-left">
+                  <button class="btn btn-st-2 btn-green btn-block" ng-hide="disabled.dob" ng-disabled="!accountSetupForm.dob.$valid || !user.dob.length "  ng-click="save('dob')">SAVE</button>
+
+                  <button class="btn btn-st-2 btn-save btn-block" ng-hide="!disabled.dob"   ng-click="change('dob')"></button>
+              </div> -->
+          </div>
+
+
+        <div class="clearfix row-item">
+            <div class="row-item__label row-item__label--account-setup pull-left">HEIGHT</div>
+            <div class="row-item__content row-item__content--account-setup pull-left">
+                <div class="pull-left">
+                    <input type="text" class="form-control form-input form-input--height-ft-inc" mask="9" ng-model="user.height_ft" name=""  ng-disabled="disabled.height" ng-hide="!showImperial" >
+                    <input type="text" class="form-control form-input form-input--height-ft-inc" mask="9" ng-model="user.height_m" name=""  ng-disabled="disabled.height" ng-show="!showImperial" >
+                </div>
+                <div class="pull-left row-item__content-text row-item__content-text-ft"><%units.height_1%> <i class="icon__arrow icon__arrow--top-4 arrow__down" ng-click="unitsShow(true)" ></i></div>
+
+                <div class="pull-left">
+                    <input type="text" class="form-control form-input form-input--height-ft-inc"  mask="99?" ng-model="user.height_inc" ng-disabled="disabled.height" ng-hide="!showImperial">
+                    <input type="text" class="form-control form-input form-input--height-ft-inc"  mask="99?" ng-model="user.height_cm" ng-disabled="disabled.height" ng-show="!showImperial" >
+                </div>
+                <div class="pull-left row-item__content-text"><%units.height_2%><i class="icon__arrow icon__arrow--top-4 arrow__down" ng-click="unitsShow(true)"></i></div>
+
+            </div>
+            <div class="row-item__btn pull-left">
+              <button class="btn btn-st-2 btn-green btn-block" ng-hide="disabled.height"  ng-click="save('height')" >SAVE</button>
+              <button class="btn btn-st-2 btn-save btn-block"  ng-hide="!disabled.height" ng-click="change('height')"></button>
+            </div>
+        </div>
+        <div class="clearfix row-item">
+            <div class="row-item__label row-item__label--account-setup pull-left">WEIGHT</div>
+            <div class="row-item__content row-item__content--account-setup pull-left">
+                <div class="pull-left">
+                    <input type="text" class="form-control form-input form-input--bpm " ng-model="user.weight" ng-disabled="disabled.weight" ng-hide="!showImperial">
+                    <input type="text" class="form-control form-input form-input--bpm " ng-model="user.weight_kg" ng-disabled="disabled.weight" ng-show="!showImperial">
+                </div>
+                <div class="pull-left row-item__content-text row-item__content-text-ft"><%units.weight%><i class="icon__arrow icon__arrow--top-4 arrow__down" ng-click="unitsShow(true)"></i></div>
+            </div>
+            <div class="row-item__btn pull-left">
+              <button class="btn btn-st-2 btn-green btn-block" ng-hide="disabled.weight"  ng-click="save('weight')">SAVE</button>
+              <button class="btn btn-st-2 btn-save btn-block"  ng-hide="!disabled.weight" ng-click="change('weight')"></button>
+            </div>
+        </div>
+          
+
+          <div class="clearfix row-item">
+              <div class="row-item__label row-item__label--account-setup pull-left">ACCOUNT STATUS</div>
+              <div class="row-item__content row-item__content--account-setup row-item__content--account-setup__text pull-left">
+                  <%user.status%>
+              </div>
+              <!--<div class="row-item__btn pull-left">-->
+                  <!--<button class="btn btn-st-2 btn-green btn-block" ng-hide="disabled.athelete_name"  ng-click="save('athelete_name')" ng-disabled="!user.password.athelete_name">SAVE</button>-->
+                  <!--<button class="btn btn-st-2 btn-save btn-block" ng-hide="!disabled.athelete_name"   ng-click="change('athelete_name')"></button>-->
+              <!--</div>-->
+          </div>
+          <div class="clearfix row-item">
+              <div class="row-item__label row-item__label--account-setup pull-left">MEMBER SINCE</div>
+              <div class="row-item__content row-item__content--account-setup row-item__content--account-setup__text pull-left text-uppercase">
+                  <%user.member%>
+              </div>
+          </div>
+      </form>
+    </div>
+    <div class="clearfix ride_search_advanced_label" ng-click="toggle = !toggle">
+        ADVANCED OPTIONS <i class="icon__arrow arrow__down"></i>
+    </div>
+    <div class="clearfix animation" ng-show="toggle">
+        <div class="clearfix ridesearch_header_info text-center">HEART RATE</div>
+        <div class="modal-body clearfix">
+            <div class="clearfix row-item">
+                <div class="row-item__label row-item__label--account-heart pull-left">LACTATE THRESHOLD HEART RATE</div>
+                <div class="row-item__content row-item__content--account-heart pull-left">
+                    <div class="pull-left">
+                        <input type="text" class="form-control form-input form-input--bpm" ng-model="user.heart_rate" ng-disabled="disabled.heart_rate" mask="999?">
+                    </div>
+                    <div class="pull-left row-item__content-text row-item__content-text-ft green">BPM <i class="icon__arrow icon__arrow--top-4 arrow__down"></i></div>
+                </div>
+                <div class="row-item__btn pull-left">
+                    <button class="btn btn-st-2 btn-green btn-block" ng-hide="disabled.heart_rate"  ng-disabled="user.heart_rate.length <= 1 "  ng-click="save('heart_rate')">SAVE</button>
+                    <button class="btn btn-st-2 btn-save btn-block"  ng-hide="!disabled.heart_rate" ng-click="change('heart_rate')"></button>
+                </div>
+            </div>
+            <div class="clearfix row-account-info">
+                LACTATE THRESHOLD HEART RATE IS YOUR AVERAGE HEART RATE DURING A 30 MINUTE RACE.  TO
+                FIND THIS NUMBER YOU CAN PERFORM A 30 MINUTE WORKOUT AT RACE PACE AND ENTER YOUR AVG
+                HEART RATE.
+            </div>
+        </div>
+
+        <div class="clearfix ridesearch_header_info text-center">POWER</div>
+        <div class="modal-body clearfix">
+            <div class="clearfix row-item">
+                <div class="row-item__label row-item__label--account-heart pull-left">FUNCTIONAL THRESHOLD POWER</div>
+                <div class="row-item__content row-item__content--account-heart pull-left">
+                    <div class="pull-left">
+                        <input type="text" class="form-control form-input form-input--bpm" ng-model="user.power" name="power" ng-disabled="disabled.power" mask="999?">
+                    </div>
+                    <div class="pull-left row-item__content-text row-item__content-text-ft green mr-10">W <i class="icon__arrow icon__arrow--top-4 arrow__down"></i></div>
+                </div>
+                <div class="row-item__btn pull-left">
+                    <button class="btn btn-st-2 btn-green btn-block" ng-hide="disabled.power" ng-disabled="user.power.length <= 1 "  ng-click="save('power')">SAVE</button>
+                    <button class="btn btn-st-2 btn-save btn-block"  ng-hide="!disabled.power" ng-click="change('power')"></button>
+                </div>
+            </div>
+            <div class="clearfix row-account-info">
+                FUNCTIONAL THRESHOLD POWER IS YOUR AVERAGE POWER DURING A 30 MINUTE RACE.  TO
+                FIND THIS NUMBER YOU CAN PERFORM A 30 MINUTE WORKOUT AT RACE PACE AND ENTER YOUR AVG
+                POWER.
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer"></div>
+</div>

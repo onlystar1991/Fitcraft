@@ -1,0 +1,180 @@
+@import "_fonts";
+@import "_main";
+@import "_icons";
+
+@import "_media";
+@import "_modal";
+
+
+@import "blocks/_input";
+@import "blocks/_row";
+@import "blocks/_btn";
+@import "blocks/_block-header";
+
+@import "blocks/_cards"; // modal player cards
+@import "blocks/_trophy-case"; //modal trophy-case
+@import "blocks/_ridedetails";
+
+@import "blocks/_margin";
+@import "blocks/_padding";
+@import "blocks/_login_modal";
+@import "blocks/_register_modal";
+@import "blocks/_objectives_modal";
+
+@import "blocks/_datepicker";
+@import "blocks/_chart";
+@import "blocks/_icons_cards";
+@import "blocks/_upload_completed";
+
+.modal-backdrop {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+.modal-body-ng {
+  padding: 8px !important;
+}
+.error {
+  color: red;
+  font-size: 11px;
+}
+.color-achievement,
+.color-Achievement{
+  color: #ff7901;
+}
+.color-level,
+.color-Level{
+  color: #73cf15;
+}
+.color-card,
+.color-Card{
+  color: #ffe11b;
+}
+.color-award,
+.color-Award{
+  color: #ffa800;
+}
+.color-objective,
+.color-Objective{
+  color: #73cf15;
+}
+.toggle-trophy-case{
+  position: absolute;
+  top: 47px;
+  left: 50%;
+  margin-right: -6px;
+  @media only screen
+  and (min-width: 1920px) {
+    top: 53px;
+    margin-right: -8px;
+  }
+  @media only screen
+  and (min-width : 2556px) {
+    top: 53px;
+    margin-right: -8px;
+  }
+}
+.animation {
+  -webkit-transition:all linear 0.3s;
+  -moz-transition:all linear 0.3s;
+  -ms-transition:all linear 0.3s;
+  -o-transition:all linear 0.3s;
+  transition:all linear 0.3s;
+}
+.scroller {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  position: relative; 
+}
+
+.chart-container .highcharts-grid {
+  display: none;
+}
+
+.dropdown-menu {
+  z-index: 9999;
+}
+//remember-my-position-dropped {
+//  width: 54px;
+//  height: 54px;
+//  display: block;
+//  float: left;
+//  margin: 4px;
+//}
+//#rankDrag {
+//  width: 54px;
+//  height: 54px;
+//}
+.remember-my-position-dropped {
+   position:absolute;
+   right:0;
+   margin-top:-40px;
+   margin-right:20px;
+   color: red;
+ }
+.remember-my-position-hover {
+  position:absolute;
+  right:0;
+  top:-100000000px;
+  color:green;
+  text-indent: 1000;
+}
+
+
+#container3 {
+  float:left;
+  width:100%;
+  background:green;
+  overflow:hidden;
+  position:relative;
+}
+#container2 {
+  float:left;
+  width:100%;
+  background:yellow;
+  position:relative;
+  right:30%;
+}
+#container1 {
+  float:left;
+  width:100%;
+  background:red;
+  position:relative;
+  right:40%;
+  width: 320px;
+}
+#col1 {
+  float:left;
+  width:26%;
+  position:relative;
+  left:72%;
+  overflow:hidden;
+}
+#col2 {
+  float:left;
+  width:36%;
+  position:relative;
+  left:76%;
+  overflow:hidden;
+}
+#col3 {
+  float:left;
+  width:26%;
+  position:relative;
+  left:80%;
+  overflow:hidden;
+}
+/* 10.06.2015 */ 
+.mr-20 {
+  margin-right: 20px;
+}
+.mr-10 {
+  margin-right: 10px;
+}
+.lh-25 {
+  line-height: 25px;
+}
+
+.hide {
+  display:none;
+}

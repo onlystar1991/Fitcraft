@@ -1,0 +1,134 @@
+<div class="clearfix upload_file_modal">
+    <div class="modal-header">
+      <button type="button" class="icon__modal_close" ng-click="close($event)"></button>
+      <h4 class="modal-title" id="myModalLabel">ATHLETE SETUP</h4>
+    </div>
+    <div class="modal-body  clearfix upload_file_modal ">
+    <div class="cleafix">
+        <div class="ride_setup_item">
+            <div class="clearfix">
+                <div class="pull-left">RIDER NAME</div>
+                <div class="form-control-container form-control-container__ridesetup form-control-container__ridesetup__ridename pull-left">
+                    <input class="form-control" type="text" ng-model="user.nickname" name="field[nickname]" ng-disabled="disabled.nickname" />
+                </div>
+                <div class="pull-left ">
+                  <button class="btn btn-st-2 btn-green" ng-hide="disabled.nickname"  ng-click="save('nickname')" ng-disabled="!user.nickname.length">SAVE</button>
+                  <button class="btn btn-st-2 btn-grey"  ng-hide="!disabled.nickname" ng-click="change('nickname')">EDIT</button>
+                </div>
+            </div>
+        </div>
+      <div class="ride_setup_item">
+          <div class="ride_setup_col_2">
+              <div class="pull-left">HEIGHT</div>
+              <div class="form-control-container form-control-container__ridesetup form-control-container__ridesetup__height pull-left">
+                  <input class="form-control" type="text"/>
+              </div>
+              <div class="pull-left green">FT</div>
+              <div class="form-control-container form-control-container__ridesetup form-control-container__ridesetup__height pull-left">
+                  <input class="form-control" type="text"/>
+              </div>
+              <div class="pull-left green">INCH</div>
+          </div>
+          <div class="ride_setup_col_2 pad-r-30">
+              <div class="pull-right green">LBS</div>
+              <div class="form-control-container form-control-container__ridesetup form-control-container__ridesetup__height pull-right">
+                  <input class="form-control" type="text"/>
+              </div>
+              <div class="pull-right">WEIGHT</div>
+          </div>
+      </div>
+      <div class="ride_setup_item">
+          <div class="ride_setup_col_2">
+              <div class="pull-left">HEART RATE ZONE 1</div>
+              <div class="form-control-container form-control-container__ridesetup pull-left">
+                  <input class="form-control" type="text"/>
+              </div>
+              <div class="pull-left green">BPM</div>
+          </div>
+          <div class="ride_setup_col_2">
+              <div class="pull-left pad-l-34">POWER ZONE 1</div>
+              <div class="form-control-container form-control-container__ridesetup form-control-container__ridesetup__watts pull-left">
+                  <input class="form-control" type="text"/>
+              </div>
+              <div class="pull-left green">W</div>
+          </div>
+      </div>
+      <div class="ride_setup_item">
+          <div class="ride_setup_col_2">
+              <div class="pull-left">HEART RATE ZONE 2</div>
+              <div class="form-control-container form-control-container__ridesetup pull-left">
+                  <input class="form-control" type="text"/>
+              </div>
+              <div class="pull-left green">BPM</div>
+          </div>
+          <div class="ride_setup_col_2">
+              <div class="pull-left pad-l-34">POWER ZONE 2</div>
+              <div class="form-control-container form-control-container__ridesetup form-control-container__ridesetup__watts pull-left">
+                  <input class="form-control" type="text"/>
+              </div>
+              <div class="pull-left green">W</div>
+          </div>
+      </div>
+      <div class="ride_setup_item">
+          <div class="ride_setup_col_2">
+              <div class="pull-left">HEART RATE ZONE 3</div>
+              <div class="form-control-container form-control-container__ridesetup pull-left">
+                  <input class="form-control" type="text"/>
+              </div>
+              <div class="pull-left green">BPM</div>
+          </div>
+          <div class="ride_setup_col_2">
+              <div class="pull-left pad-l-34">POWER ZONE 3</div>
+              <div class="form-control-container form-control-container__ridesetup form-control-container__ridesetup__watts pull-left">
+                  <input class="form-control" type="text"/>
+              </div>
+              <div class="pull-left green">W</div>
+          </div>
+      </div>
+      <div class="ride_setup_item">
+          <div class="ride_setup_col_2">
+              <div class="pull-left">HEART RATE ZONE 4</div>
+              <div class="form-control-container form-control-container__ridesetup pull-left">
+                  <input class="form-control" type="text"/>
+              </div>
+              <div class="pull-left green">BPM</div>
+          </div>
+          <div class="ride_setup_col_2">
+              <div class="pull-left pad-l-34">POWER ZONE 4</div>
+              <div class="form-control-container form-control-container__ridesetup form-control-container__ridesetup__watts pull-left">
+                  <input class="form-control" type="text"/>
+              </div>
+              <div class="pull-left green">W</div>
+          </div>
+      </div>
+      <div class="ride_setup_item">
+          <div class="ride_setup_col_2">
+              <div class="pull-left ">HEART RATE ZONE 5</div>
+              <div class="form-control-container form-control-container__ridesetup pull-left">
+                  <input class="form-control" type="text"/>
+              </div>
+              <div class="pull-left green">BPM</div>
+          </div>
+          <div class="ride_setup_col_2">
+              <div class="pull-left pad-l-34">POWER ZONE 5</div>
+              <div class="form-control-container form-control-container__ridesetup form-control-container__ridesetup__watts pull-left">
+                  <input class="form-control" type="text"/>
+              </div>
+              <div class="pull-left green">W</div>
+          </div>
+      </div>
+      <div class="ride_setup_item">
+          <div class="ride_setup_col_2 text-center">
+              <button class="btn btn-st-2 btn-green">ESTIMATE</button>
+          </div>
+          <div class="ride_setup_col_2 text-center">
+                  <button class="btn btn-st-2 btn-green">ESTIMATE</button>
+          </div>
+      </div>
+      <div class="ride_setup_item text-center">
+          <button class="btn btn-st-2 btn-green"  data-toggle="modal" data-target="#rideDetailsModal">SAVE</button>
+      </div>
+    </div>
+</div>
+<div class="modal-footer"></div>
+</div>

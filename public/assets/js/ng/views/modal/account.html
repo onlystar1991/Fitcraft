@@ -1,0 +1,376 @@
+<div class="clearfix upload_file_modal">
+
+    <div class="modal-header">
+      <button type="button" class="icon__modal_close" ng-click="close($event)"></button>
+      <h4 class="modal-title" id="myModalLabel">ACCOUNT OPTIONS</h4>
+    </div>
+    <div class="modal-body  clearfix">
+      <form name="accountSetupForm" class="accountSetupForm">
+
+          <!-- separate row -->
+          <div class="clearfix row-item">
+              <div class="row-item__label row-item__label--account-setup pull-left">FIRST NAME</div>
+              <div class="row-item__content row-item__content--account-setup pull-left">
+                  <input class="form-control form-input" type="text" ng-model="user.name" name="field[name]" ng-disabled="disabled.name" value="" >
+              </div>
+              <div class="row-item__btn pull-left">
+                  <button class="btn btn-st-2 btn-green btn-block" ng-hide="disabled.name"  ng-click="save('name')" ng-disabled="!user.name.length">SAVE</button>
+                  <button class="btn btn-st-2 btn-save btn-block" ng-hide="!disabled.name"   ng-click="change('name')"></button>
+              </div>
+          </div> 
+          <!-- /separate row -->
+
+          <!-- separate row -->
+          <div class="clearfix row-item">
+              <div class="row-item__label row-item__label--account-setup pull-left">LAST NAME</div>
+              <div class="row-item__content row-item__content--account-setup pull-left">
+                  <input class="form-control form-input" type="text" ng-model="user.last_name" name="field[last_name]" ng-disabled="disabled.last_name" value="" >
+              </div>
+              <div class="row-item__btn pull-left">
+                  <button class="btn btn-st-2 btn-green btn-block" ng-hide="disabled.last_name"  ng-click="save('last_name')" ng-disabled="!user.last_name.length">SAVE</button>
+                  <button class="btn btn-st-2 btn-save btn-block" ng-hide="!disabled.last_name"   ng-click="change('last_name')"></button>
+              </div>
+          </div> 
+          <!-- /separate row -->
+
+          <!-- separate row -->
+          <div class="clearfix row-item">
+              <div class="row-item__label row-item__label--account-setup pull-left">EMAIL </div>
+              <div class="row-item__content row-item__content--account-setup pull-left">
+                  <input class="form-control form-input" type="email" ng-model="user.email" name="email" ng-pattern="/^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,4}$/i" ng-disabled="disabled.email" value="">
+                  <small class="help-block error" ng-show="error.email"><%error.email%></small>
+              </div>
+
+              <div class="row-item__btn pull-left">
+                  <button class="btn btn-st-2 btn-green btn-block" ng-hide="disabled.email"  ng-click="save('email')" ng-disabled="!user.email.length || !accountSetupForm.email.$valid">SAVE</button>
+                  <button class="btn btn-st-2 btn-save btn-block" ng-hide="!disabled.email"   ng-click="change('email')"></button>
+              </div>
+
+          </div>
+          <!-- /separate row -->
+
+          <!-- separate row -->
+          <div class="clearfix row-item">
+              <div class="row-item__label row-item__label--account-setup pull-left">PASSWORD</div>
+              <div class="row-item__content row-item__content--account-setup pull-left">
+                  <input class="form-control form-input" type="password" ng-model="user.password" name="field[password]" ng-disabled="disabled.password"  value="">
+                  <small class="help-block error" ng-show="error.password"><%error.password%></small>
+              </div>
+              <div class="row-item__btn pull-left">
+                  <button class="btn btn-st-2 btn-green btn-block" ng-hide="disabled.password"  ng-click="save('password')">SAVE</button>
+                  <button class="btn btn-st-2 btn-save btn-block" ng-hide="!disabled.password"   ng-click="change('password')"></button>
+              </div>
+          </div>
+          <!-- /separate row -->
+
+          <!-- separate row -->
+          <div class="clearfix row-item">
+              <div class="row-item__label row-item__label--account-setup pull-left">CONFIRM PASSWORD</div>
+              <div class="row-item__content row-item__content--account-setup pull-left">
+                  <input class="form-control form-input" type="password" ng-model="user.confirm_password" name="field[confirm_password]" ng-disabled="disabled.password" value="" >
+                  <small class="help-block error" ng-show="error.password"><%error.password%></small>
+              </div>
+          </div>
+          <!-- /separate row -->
+          
+          <!-- separate row -->
+          <div class="clearfix row-item">
+
+              <div class="row-item__label row-item__label--account-setup pull-left">HOME ZIPCODE</div>
+              <div class="row-item__content row-item__content--account-setup pull-left">
+                  <input class="form-control form-input" type="text" ng-model="user.zip" name="zip" ng-disabled="disabled.zip" value="" wiz-val-zipcode>
+              </div>
+              <div class="row-item__btn pull-left">
+                  <button class="btn btn-st-2 btn-green btn-block" ng-hide="disabled.zip"   ng-disabled="accountSetupForm.zip.$error.wizValZipcode" ng-click="save('zip')">SAVE</button>
+                  <button class="btn btn-st-2 btn-save btn-block"  ng-hide="!disabled.zip"  ng-click="change('zip')"></button>
+              </div>
+          </div>
+          <!-- /separate row -->
+
+
+          <!-- separate row -->
+          <div class="clearfix row-item">
+              <div class="row-item__label row-item__label--account-setup pull-left">ATHLETE NAME</div>
+              <div class="row-item__content row-item__content--account-setup pull-left">
+                  <input class="form-control form-input" type="text" ng-model="user.nickname" name="field[nickname]" ng-disabled="disabled.nickname" value="" >
+                  <small class="help-block error" ng-show="error.nickname"><%error.nickname%></small>
+              </div>
+              <div class="row-item__btn pull-left">
+                  <button class="btn btn-st-2 btn-green btn-block" ng-hide="disabled.nickname"  ng-click="save('nickname')" ng-disabled="!user.nickname">SAVE</button>
+                  <button class="btn btn-st-2 btn-save btn-block" ng-hide="!disabled.nickname"   ng-click="change('nickname')"></button>
+              </div>
+          </div>
+          <!-- /separate row -->
+          
+          <!-- separate row -->
+          <div class="clearfix row-item">
+              <div class="row-item__label row-item__label--account-setup pull-left">GENDER</div>
+              <div class="row-item__content row-item__content--account-setup pull-left">
+                <div class="select-style-arr" style="width: 145px;">
+                  <select class="form-control form-input" ng-change="save('gender')"  name="field[gender]" ng-model="user.gender">
+                      <option value="m">MALE</option>
+                      <option value="f">FEMALE</option>
+                  </select>
+                </div>
+              </div>
+          </div>
+          <!-- /separate row -->
+
+          <!-- separate row -->
+          <div class="clearfix row-item">
+              <div class="row-item__label row-item__label--account-setup  pull-left">BIRTH DATE</div>
+
+              <div class="row-item__content row-item__content--register-modal row-item__content--register-modal_wide pull-left">
+                
+                <!-- date row -->
+                <div class="account_date_row">
+                  <div class="select-style-arr form-control">
+                         <select class="form-input widder" name="day" ng-change="save('dob')" ng-model="user.birth_day" class="form-input cs-select cs-skin-border">
+                            <option value=""></option>
+                            <option value='01' >1</option><option value='02' >2</option><option value='03' >3</option><option value='04' >4</option><option value='05' >5</option><option value='06' >6</option><option value='07' >7</option><option value='08' >8</option><option value='09' >9</option><option value='10' >10</option><option value='11' >11</option><option value='12' >12</option><option value='13' >13</option><option value='14' >14</option><option value='15' >15</option><option value='16' >16</option><option value='17' >17</option><option value='18' >18</option><option value='19' >19</option><option value='20' >20</option><option value='21' >21</option><option value='22' >22</option><option value='23' >23</option><option value='24' >24</option><option value='25' >25</option><option value='26' >26</option><option value='27' >27</option><option value='28' >28</option><option value='29' >29</option><option value='30' >30</option><option value='31' >31</option>                                   </select>     
+                    </div>        
+                  <span>
+                      DAY
+                  </span>
+                </div>
+                <!-- date row -->
+                
+                <!-- date row -->
+                <div class="account_date_row">
+                  <div class="select-style-arr form-control">
+                         <select class="widder form-input" name="month" ng-change="save('dob')" ng-model="user.birth_month" class="form-input cs-select cs-skin-border">
+                            <option value=""></option>
+                            <option value='01' >1</option><option value='02' >2</option><option value='03' >3</option><option value='04' >4</option><option value='05' >5</option><option value='06' >6</option><option value='07' >7</option><option value='08' >8</option><option value='09' >9</option><option value='10' >10</option><option value='11' >11</option><option value='12' >12</option>                                   </select>
+                  </div>
+                  <span>
+                      MONTH
+                  </span>
+                </div>
+                <!-- date row -->
+
+                <!-- date row -->
+                <div class="account_date_row">
+                  <div class="select-style-arr form-control form-control-year">
+                         <select class="form-control form-input widder" name="year" ng-change="save('dob')" ng-model="user.birth_year" class="form-input cs-select cs-skin-border cs-select__year">                                     
+                            <option value=""></option>
+                            <option value='1925' >1925</option><option value='1926' >1926</option><option value='1927' >1927</option><option value='1928' >1928</option><option value='1929' >1929</option><option value='1930' >1930</option><option value='1931' >1931</option><option value='1932' >1932</option><option value='1933' >1933</option><option value='1934' >1934</option><option value='1935' >1935</option><option value='1936' >1936</option><option value='1937' >1937</option><option value='1938' >1938</option><option value='1939' >1939</option><option value='1940' >1940</option><option value='1941' >1941</option><option value='1942' >1942</option><option value='1943' >1943</option><option value='1944' >1944</option><option value='1945' >1945</option><option value='1946' >1946</option><option value='1947' >1947</option><option value='1948' >1948</option><option value='1949' >1949</option><option value='1950' >1950</option><option value='1951' >1951</option><option value='1952' >1952</option><option value='1953' >1953</option><option value='1954' >1954</option><option value='1955' >1955</option><option value='1956' >1956</option><option value='1957' >1957</option><option value='1958' >1958</option><option value='1959' >1959</option><option value='1960' >1960</option><option value='1961' >1961</option><option value='1962' >1962</option><option value='1963' >1963</option><option value='1964' >1964</option><option value='1965' >1965</option><option value='1966' >1966</option><option value='1967' >1967</option><option value='1968' >1968</option><option value='1969' >1969</option><option value='1970' >1970</option><option value='1971' >1971</option><option value='1972' >1972</option><option value='1973' >1973</option><option value='1974' >1974</option><option value='1975' >1975</option><option value='1976' >1976</option><option value='1977' >1977</option><option value='1978' >1978</option><option value='1979' >1979</option><option value='1980' >1980</option><option value='1981' >1981</option><option value='1982' >1982</option><option value='1983' >1983</option><option value='1984' >1984</option><option value='1985' >1985</option><option value='1986' >1986</option><option value='1987' >1987</option><option value='1988' >1988</option><option value='1989' >1989</option><option value='1990' >1990</option><option value='1991' >1991</option><option value='1992' >1992</option><option value='1993' >1993</option><option value='1994' >1994</option><option value='1995' >1995</option><option value='1996' >1996</option><option value='1997' >1997</option><option value='1998' >1998</option><option value='1999' >1999</option><option value='2000' >2000</option>                                   </select>
+                    </div>             
+                  <span>
+                      YEAR
+                  </span>
+                </div>
+                <!-- date row -->
+
+              </div>
+
+          </div>
+          <!-- separate row -->
+
+          <!-- separate row -->
+          <div class="clearfix row-item">
+              <div class="row-item__label row-item__label--account-setup  pull-left">HEIGHT</div>
+
+              <div class="row-item__content row-item__content--register-modal row-item__content--register-modal_wide pull-left">
+                
+                <!-- date row -->
+                <div class="account_date_row">
+                  <div class="select-style-arr form-control">
+                         <select class="widder form-input" ng-change="save('height_ft')" ng-model="user.height_ft" ng-hide="!showImperial" class="form-input cs-select cs-skin-border">
+                              <option value='1' >1</option><option value='2' >2</option><option value='3' >3</option><option value='4' >4</option><option value='5' >5</option><option value='6' >6</option>                                   
+                          </select>     
+
+                          <select class="widder form-input" ng-change="save('height_m')" ng-model="user.height_m" ng-show="!showImperial" class="form-input cs-select cs-skin-border">
+                              <option value='0' >0</option><option value='1' >1</option><option value='2' >2</option><option value='3' >3</option>                                
+                          </select>    
+                  </div>         
+                  <span>
+                      <%units.height_1%>
+                  </span>
+                </div>
+                <!-- date row -->
+                
+                <!-- date row -->
+                <div class="account_date_row">
+                  <div class="select-style-arr form-control">
+                         <select class="widder form-input" ng-change="save('height_inc')"  ng-model="user.height_inc" ng-hide="!showImperial" class="form-input cs-select cs-skin-border">
+                            <option value='0' >0</option><option value='1' >1</option><option value='2' >2</option><option value='3' >3</option><option value='4' >4</option><option value='5' >5</option><option value='6' >6</option><option value='7' >7</option><option value='8' >8</option><option value='9' >9</option><option value='10' >10</option><option value='11' >11</option>                                    
+                          </select>
+                          <select class="widder form-input" ng-change="save('height_cm')"  ng-model="user.height_cm" ng-show="!showImperial" class="form-input cs-select cs-skin-border">
+                            <option value='0' >0</option><option value='1' >1</option><option value='2' >2</option><option value='3' >3</option><option value='4' >4</option><option value='5' >5</option><option value='6' >6</option><option value='7' >7</option><option value='8' >8</option><option value='9' >9</option><option value='10'>10</option><option value='11'>11</option><option value='12'>12</option><option value='13'>13</option><option value='14'>14</option><option value='15'>15</option><option value='16'>16</option><option value='17'>17</option><option value='18'>18</option><option value='19'>19</option><option value='20'>20</option><option value='21'>21</option><option value='22'>22</option><option value='23'>23</option><option value='24'>24</option><option value='25'>25</option><option value='26'>26</option><option value='27'>27</option><option value='28'>28</option><option value='29'>29</option><option value='30'>30</option><option value='31'>31</option><option value='32'>32</option><option value='33'>33</option><option value='34'>34</option><option value='35'>35</option><option value='36'>36</option><option value='37'>37</option><option value='38'>38</option><option value='39'>39</option><option value='40'>40</option><option value='41'>41</option><option value='42'>42</option><option value='43'>43</option><option value='44'>44</option><option value='45'>45</option><option value='46'>46</option><option value='47'>47</option><option value='48'>48</option><option value='49'>49</option><option value='50'>50</option><option value='51'>51</option><option value='52'>52</option><option value='53'>53</option><option value='54'>54</option><option value='55'>55</option><option value='56'>56</option><option value='57'>57</option><option value='58'>58</option><option value='59'>59</option><option value='60'>60</option><option value='61'>61</option><option value='62'>62</option><option value='63'>63</option><option value='64'>64</option><option value='65'>65</option><option value='66'>66</option><option value='67'>67</option><option value='68'>68</option><option value='69'>69</option><option value='70'>70</option><option value='71'>71</option><option value='72'>72</option><option value='73'>73</option><option value='74'>74</option><option value='75'>75</option><option value='76'>76</option><option value='77'>77</option><option value='78'>78</option><option value='79'>79</option><option value='80'>80</option><option value='81'>81</option><option value='82'>82</option><option value='83'>83</option><option value='84'>84</option><option value='85'>85</option><option value='86'>86</option><option value='87'>87</option><option value='88'>88</option><option value='89'>89</option><option value='90'>90</option><option value='91'>91</option><option value='92'>92</option><option value='93'>93</option><option value='94'>94</option><option value='95'>95</option><option value='96'>96</option><option value='97'>97</option><option value='98'>98</option><option value='99'>99</option>                                  
+                          </select>
+                    </div>
+                  <span>
+                      <%units.height_2%>
+                  </span>
+                </div>
+                <!-- date row -->
+
+              </div>
+
+          </div>
+          <!-- separate row -->
+
+          <!-- separate row -->
+          <div class="clearfix row-item">
+              <div class="row-item__label row-item__label--account-setup  pull-left">WEIGHT</div>
+
+              <div class="row-item__content row-item__content--register-modal row-item__content--register-modal_wide pull-left">
+                
+                <!-- date row -->
+                <div class="account_date_row">
+                  <div class="select-style-arr form-control">
+                         <select class="widder form-input" ng-change="save('weight')" ng-model="user.weight" ng-hide="!showImperial" class="form-input cs-select cs-skin-border">
+                              <option value='0' >0</option><option value='1' >1</option><option value='2' >2</option><option value='3' >3</option><option value='4' >4</option><option value='5' >5</option><option value='6' >6</option><option value='7' >7</option><option value='8' >8</option><option value='9' >9</option><option value='10' >10</option><option value='11' >11</option><option value='12' >12</option><option value='13' >13</option><option value='14' >14</option><option value='15' >15</option><option value='16' >16</option><option value='17' >17</option><option value='18' >18</option><option value='19' >19</option><option value='20' >20</option><option value='21' >21</option><option value='22' >22</option><option value='23' >23</option><option value='24' >24</option><option value='25' >25</option><option value='26' >26</option><option value='27' >27</option><option value='28' >28</option><option value='29' >29</option><option value='30' >30</option><option value='31' >31</option><option value='32' >32</option><option value='33' >33</option><option value='34' >34</option><option value='35' >35</option><option value='36' >36</option><option value='37' >37</option><option value='38' >38</option><option value='39' >39</option><option value='40' >40</option><option value='41' >41</option><option value='42' >42</option><option value='43' >43</option><option value='44' >44</option><option value='45' >45</option><option value='46' >46</option><option value='47' >47</option><option value='48' >48</option><option value='49' >49</option><option value='50' >50</option><option value='51' >51</option><option value='52' >52</option><option value='53' >53</option><option value='54' >54</option><option value='55' >55</option><option value='56' >56</option><option value='57' >57</option><option value='58' >58</option><option value='59' >59</option><option value='60' >60</option><option value='61' >61</option><option value='62' >62</option><option value='63' >63</option><option value='64' >64</option><option value='65' >65</option><option value='66' >66</option><option value='67' >67</option><option value='68' >68</option><option value='69' >69</option><option value='70' >70</option><option value='71' >71</option><option value='72' >72</option><option value='73' >73</option><option value='74' >74</option><option value='75' >75</option><option value='76' >76</option><option value='77' >77</option><option value='78' >78</option><option value='79' >79</option><option value='80' >80</option><option value='81' >81</option><option value='82' >82</option><option value='83' >83</option><option value='84' >84</option><option value='85' >85</option><option value='86' >86</option><option value='87' >87</option><option value='88' >88</option><option value='89' >89</option><option value='90' >90</option><option value='91' >91</option><option value='92' >92</option><option value='93' >93</option><option value='94' >94</option><option value='95' >95</option><option value='96' >96</option><option value='97' >97</option><option value='98' >98</option><option value='99' >99</option><option value='100' >100</option><option value='101' >101</option><option value='102' >102</option><option value='103' >103</option><option value='104' >104</option><option value='105' >105</option><option value='106' >106</option><option value='107' >107</option><option value='108' >108</option><option value='109' >109</option><option value='110' >110</option><option value='111' >111</option><option value='112' >112</option><option value='113' >113</option><option value='114' >114</option><option value='115' >115</option><option value='116' >116</option><option value='117' >117</option><option value='118' >118</option><option value='119' >119</option><option value='120' >120</option><option value='121' >121</option><option value='122' >122</option><option value='123' >123</option><option value='124' >124</option><option value='125' >125</option><option value='126' >126</option><option value='127' >127</option><option value='128' >128</option><option value='129' >129</option><option value='130' >130</option><option value='131' >131</option><option value='132' >132</option><option value='133' >133</option><option value='134' >134</option><option value='135' >135</option><option value='136' >136</option><option value='137' >137</option><option value='138' >138</option><option value='139' >139</option><option value='140' >140</option><option value='141' >141</option><option value='142' >142</option><option value='143' >143</option><option value='144' >144</option><option value='145' >145</option><option value='146' >146</option><option value='147' >147</option><option value='148' >148</option><option value='149' >149</option><option value='150' >150</option><option value='151' >151</option><option value='152' >152</option><option value='153' >153</option><option value='154' >154</option><option value='155' >155</option><option value='156' >156</option><option value='157' >157</option><option value='158' >158</option><option value='159' >159</option><option value='160' >160</option><option value='161' >161</option><option value='162' >162</option><option value='163' >163</option><option value='164' >164</option><option value='165' >165</option><option value='166' >166</option><option value='167' >167</option><option value='168' >168</option><option value='169' >169</option><option value='170' >170</option><option value='171' >171</option><option value='172' >172</option><option value='173' >173</option><option value='174' >174</option><option value='175' >175</option><option value='176' >176</option><option value='177' >177</option><option value='178' >178</option><option value='179' >179</option><option value='180' >180</option><option value='181' >181</option><option value='182' >182</option><option value='183' >183</option><option value='184' >184</option><option value='185' >185</option><option value='186' >186</option><option value='187' >187</option><option value='188' >188</option><option value='189' >189</option><option value='190' >190</option><option value='191' >191</option><option value='192' >192</option><option value='193' >193</option><option value='194' >194</option><option value='195' >195</option><option value='196' >196</option><option value='197' >197</option><option value='198' >198</option><option value='199' >199</option><option value='200' >200</option><option value='201' >201</option><option value='202' >202</option><option value='203' >203</option><option value='204' >204</option><option value='205' >205</option><option value='206' >206</option><option value='207' >207</option><option value='208' >208</option><option value='209' >209</option><option value='210' >210</option><option value='211' >211</option><option value='212' >212</option><option value='213' >213</option><option value='214' >214</option><option value='215' >215</option><option value='216' >216</option><option value='217' >217</option><option value='218' >218</option><option value='219' >219</option><option value='220' >220</option><option value='221' >221</option><option value='222' >222</option><option value='223' >223</option><option value='224' >224</option><option value='225' >225</option><option value='226' >226</option><option value='227' >227</option><option value='228' >228</option><option value='229' >229</option><option value='230' >230</option><option value='231' >231</option><option value='232' >232</option><option value='233' >233</option><option value='234' >234</option><option value='235' >235</option><option value='236' >236</option><option value='237' >237</option><option value='238' >238</option><option value='239' >239</option><option value='240' >240</option><option value='241' >241</option><option value='242' >242</option><option value='243' >243</option><option value='244' >244</option><option value='245' >245</option><option value='246' >246</option><option value='247' >247</option><option value='248' >248</option><option value='249' >249</option><option value='250' >250</option><option value='251' >251</option><option value='252' >252</option><option value='253' >253</option><option value='254' >254</option><option value='255' >255</option><option value='256' >256</option><option value='257' >257</option><option value='258' >258</option><option value='259' >259</option><option value='260' >260</option><option value='261' >261</option><option value='262' >262</option><option value='263' >263</option><option value='264' >264</option><option value='265' >265</option><option value='266' >266</option><option value='267' >267</option><option value='268' >268</option><option value='269' >269</option><option value='270' >270</option><option value='271' >271</option><option value='272' >272</option><option value='273' >273</option><option value='274' >274</option><option value='275' >275</option><option value='276' >276</option><option value='277' >277</option><option value='278' >278</option><option value='279' >279</option><option value='280' >280</option><option value='281' >281</option><option value='282' >282</option><option value='283' >283</option><option value='284' >284</option><option value='285' >285</option><option value='286' >286</option><option value='287' >287</option><option value='288' >288</option><option value='289' >289</option><option value='290' >290</option><option value='291' >291</option><option value='292' >292</option><option value='293' >293</option><option value='294' >294</option><option value='295' >295</option><option value='296' >296</option><option value='297' >297</option><option value='298' >298</option><option value='299' >299</option><option value='300' >300</option><option value='301' >301</option><option value='302' >302</option><option value='303' >303</option><option value='304' >304</option><option value='305' >305</option><option value='306' >306</option><option value='307' >307</option><option value='308' >308</option><option value='309' >309</option><option value='310' >310</option><option value='311' >311</option><option value='312' >312</option><option value='313' >313</option><option value='314' >314</option><option value='315' >315</option><option value='316' >316</option><option value='317' >317</option><option value='318' >318</option><option value='319' >319</option><option value='320' >320</option><option value='321' >321</option><option value='322' >322</option><option value='323' >323</option><option value='324' >324</option><option value='325' >325</option><option value='326' >326</option><option value='327' >327</option><option value='328' >328</option><option value='329' >329</option><option value='330' >330</option><option value='331' >331</option><option value='332' >332</option><option value='333' >333</option><option value='334' >334</option><option value='335' >335</option><option value='336' >336</option><option value='337' >337</option><option value='338' >338</option><option value='339' >339</option><option value='340' >340</option><option value='341' >341</option><option value='342' >342</option><option value='343' >343</option><option value='344' >344</option><option value='345' >345</option><option value='346' >346</option><option value='347' >347</option><option value='348' >348</option><option value='349' >349</option><option value='350' >350</option>                                
+                          </select>     
+
+                          <select class="widder form-input" ng-change="save('weight_kg')" ng-model="user.weight_kg" ng-show="!showImperial" class="form-input cs-select cs-skin-border">
+                              <option value='0' >0</option><option value='1' >1</option><option value='2' >2</option><option value='3' >3</option><option value='4' >4</option><option value='5' >5</option><option value='6' >6</option><option value='7' >7</option><option value='8' >8</option><option value='9' >9</option><option value='10' >10</option><option value='11' >11</option><option value='12' >12</option><option value='13' >13</option><option value='14' >14</option><option value='15' >15</option><option value='16' >16</option><option value='17' >17</option><option value='18' >18</option><option value='19' >19</option><option value='20' >20</option><option value='21' >21</option><option value='22' >22</option><option value='23' >23</option><option value='24' >24</option><option value='25' >25</option><option value='26' >26</option><option value='27' >27</option><option value='28' >28</option><option value='29' >29</option><option value='30' >30</option><option value='31' >31</option><option value='32' >32</option><option value='33' >33</option><option value='34' >34</option><option value='35' >35</option><option value='36' >36</option><option value='37' >37</option><option value='38' >38</option><option value='39' >39</option><option value='40' >40</option><option value='41' >41</option><option value='42' >42</option><option value='43' >43</option><option value='44' >44</option><option value='45' >45</option><option value='46' >46</option><option value='47' >47</option><option value='48' >48</option><option value='49' >49</option><option value='50' >50</option><option value='51' >51</option><option value='52' >52</option><option value='53' >53</option><option value='54' >54</option><option value='55' >55</option><option value='56' >56</option><option value='57' >57</option><option value='58' >58</option><option value='59' >59</option><option value='60' >60</option><option value='61' >61</option><option value='62' >62</option><option value='63' >63</option><option value='64' >64</option><option value='65' >65</option><option value='66' >66</option><option value='67' >67</option><option value='68' >68</option><option value='69' >69</option><option value='70' >70</option><option value='71' >71</option><option value='72' >72</option><option value='73' >73</option><option value='74' >74</option><option value='75' >75</option><option value='76' >76</option><option value='77' >77</option><option value='78' >78</option><option value='79' >79</option><option value='80' >80</option><option value='81' >81</option><option value='82' >82</option><option value='83' >83</option><option value='84' >84</option><option value='85' >85</option><option value='86' >86</option><option value='87' >87</option><option value='88' >88</option><option value='89' >89</option><option value='90' >90</option><option value='91' >91</option><option value='92' >92</option><option value='93' >93</option><option value='94' >94</option><option value='95' >95</option><option value='96' >96</option><option value='97' >97</option><option value='98' >98</option><option value='99' >99</option><option value='100' >100</option><option value='101' >101</option><option value='102' >102</option><option value='103' >103</option><option value='104' >104</option><option value='105' >105</option><option value='106' >106</option><option value='107' >107</option><option value='108' >108</option><option value='109' >109</option><option value='110' >110</option><option value='111' >111</option><option value='112' >112</option><option value='113' >113</option><option value='114' >114</option><option value='115' >115</option><option value='116' >116</option><option value='117' >117</option><option value='118' >118</option><option value='119' >119</option><option value='120' >120</option><option value='121' >121</option><option value='122' >122</option><option value='123' >123</option><option value='124' >124</option><option value='125' >125</option><option value='126' >126</option><option value='127' >127</option><option value='128' >128</option><option value='129' >129</option><option value='130' >130</option><option value='131' >131</option><option value='132' >132</option><option value='133' >133</option><option value='134' >134</option><option value='135' >135</option><option value='136' >136</option><option value='137' >137</option><option value='138' >138</option><option value='139' >139</option><option value='140' >140</option><option value='141' >141</option><option value='142' >142</option><option value='143' >143</option><option value='144' >144</option><option value='145' >145</option><option value='146' >146</option><option value='147' >147</option><option value='148' >148</option><option value='149' >149</option><option value='150' >150</option><option value='151' >151</option><option value='152' >152</option><option value='153' >153</option><option value='154' >154</option><option value='155' >155</option><option value='156' >156</option><option value='157' >157</option><option value='158' >158</option><option value='159' >159</option><option value='160' >160</option>                               
+                          </select> 
+                    </div>            
+                  <span>
+                      <%units.weight%>
+                  </span>
+                </div>
+                <!-- date row -->
+
+                <!-- date row -->
+                <div class="account_date_row">
+                  <span style="margin:0 5px 0 50px;">
+                      BODY FAT
+                  </span>
+                    <div class="select-style-arr form-control">
+                         <select class="widder form-input" ng-change="save('body_fat')" ng-model="user.body_fat" class="form-input cs-select cs-skin-border">
+                            <option value='0' >0</option><option value='1' >1</option><option value='2' >2</option><option value='3' >3</option><option value='4' >4</option><option value='5' >5</option><option value='6' >6</option><option value='7' >7</option><option value='8' >8</option><option value='9' >9</option><option value='10' >10</option><option value='11' >11</option><option value='12' >12</option><option value='13' >13</option><option value='14' >14</option><option value='15' >15</option><option value='16' >16</option><option value='17' >17</option><option value='18' >18</option><option value='19' >19</option><option value='20' >20</option><option value='21' >21</option><option value='22' >22</option><option value='23' >23</option><option value='24' >24</option><option value='25' >25</option><option value='26' >26</option><option value='27' >27</option><option value='28' >28</option><option value='29' >29</option><option value='30' >30</option><option value='31' >31</option><option value='32' >32</option><option value='33' >33</option><option value='34' >34</option><option value='35' >35</option><option value='36' >36</option><option value='37' >37</option><option value='38' >38</option><option value='39' >39</option><option value='40' >40</option><option value='41' >41</option><option value='42' >42</option><option value='43' >43</option><option value='44' >44</option><option value='45' >45</option><option value='46' >46</option><option value='47' >47</option><option value='48' >48</option><option value='49' >49</option><option value='50' >50</option><option value='51' >51</option><option value='52' >52</option><option value='53' >53</option><option value='54' >54</option><option value='55' >55</option><option value='56' >56</option><option value='57' >57</option><option value='58' >58</option><option value='59' >59</option><option value='60' >60</option><option value='61' >61</option><option value='62' >62</option><option value='63' >63</option><option value='64' >64</option><option value='65' >65</option>                              
+                      </select>
+                    </div>
+                  <span>
+                      %
+                  </span>
+                </div>
+                <!-- date row -->
+
+              </div>
+
+          </div>
+          <!-- separate row -->
+
+          <!-- separate row -->
+          <div class="clearfix row-item">
+              <div class="row-item__label row-item__label--account-setup pull-left">UNITS</div>
+              <div class="row-item__content row-item__content--account-setup pull-left">
+                <div class="select-style-arr form-control"  style="width: 145px;">
+                  <select class="form-control form-input" ng-change="save('units');unitsShow(true)"  name="field[units]" ng-model="user.units">
+                      <option value="imperial">IMPERIAL (US)</option>
+                      <option value="metric">METRIC (EU)</option>
+                  </select>
+                </div>
+              </div>
+          </div>
+          <!-- /separate row -->
+
+        <!-- separate row -->
+        <div class="clearfix row-item">
+            <div class="row-item__label row-item__label--account-setup pull-left">ACCOUNT STATUS</div>
+            <div class="row-item__content row-item__content--account-setup row-item__content--account-setup__text pull-left">
+                <%user.status%>
+            </div>            
+        </div>
+        <!-- /separate row -->
+
+        <!-- separate row -->
+        <div class="clearfix row-item">
+            <div class="row-item__label row-item__label--account-setup pull-left">MEMBER SINCE</div>
+            <div class="row-item__content row-item__content--account-setup row-item__content--account-setup__text pull-left text-uppercase">
+                <%user.member%>
+            </div>
+        </div>
+        <!-- /separate row -->
+
+      </form>
+    </div>
+
+
+    <div class="clearfix ride_search_advanced_label" ng-click="toggle = !toggle">
+        ADVANCED OPTIONS <i class="icon__arrow arrow__down"></i>
+    </div>
+
+
+    <div class="clearfix animation" ng-show="toggle">
+        <div class="clearfix ridesearch_header_info text-center">HEART RATE</div>
+        <div class="modal-body clearfix">
+
+          <!-- separate row -->
+          <div class="clearfix row-item">
+
+            <div class="clearfix">
+              <div class="row-item__label row-item__label--account-setup  pull-left">LACTATE THRESHOLD HEART RATE</div>
+
+              <div class="row-item__content row-item__content--register-modal row-item__content--register-modal_wide">
+                
+                <!-- date row -->
+                <div class="account_date_row">
+                  <div class="select-style-arr form-control w80">
+                         <select class="form-control form-input" ng-change="save('heart_rate')" ng-model="user.heart_rate" class="form-input cs-select cs-skin-border">
+                            <option value='30' >30</option><option value='31' >31</option><option value='32' >32</option><option value='33' >33</option><option value='34' >34</option><option value='35' >35</option><option value='36' >36</option><option value='37' >37</option><option value='38' >38</option><option value='39' >39</option><option value='40' >40</option><option value='41' >41</option><option value='42' >42</option><option value='43' >43</option><option value='44' >44</option><option value='45' >45</option><option value='46' >46</option><option value='47' >47</option><option value='48' >48</option><option value='49' >49</option><option value='50' >50</option><option value='51' >51</option><option value='52' >52</option><option value='53' >53</option><option value='54' >54</option><option value='55' >55</option><option value='56' >56</option><option value='57' >57</option><option value='58' >58</option><option value='59' >59</option><option value='60' >60</option><option value='61' >61</option><option value='62' >62</option><option value='63' >63</option><option value='64' >64</option><option value='65' >65</option><option value='66' >66</option><option value='67' >67</option><option value='68' >68</option><option value='69' >69</option><option value='70' >70</option><option value='71' >71</option><option value='72' >72</option><option value='73' >73</option><option value='74' >74</option><option value='75' >75</option><option value='76' >76</option><option value='77' >77</option><option value='78' >78</option><option value='79' >79</option><option value='80' >80</option><option value='81' >81</option><option value='82' >82</option><option value='83' >83</option><option value='84' >84</option><option value='85' >85</option><option value='86' >86</option><option value='87' >87</option><option value='88' >88</option><option value='89' >89</option><option value='90' >90</option><option value='91' >91</option><option value='92' >92</option><option value='93' >93</option><option value='94' >94</option><option value='95' >95</option><option value='96' >96</option><option value='97' >97</option><option value='98' >98</option><option value='99' >99</option><option value='100' >100</option><option value='101' >101</option><option value='102' >102</option><option value='103' >103</option><option value='104' >104</option><option value='105' >105</option><option value='106' >106</option><option value='107' >107</option><option value='108' >108</option><option value='109' >109</option><option value='110' >110</option><option value='111' >111</option><option value='112' >112</option><option value='113' >113</option><option value='114' >114</option><option value='115' >115</option><option value='116' >116</option><option value='117' >117</option><option value='118' >118</option><option value='119' >119</option><option value='120' >120</option><option value='121' >121</option><option value='122' >122</option><option value='123' >123</option><option value='124' >124</option><option value='125' >125</option><option value='126' >126</option><option value='127' >127</option><option value='128' >128</option><option value='129' >129</option><option value='130' >130</option><option value='131' >131</option><option value='132' >132</option><option value='133' >133</option><option value='134' >134</option><option value='135' >135</option><option value='136' >136</option><option value='137' >137</option><option value='138' >138</option><option value='139' >139</option><option value='140' >140</option><option value='141' >141</option><option value='142' >142</option><option value='143' >143</option><option value='144' >144</option><option value='145' >145</option><option value='146' >146</option><option value='147' >147</option><option value='148' >148</option><option value='149' >149</option><option value='150' >150</option><option value='151' >151</option><option value='152' >152</option><option value='153' >153</option><option value='154' >154</option><option value='155' >155</option><option value='156' >156</option><option value='157' >157</option><option value='158' >158</option><option value='159' >159</option><option value='160' >160</option><option value='161' >161</option><option value='162' >162</option><option value='163' >163</option><option value='164' >164</option><option value='165' >165</option><option value='166' >166</option><option value='167' >167</option><option value='168' >168</option><option value='169' >169</option><option value='170' >170</option><option value='171' >171</option><option value='172' >172</option><option value='173' >173</option><option value='174' >174</option><option value='175' >175</option><option value='176' >176</option><option value='177' >177</option><option value='178' >178</option><option value='179' >179</option><option value='180' >180</option><option value='181' >181</option><option value='182' >182</option><option value='183' >183</option><option value='184' >184</option><option value='185' >185</option><option value='186' >186</option><option value='187' >187</option><option value='188' >188</option><option value='189' >189</option><option value='190' >190</option><option value='191' >191</option><option value='192' >192</option><option value='193' >193</option><option value='194' >194</option><option value='195' >195</option><option value='196' >196</option><option value='197' >197</option><option value='198' >198</option><option value='199' >199</option><option value='200' >200</option><option value='201' >201</option><option value='202' >202</option><option value='203' >203</option><option value='204' >204</option><option value='205' >205</option><option value='206' >206</option><option value='207' >207</option><option value='208' >208</option><option value='209' >209</option><option value='210' >210</option><option value='211' >211</option><option value='212' >212</option><option value='213' >213</option><option value='214' >214</option><option value='215' >215</option><option value='216' >216</option><option value='217' >217</option><option value='218' >218</option><option value='219' >219</option><option value='220' >220</option><option value='221' >221</option><option value='222' >222</option><option value='223' >223</option><option value='224' >224</option><option value='225' >225</option><option value='226' >226</option><option value='227' >227</option><option value='228' >228</option><option value='229' >229</option><option value='230' >230</option></select>     
+                    </div>        
+                  <span>
+                      BPM
+                  </span>
+                </div>
+                <!-- date row -->
+
+              </div>
+            </div>
+
+              <div class="clearfix row-account-info row-pull-top">
+                  LACTATE THRESHOLD HEART RATE IS YOUR AVERAGE HEART RATE DURING A 30 MINUTE RACE.  TO
+                  FIND THIS NUMBER YOU CAN PERFORM A 30 MINUTE WORKOUT AT RACE PACE AND ENTER YOUR AVG
+                  HEART RATE.
+              </div>
+
+          </div>
+          <!-- separate row -->
+        </div>
+
+        <div class="clearfix ridesearch_header_info text-center">POWER</div>
+        <div class="modal-body clearfix">
+
+
+
+
+
+
+          <!-- separate row -->
+          <div class="clearfix row-item">
+            <div class="clearfix">
+              <div class="row-item__label row-item__label--account-setup  pull-left">FUNCTIONAL THRESHOLD POWER</div>
+
+              <div class="row-item__content row-item__content--register-modal row-item__content--register-modal_wide">
+                
+                <!-- date row -->
+                <div class="account_date_row">
+                  <div class="select-style-arr form-control w80">
+                         <select class="form-control form-input" ng-change="save('power')" ng-model="user.power" class="form-input cs-select cs-skin-border">
+                            <option value='0' >0</option><option value='1' >1</option><option value='2' >2</option><option value='3' >3</option><option value='4' >4</option><option value='5' >5</option><option value='6' >6</option><option value='7' >7</option><option value='8' >8</option><option value='9' >9</option><option value='10' >10</option><option value='11' >11</option><option value='12' >12</option><option value='13' >13</option><option value='14' >14</option><option value='15' >15</option><option value='16' >16</option><option value='17' >17</option><option value='18' >18</option><option value='19' >19</option><option value='20' >20</option><option value='21' >21</option><option value='22' >22</option><option value='23' >23</option><option value='24' >24</option><option value='25' >25</option><option value='26' >26</option><option value='27' >27</option><option value='28' >28</option><option value='29' >29</option><option value='30' >30</option><option value='31' >31</option><option value='32' >32</option><option value='33' >33</option><option value='34' >34</option><option value='35' >35</option><option value='36' >36</option><option value='37' >37</option><option value='38' >38</option><option value='39' >39</option><option value='40' >40</option><option value='41' >41</option><option value='42' >42</option><option value='43' >43</option><option value='44' >44</option><option value='45' >45</option><option value='46' >46</option><option value='47' >47</option><option value='48' >48</option><option value='49' >49</option><option value='50' >50</option><option value='51' >51</option><option value='52' >52</option><option value='53' >53</option><option value='54' >54</option><option value='55' >55</option><option value='56' >56</option><option value='57' >57</option><option value='58' >58</option><option value='59' >59</option><option value='60' >60</option><option value='61' >61</option><option value='62' >62</option><option value='63' >63</option><option value='64' >64</option><option value='65' >65</option><option value='66' >66</option><option value='67' >67</option><option value='68' >68</option><option value='69' >69</option><option value='70' >70</option><option value='71' >71</option><option value='72' >72</option><option value='73' >73</option><option value='74' >74</option><option value='75' >75</option><option value='76' >76</option><option value='77' >77</option><option value='78' >78</option><option value='79' >79</option><option value='80' >80</option><option value='81' >81</option><option value='82' >82</option><option value='83' >83</option><option value='84' >84</option><option value='85' >85</option><option value='86' >86</option><option value='87' >87</option><option value='88' >88</option><option value='89' >89</option><option value='90' >90</option><option value='91' >91</option><option value='92' >92</option><option value='93' >93</option><option value='94' >94</option><option value='95' >95</option><option value='96' >96</option><option value='97' >97</option><option value='98' >98</option><option value='99' >99</option><option value='100' >100</option><option value='101' >101</option><option value='102' >102</option><option value='103' >103</option><option value='104' >104</option><option value='105' >105</option><option value='106' >106</option><option value='107' >107</option><option value='108' >108</option><option value='109' >109</option><option value='110' >110</option><option value='111' >111</option><option value='112' >112</option><option value='113' >113</option><option value='114' >114</option><option value='115' >115</option><option value='116' >116</option><option value='117' >117</option><option value='118' >118</option><option value='119' >119</option><option value='120' >120</option><option value='121' >121</option><option value='122' >122</option><option value='123' >123</option><option value='124' >124</option><option value='125' >125</option><option value='126' >126</option><option value='127' >127</option><option value='128' >128</option><option value='129' >129</option><option value='130' >130</option><option value='131' >131</option><option value='132' >132</option><option value='133' >133</option><option value='134' >134</option><option value='135' >135</option><option value='136' >136</option><option value='137' >137</option><option value='138' >138</option><option value='139' >139</option><option value='140' >140</option><option value='141' >141</option><option value='142' >142</option><option value='143' >143</option><option value='144' >144</option><option value='145' >145</option><option value='146' >146</option><option value='147' >147</option><option value='148' >148</option><option value='149' >149</option><option value='150' >150</option><option value='151' >151</option><option value='152' >152</option><option value='153' >153</option><option value='154' >154</option><option value='155' >155</option><option value='156' >156</option><option value='157' >157</option><option value='158' >158</option><option value='159' >159</option><option value='160' >160</option><option value='161' >161</option><option value='162' >162</option><option value='163' >163</option><option value='164' >164</option><option value='165' >165</option><option value='166' >166</option><option value='167' >167</option><option value='168' >168</option><option value='169' >169</option><option value='170' >170</option><option value='171' >171</option><option value='172' >172</option><option value='173' >173</option><option value='174' >174</option><option value='175' >175</option><option value='176' >176</option><option value='177' >177</option><option value='178' >178</option><option value='179' >179</option><option value='180' >180</option><option value='181' >181</option><option value='182' >182</option><option value='183' >183</option><option value='184' >184</option><option value='185' >185</option><option value='186' >186</option><option value='187' >187</option><option value='188' >188</option><option value='189' >189</option><option value='190' >190</option><option value='191' >191</option><option value='192' >192</option><option value='193' >193</option><option value='194' >194</option><option value='195' >195</option><option value='196' >196</option><option value='197' >197</option><option value='198' >198</option><option value='199' >199</option><option value='200' >200</option><option value='201' >201</option><option value='202' >202</option><option value='203' >203</option><option value='204' >204</option><option value='205' >205</option><option value='206' >206</option><option value='207' >207</option><option value='208' >208</option><option value='209' >209</option><option value='210' >210</option><option value='211' >211</option><option value='212' >212</option><option value='213' >213</option><option value='214' >214</option><option value='215' >215</option><option value='216' >216</option><option value='217' >217</option><option value='218' >218</option><option value='219' >219</option><option value='220' >220</option><option value='221' >221</option><option value='222' >222</option><option value='223' >223</option><option value='224' >224</option><option value='225' >225</option><option value='226' >226</option><option value='227' >227</option><option value='228' >228</option><option value='229' >229</option><option value='230' >230</option></select>
+                    </div>             
+                  <span>
+                      W
+                  </span>
+                </div>
+                <!-- date row -->
+
+              </div>
+            </div>
+
+              <div class="clearfix row-account-info row-pull-top">
+                  FUNCTIONAL THRESHOLD POWER IS YOUR AVERAGE POWER DURING A 30 MINUTE RACE.  TO
+                FIND THIS NUMBER YOU CAN PERFORM A 30 MINUTE WORKOUT AT RACE PACE AND ENTER YOUR AVG
+                POWER.
+              </div>
+
+          </div>
+          <!-- separate row -->
+
+        </div>
+    </div>
+</div>

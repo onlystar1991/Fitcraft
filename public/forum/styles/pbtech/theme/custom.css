@@ -1,0 +1,371 @@
+/* Custom CSS for PBTech
+
+You can customize whatever you want.
+Some defaults are included, like on PBWoW.com
+
+Get all the FontAwesome CSS codes here: https://fortawesome.github.io/Font-Awesome/icons/
+
+*/
+#page-header{
+    background: url("./images/header-bg.png") #040404;
+}
+#logo {
+    background: url("./images/logo-new-2.png") no-repeat 50% 0;
+    position: absolute;
+	width: 381px;
+	height: 145px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 190px;
+}
+#site-description{
+    height: 142px;
+}
+
+/* Top-bar links
+ * (example of how to apply custom icons to elements in the top-bar)
+--------------------------------------------- */
+
+#top-bar .icon1:before			{ content: '\f1b3'; }
+#top-bar .icon2 > a:before		{ content: '\f004'; }
+#top-bar .icon3 > a:before		{ content: '\f0ac'; }
+#top-bar .icon4 > a:before		{ content: '\f0a4'; }
+
+
+/* Special post styles
+--------------------------------------------- */
+
+.blizz .post,
+.blizz #viewprofile .panel:first-of-type { background: #ecebea url("./images/staff.gif") no-repeat 0 0; }
+.blizz .content { color: #086d97; }
+.blizz .content strong { color: #41aef0; }
+
+.mvp .post,
+.mvp #viewprofile .panel:first-of-type { background: #dbdfda; }
+.mvp .content { color: #038515; }
+.mvp .content strong { color: #63913e; }
+
+
+/* Post profiles
+--------------------------------------------- */
+
+.blizz .postprofile .avatar {
+	background: url("./images/avatar-tr-blizz.png") 100% 0 no-repeat, url("./images/avatar-bl-blizz.png") 0 100% no-repeat;
+}
+.blizz .postprofile .avatar img {
+	border-color: #77c1ff;
+	box-shadow: 0 0 8px rgba(1,93,255,0.5);
+}
+
+.mvp .postprofile .avatar {
+	background: url("./images/avatar-tr-mvp.png") 100% 0 no-repeat, url("./images/avatar-bl-mvp.png") 0 100% no-repeat;
+}
+.mvp .postprofile .avatar img {
+	border-color: #79ad50;
+	box-shadow: 0 0 8px rgba(186,255,0,0.2);
+}
+
+.propass .postprofile .avatar {
+	background: url("./images/avatar-tr-propass.png") 100% 0 no-repeat, url("./images/avatar-bl-propass.png") 0 100% no-repeat;
+}
+.propass .postprofile .avatar img {
+	border-color: #f3a900;
+	box-shadow: 0 0 8px rgba(243,169,0,0.2);
+}
+
+
+/* Hide repetitive post titles
+--------------------------------------------- */
+
+body.section-viewtopic .postbody h3,
+#qr_postform .fields1 > dl {
+	display: none;
+}
+
+body.section-viewtopic .postbody p.author {
+	clear: none;
+	margin: 0;
+	padding: 8px 0 12px;
+}
+
+/* Links, arrows & text
+--------------------------------------------- */
+a	 		{ color: #40740c; }
+a:hover 	{ color: #73CF15; }
+a:active	{ color: #73CF15; }
+
+a.topictitle			{ color: #3a3a3a; }
+a.topictitle:hover		{ color: #73CF15; }
+a.topictitle:active		{ color: #73CF15; }
+
+a.forumtitle,			.forumbg .header a,			.forabg .header a, 			th a 		{ color: #40740c; }
+a.forumtitle:hover,		.forumbg .header a:hover,	.forabg .header a:hover, 	th a:hover 	{ color: #73CF15; }
+a.forumtitle:active,	.forumbg .header a:active,	.forabg .header a:active, 	th a:active { color: #73CF15; }
+
+#nav-main > li > a,			#page-footer a			{ color: #40740c; }
+#nav-main > li > a:hover,	#page-footer a:hover	{ color: #5aa210; }
+#nav-main > li > a:active,	#page-footer a:active	{ color: #5aa210; }
+
+/* Post body links */
+.postlink 			{ color: #40740c; border-bottom-color: #5aa210; }
+.postlink:active	{ color: #73CF15; border-bottom-color: #5aa210; }
+.postlink:hover		{ color: #73CF15; border-bottom-color: #5aa210; }
+
+a.up:hover, a.down:hover, a.left:hover, a.right:hover, a.top:hover, a.top2:hover,
+a.arrow-up:hover, a.arrow-down:hover, a.arrow-left:hover, a.arrow-right:hover {
+    color: inherit;
+    text-shadow: none;
+}
+
+/* Headings */
+h2 {
+    background: url("./images/category-shadow.png") no-repeat 0 0;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: #335d09;
+}
+h2 a { color: #40740c; }
+h2 a:hover { color: #5aa210; }
+
+.content h2, .panel h2 {
+    color: #40740c;
+    background: none;
+    border-bottom-color: #5aa210;
+}
+
+h3 {
+    color: #73d016;
+    border-color: rgba(64, 116, 12, 0.5);
+}
+
+.pm .postbody h3.first {
+    color: #73d016;
+}
+
+hr {
+    border-color: #b5b3b2;
+}
+/* Breadcrumbs & Navlinks
+--------------------------------------------- */
+#body-header .breadcrumbs .crumb a:hover {
+    color: #40740c;
+}
+
+#body-header .breadcrumbs .crumb a:before {
+    border-bottom-color: #40740c;
+}
+#body-header .breadcrumbs .crumb a:hover:before {
+    border-bottom-color: #5aa210;
+}
+
+.breadcrumbs .crumb:before {
+    font-size: 0.8em;
+    color: #5aa210;
+}
+/* Tables
+--------------------------------------------- */
+table.table1 thead tr {
+    background: none;
+    border: none;
+    border-bottom: 1px solid #5aa210; /* TODO color */
+}
+
+/* Polls
+--------------------------------------------- */
+.topic_poll h2 {
+    color: #40740c;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+fieldset.polls dd.resultbar div {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background: #5aa210;
+    color: #FFF;
+}
+
+fieldset.polls dd.resultbar div:before {
+    background-image: none;
+}
+
+fieldset.polls dl.most-votes dd.resultbar div {
+    background: #5aa210;
+    box-shadow: 0 0 5px rgba(90, 162, 16, 0.7);
+}
+
+/* Content container styles
+--------------------------------------------- */
+.postprofile strong { color: #5aa210; }
+
+.post:target {
+    border: 1px solid #5aa210;
+}
+
+/* Buttons
+--------------------------------------------- */
+.button {
+    background: #5aa210;
+    background: linear-gradient(rgba(90, 162, 16, 1), rgba(78, 140, 13, 1));
+    border: none;
+    border-radius: 3px;
+    color: #FFF;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
+    transition: none;
+    line-height: 30px;
+}
+
+.button:hover,
+.button:active,
+.dropdown-visible .dropdown-select,
+.dropdown-visible .dropdown-select:hover,
+.nojs .dropdown-container:hover .dropdown-select {
+    background: #5aa210;
+    border-color: #40740c;
+    color: #FFF;
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-select:after,
+.dropdown-select:hover:after,
+.dropdown-visible .dropdown-select:after,
+.nojs .dropdown-container:hover .dropdown-select:after {
+    border-color: rgba(0, 0, 0, 0.15);
+}
+
+.post-buttons .icon-button {
+    color: #4d606d;
+}
+
+.post-buttons .icon-button:before {
+    text-shadow: none;
+}
+
+.post-buttons .icon-button:hover:before {
+    color: #565656;
+}
+
+/* Forms
+--------------------------------------------- */
+select {
+    background-color: #FFF;
+    background-image: url("./images/icons/select.png");
+    border-color: #b5b3b2;
+    color: #5a5a5a;
+}
+
+fieldset dt {
+    color: #5aa210;
+}
+
+dl.faq dt {
+    color: #172040;
+}
+
+label, dd label {
+    color: inherit;
+}
+
+#message-box textarea { color: #5a5a5a; }
+
+.inputbox {
+    background: #FFF;
+    border-color: #cac9c8;
+    color: #5a5a5a;
+}
+.inputbox:hover,
+.inputbox:focus {
+    border-color: #5aa210;
+}
+.inputbox:focus {
+    color: #4a4a4a;
+}
+
+.inputbox:-moz-placeholder { color: #707070; opacity: 0.6; }
+.inputbox::-moz-placeholder { color: #707070; opacity: 0.6; }
+.inputbox::-webkit-input-placeholder { color: #707070; opacity: 0.6; }
+
+/* Form buttons */
+a.button1, input.button1,
+a.button2, input.button2, input.button3 {
+    padding: 3px 4px;
+    background: #5aa210;
+    background: linear-gradient(rgba(90, 162, 16, 1), rgba(78, 140, 13, 1));
+    border: none;
+    color: #FFF;
+    font-size: 1.1em;
+    text-shadow: none;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.3);
+    transition: all 0.3s;
+}
+
+a.button1, a.button1:active,
+a.button2, a.button2:active {
+    color: #DDD;
+    padding: 2px 8px;
+}
+
+a.button1:hover, input.button1:hover,
+a.button2:hover, input.button2:hover, input.button3:hover,
+input.button1:active, input.button3:active, input.button2:active {
+    background: #5aa210;
+    background: linear-gradient(rgba(90, 162, 16, 1), rgba(78, 140, 13, 1));
+    border: none;
+    box-shadow: 0 0 4px rgba(0, 129, 180, 0.25);
+    color: #FFF;
+}
+
+.button1.disabled {
+    background: #6D7176;
+    border-color: #6D7176;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.8);
+    color: #E1E0E0 !important;
+    opacity: 0.6;
+    transition: none;
+}
+
+/* Posting */
+#format-buttons input {
+    background: #444;
+    background: linear-gradient(#585858, #444444);
+    border-color: #a3a1a0;
+    box-shadow: none;
+    color: #FFF;
+}
+
+#format-buttons input:hover {
+    background: #606060;
+    background: linear-gradient(#838383, #606060);
+    border-color: #dcdada;
+    box-shadow: none;
+}
+
+/* Collapseable blocks
+--------------------------------------------- */
+.collapse-box h2 a:hover,
+.stat-block h3 a:hover { color: #5aa210; text-decoration: none; }
+
+/* Top-bar
+--------------------------------------------- */
+#top-bar {
+    background: #262729;
+    background: linear-gradient(#2A3035, #262729);
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 18px;
+    border-bottom: 1px solid #73CF15;
+}
+
+#top-bar .linklist > li.link a {
+    color: #FFF;
+}
+#top-bar .linklist > li.link a:hover {
+    color: #73CF15;
+}
+
+
+/* Search box (header)
+--------------------------------------------- */
+.search-header {
+    background: url("./images/search-bar-new.png") no-repeat 0 0;
+}

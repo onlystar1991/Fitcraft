@@ -1,0 +1,126 @@
+/* 1. base style ---------------------------*/
+
+/* --------------- reset.css --------------- */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;                              
+	vertical-align: baseline;
+	background: transparent;      
+	font-size: 100%;                   
+}
+a {                                      	     
+	margin:0;
+	padding:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+}
+table {						
+	border-collapse: collapse; 
+	border-spacing: 0;
+}
+td, td img {
+	vertical-align: top;			
+} 
+input, select, button, textarea {
+	margin: 0; 				
+	font-size: 100%; 			
+}
+input[type="text"], input[type="password"], textarea {
+	padding: 0; 	
+	outline: 0;  
+}
+input , textarea {
+	color:#000;		
+}
+textarea{
+	resize:none;
+}
+input[type="checkbox"] { 		
+	vertical-align: bottom;
+	width: 14px;
+	height: 14px;
+	padding: 0;
+	margin: 0;
+}
+input[type="radio"] {
+	vertical-align: text-bottom;
+}
+sub {
+	vertical-align: sub;
+	font-size: smaller;
+}
+sup {
+	vertical-align: super;
+	font-size: smaller;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display:block;
+	top: 0;
+}
+nav ul {
+	 list-style:none;
+}
+input[type=submit]::-moz-focus-inner,
+button::-moz-focus-inner { 
+	padding:0;
+	border:0
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+input[type=search] {
+	-webkit-appearance: none;
+	box-sizing: border-box; 
+	-moz-box-sizing: border-box; 
+}
+input[type="search"]:focus {
+	outline: none;
+}
+input[type="email"]::-webkit-search-decoration,
+input[type="email"]::-webkit-search-results-button,
+input[type="email"]::-webkit-search-results-decoration {
+  display: none;
+}
+input[type=email] {
+	-webkit-appearance: none;
+	box-sizing: border-box; 
+	-moz-box-sizing: border-box; 
+}
+input[type="email"]:focus {
+	outline: none;
+}
+input[type=submit]{
+	-webkit-appearance: none;
+}
+ input::-webkit-input-placeholder {color:#000;}
+ input[type="search"]::-webkit-search-cancel-button { 
+	-webkit-appearance: none; 
+}
+input:focus{
+	outline:none;
+}
+input:invalid{
+	-moz-box-shadow: none;
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px rgba(0,0,0,0) inset;
+}
+
+/* --------------- base set ---------*/
+html {
+	overflow-y: auto; 
+	height: 100%;
+}
+body {
+	line-height: 1;
+	height: 100%;
+}
+label, input[type="button"], input[type="submit"], button {
+	cursor: pointer; 
+}
+
