@@ -40,7 +40,7 @@
                        placeholder="ENTER PASSWORD">
                     </div>
                     <div class="clearfix row-login">
-                        <button type="button" onclick="window.location.href='/auth/register'" class="pull-left btn-st-2 btn btn-yellow btn-signup" >SIGN UP</button>
+                        <button type="button" onclick="window.location.href='/public/auth/register'" class="pull-left btn-st-2 btn btn-yellow btn-signup" >SIGN UP</button>
                         <button type="submit" class="pull-left btn btn-st-2 btn-green btn-login" >LOGIN</button>
                         <span>
                             <input type="checkbox" id="saveLogin" name="remember" class="">
