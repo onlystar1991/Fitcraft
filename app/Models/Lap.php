@@ -638,7 +638,7 @@ class Lap extends Model {
                         if($value['path']) {
                             $result[$key]['path'] = iconPath($value['path']);
                         } else {
-                            $result[$key]['path'] = '/assets/img/user_1.png';
+                            $result[$key]['path'] = '/public/assets/img/user_1.png';
                         }
                         $result[$key]['awards'] = Awards::getTopUserAwards($value['id']);
                         ////////////////////////

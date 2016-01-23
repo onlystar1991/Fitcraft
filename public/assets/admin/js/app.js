@@ -576,7 +576,7 @@ $(document).on('click','#dropzone',function(){
 
 $(document).on('click','.btn-icon-remove',function(){
     var module = $(this).attr('data-type');
-    $('.icon-'+module).attr('src','/assets/img/icon-empty.png');
+    $('.icon-'+module).attr('src','/public/assets/img/icon-empty.png');
     $('input[name=icon_'+module+']').val('');
     $(this).removeClass('show').addClass('hide');
 });

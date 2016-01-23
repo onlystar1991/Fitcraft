@@ -252,8 +252,8 @@ app.controller('RankingsCtrl',function($scope, $http, $modal){
     
     $scope.showDetails = function(id) {
         var modalInstance = $modal.open({
-            templateUrl: '/assets/js/ng/views/modal/athelete_details.html',
-            windowTemplateUrl : '/assets/js/ng/views/modal/base.html',
+            templateUrl: '/public/assets/js/ng/views/modal/athelete_details.html',
+            windowTemplateUrl : '/public/assets/js/ng/views/modal/base.html',
             controller: 'RideLibraryModalCtrl',
             size: 'dialog-large',
             resolve: {

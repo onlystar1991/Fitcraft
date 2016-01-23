@@ -4,7 +4,7 @@ app.controller('ModalCtrl',function($scope, $modal, $http, userTooltipService){
         $('body').append('<div id="popupLoader"><span></span></div>');
         $http.get('/strava/index').then(function(response){
             var modalInstance = $modal.open({
-                templateUrl: '/assets/js/ng/views/modal/upload.html',
+                templateUrl: '/public/assets/js/ng/views/modal/upload.html',
                 controller: 'UploadModalCtrl',
                 resolve: {
                     stravaLogin: function(){
@@ -20,7 +20,7 @@ app.controller('ModalCtrl',function($scope, $modal, $http, userTooltipService){
 
       $('body').append('<div id="popupLoader"><span></span></div>');
       var modalInstance = $modal.open({
-          templateUrl: '/assets/js/ng/views/modal/account.html',
+          templateUrl: '/public/assets/js/ng/views/modal/account.html',
           controller: 'AccountModalCtrl',
             resolve: {
             }
@@ -32,7 +32,7 @@ app.controller('ModalCtrl',function($scope, $modal, $http, userTooltipService){
 
       $('body').append('<div id="popupLoader"><span></span></div>');
       var modalInstance = $modal.open({
-          templateUrl: '/assets/js/ng/views/modal/report.html',
+          templateUrl: '/public/assets/js/ng/views/modal/report.html',
           controller: 'ReportModalCtrl',
             resolve: {
                 items: function () {
@@ -47,8 +47,8 @@ app.controller('ModalCtrl',function($scope, $modal, $http, userTooltipService){
 
       $('body').append('<div id="popupLoader"><span></span></div>');
       var modalInstance = $modal.open({
-          templateUrl: '/assets/js/ng/views/modal/objectives.html',
-          windowTemplateUrl : '/assets/js/ng/views/modal/base.html',
+          templateUrl: '/public/assets/js/ng/views/modal/objectives.html',
+          windowTemplateUrl : '/public/assets/js/ng/views/modal/base.html',
           controller: 'ObjectivesModalCtrl',
           size: 'dialog-large',
             resolve: {
@@ -64,8 +64,8 @@ app.controller('ModalCtrl',function($scope, $modal, $http, userTooltipService){
         $http.get('/achievements/categories').
             then(function(response){
                 var modalInstance = $modal.open({
-                    templateUrl: '/assets/js/ng/views/modal/achievements.html',
-                    windowTemplateUrl : '/assets/js/ng/views/modal/base.html',
+                    templateUrl: '/public/assets/js/ng/views/modal/achievements.html',
+                    windowTemplateUrl : '/public/assets/js/ng/views/modal/base.html',
                     controller: 'AchievementsModalCtrl',
                     size: 'dialog-large',
                     resolve: {
@@ -82,8 +82,8 @@ app.controller('ModalCtrl',function($scope, $modal, $http, userTooltipService){
 
       $('body').append('<div id="popupLoader"><span></span></div>');
       var modalInstance = $modal.open({
-          templateUrl: '/assets/js/ng/views/modal/ridelibrary.html',
-          windowTemplateUrl : '/assets/js/ng/views/modal/base.html',
+          templateUrl: '/public/assets/js/ng/views/modal/ridelibrary.html',
+          windowTemplateUrl : '/public/assets/js/ng/views/modal/base.html',
           controller: 'RideLibraryModalCtrl',
           size: 'dialog-large modal-dialog-large__ride',
             resolve: {
@@ -107,7 +107,7 @@ app.controller('ModalCtrl',function($scope, $modal, $http, userTooltipService){
         $http.get('/cards').
             then(function(response){
                 var modalInstance = $modal.open({
-                    templateUrl: '/assets/js/ng/views/modal/avatar.html',
+                    templateUrl: '/public/assets/js/ng/views/modal/avatar.html',
                     controller: 'AvatarModalCtrl',
                     resolve: {
                         listCards: function() {
@@ -140,7 +140,7 @@ app.controller('ModalCtrl',function($scope, $modal, $http, userTooltipService){
         $http.get('/awards').
             then(function(response){
                 var modalInstance = $modal.open({
-                    templateUrl: '/assets/js/ng/views/modal/trophy_case.html',
+                    templateUrl: '/public/assets/js/ng/views/modal/trophy_case.html',
                     controller: 'TrophyCaseModalCtrl',
                     resolve: {
                         trophy: function() {
@@ -162,8 +162,8 @@ app.controller('UsersCtrl',function($scope, $modal){
         
         $('body').append('<div id="popupLoader"><span></span></div>');
         var modalInstance = $modal.open({
-            templateUrl: '/assets/js/ng/views/modal/athelete_details.html',
-            windowTemplateUrl : '/assets/js/ng/views/modal/base.html',
+            templateUrl: '/public/assets/js/ng/views/modal/athelete_details.html',
+            windowTemplateUrl : '/public/assets/js/ng/views/modal/base.html',
             controller: 'AtheleteModalCtrl',
             size: 'dialog-large',
             resolve: {

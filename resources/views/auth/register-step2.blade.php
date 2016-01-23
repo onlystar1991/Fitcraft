@@ -118,7 +118,7 @@
                 <div class="container">
                       <div class="register-modal__footer__step_progress register-footer">
                           <div class="pull-left left_ico">
-                            <img src="/assets/img/ico_lock_steps.png"  class="img-responsive"  />
+                            <img src="/public/assets/img/ico_lock_steps.png"  class="img-responsive"  />
                           </div>
                           <div class="pull-left">                             
                               <div class="meter register-modal__footer__step_progress__merter_score">

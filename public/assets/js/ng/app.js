@@ -179,7 +179,7 @@ app.controller('oneCtrl', function($scope, $timeout, $http) {
         $scope.list1.push({});
     });
 
-    $http.get('/assets/js/ng/dummy/trophy.json').
+    $http.get('/public/assets/js/ng/dummy/trophy.json').
         then(function(response){
             $scope.list2 = response.data.collection;
             //$scope.list5 = response.data.user;
@@ -219,7 +219,7 @@ app.controller('oneCtrl', function($scope, $timeout, $http) {
 
 app.controller('oneCtrl1', function($scope, $timeout, $http) {
 
-    $http.get('/assets/js/ng/dummy/trophy.json').
+    $http.get('/public/assets/js/ng/dummy/trophy.json').
         then(function(response){
             $scope.list4 = response.data.collection;
             console.log($scope.list4);

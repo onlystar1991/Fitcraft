@@ -52,17 +52,17 @@
                                 <ul class="bxslider">
                                   <li>
                                     <a href="">
-                                        <img src="/assets/img/cards/PC_Roadette_grey.png" class="img-responsive" >   
+                                        <img src="/public/assets/img/cards/PC_Roadette_grey.png" class="img-responsive" >   
                                     </a>
                                   </li>
                                   <li>
                                     <a href="">
-                                        <img src="/assets/img/cards/PC_Roadie_grey.png" class="img-responsive" >
+                                        <img src="/public/assets/img/cards/PC_Roadie_grey.png" class="img-responsive" >
                                     </a>
                                   </li>
                                   <li>
                                     <a href="">
-                                        <img src="/assets/img/cards/PC_theMessenger_grey.png" class="img-responsive" >    
+                                        <img src="/public/assets/img/cards/PC_theMessenger_grey.png" class="img-responsive" >    
                                     </a>
                                    </li>
                                 </ul>                                                                           
@@ -92,7 +92,7 @@
                 <div class="container">
                       <div class="register-modal__footer__step_progress register-footer">
                           <div class="pull-left left_ico">
-                            <img src="/assets/img/ico_lock_steps.png"  class="img-responsive"  />
+                            <img src="/public/assets/img/ico_lock_steps.png"  class="img-responsive"  />
                           </div>
                           <div class="pull-left">                             
                               <div class="meter register-modal__footer__step_progress__merter_score">
