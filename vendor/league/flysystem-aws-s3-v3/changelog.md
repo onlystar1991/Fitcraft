@@ -1,5 +1,23 @@
 # Changelog
 
+## 1.0.9 - 2015-11-19
+
+### Fixed
+
+* [#49] Large listings only returned the last page of the listing.
+
+## 1.0.8 - 2015-11-06
+
+### Improved
+
+* Non-recursive listings now retrieve a shallow listing for better performance.
+
+## 1.0.7 - 2015-11-06
+
+### Fixed
+
+* The `copy` operation now `urlencode`'s the `CopySource` to allow characters like `+`.
+
 ## 1.0.6 - 2015-09-25
 
 ### Fixed

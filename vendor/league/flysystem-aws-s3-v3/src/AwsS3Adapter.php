@@ -2,6 +2,7 @@
 
 namespace League\Flysystem\AwsS3v3;
 
+use ArrayIterator;
 use Aws\Result;
 use Aws\S3\Exception\DeleteMultipleObjectsException;
 use Aws\S3\Exception\S3Exception;
@@ -10,6 +11,8 @@ use League\Flysystem\Adapter\AbstractAdapter;
 use League\Flysystem\AdapterInterface;
 use League\Flysystem\Config;
 use League\Flysystem\Util;
+use RecursiveArrayIterator;
+use RecursiveIteratorIterator;
 
 class AwsS3Adapter extends AbstractAdapter
 {
@@ -19,10 +22,10 @@ class AwsS3Adapter extends AbstractAdapter
      * @var array
      */
     protected static $resultMap = [
-        'Body'          => 'contents',
+        'Body' => 'contents',
         'ContentLength' => 'size',
-        'ContentType'   => 'mimetype',
-        'Size'          => 'size',
+        'ContentType' => 'mimetype',
+        'Size' => 'size',
     ];
 
     /**
@@ -36,6 +39,7 @@ class AwsS3Adapter extends AbstractAdapter
         'Metadata',
         'ACL',
         'ContentType',
+        'ContentEncoding',
     ];
 
     /**
@@ -49,17 +53,24 @@ class AwsS3Adapter extends AbstractAdapter
     protected $bucket;
 
     /**
+     * @var array
+     */
+    protected $options = [];
+
+    /**
      * Constructor.
      *
      * @param S3Client $client
-     * @param          $bucket
+     * @param string   $bucket
      * @param string   $prefix
+     * @param array    $options
      */
-    public function __construct(S3Client $client, $bucket, $prefix = '')
+    public function __construct(S3Client $client, $bucket, $prefix = '', array $options = [])
     {
         $this->s3Client = $client;
         $this->bucket = $bucket;
         $this->setPathPrefix($prefix);
+        $this->options = $options;
     }
 
     /**
@@ -71,6 +82,7 @@ class AwsS3Adapter extends AbstractAdapter
     {
         return $this->bucket;
     }
+
     /**
      * Get the S3Client instance.
      *
@@ -119,7 +131,7 @@ class AwsS3Adapter extends AbstractAdapter
      */
     public function rename($path, $newpath)
     {
-        if (! $this->copy($path, $newpath)) {
+        if (!$this->copy($path, $newpath)) {
             return false;
         }
 
@@ -137,14 +149,17 @@ class AwsS3Adapter extends AbstractAdapter
     {
         $location = $this->applyPathPrefix($path);
 
-        $command = $this->s3Client->getCommand('deleteObject', [
-            'Bucket' => $this->bucket,
-            'Key' => $location,
-        ]);
+        $command = $this->s3Client->getCommand(
+            'deleteObject',
+            [
+                'Bucket' => $this->bucket,
+                'Key' => $location,
+            ]
+        );
 
         $this->s3Client->execute($command);
 
-        return ! $this->has($path);
+        return !$this->has($path);
     }
 
     /**
@@ -222,18 +237,34 @@ class AwsS3Adapter extends AbstractAdapter
     public function listContents($directory = '', $recursive = false)
     {
         $prefix = $this->applyPathPrefix(rtrim($directory, '/').'/');
+        $options = ['Bucket' => $this->bucket, 'Prefix' => ltrim($prefix, '/')];
 
-        $iterator = $this->s3Client->getIterator('ListObjects', [
-            'Bucket' => $this->bucket,
-            'Prefix' => ltrim($prefix, '/'),
-        ]);
+        if ($recursive === false) {
+            $options['Delimiter'] = '/';
+        }
 
-        return Util::emulateDirectories(
-            array_map(
-                [$this, 'normalizeResponse'],
-                iterator_to_array($iterator)
-            )
-        );
+        $listing = $this->retrievePaginatedListing($options);
+        $normalizer = [$this, 'normalizeResponse'];
+        $normalized = array_map($normalizer, $listing);
+
+        return Util::emulateDirectories($normalized);
+    }
+
+    /**
+     * @param array $options
+     *
+     * @return array
+     */
+    protected function retrievePaginatedListing(array $options)
+    {
+        $resultPaginator = $this->s3Client->getPaginator('ListObjects', $options);
+        $listing = [];
+
+        foreach ($resultPaginator as $result) {
+            $listing = array_merge($listing, $result->get('Contents') ?: [], $result->get('CommonPrefixes') ?: []);
+        }
+
+        return $listing;
     }
 
     /**
@@ -245,12 +276,15 @@ class AwsS3Adapter extends AbstractAdapter
      */
     public function getMetadata($path)
     {
-        $command = $this->s3Client->getCommand('headObject', [
-            'Bucket' => $this->bucket,
-            'Key' => $this->applyPathPrefix($path),
-        ]);
+        $command = $this->s3Client->getCommand(
+            'headObject',
+            [
+                'Bucket' => $this->bucket,
+                'Key' => $this->applyPathPrefix($path),
+            ]
+        );
 
-        /** @var Result $result */
+        /* @var Result $result */
         try {
             $result = $this->s3Client->execute($command);
         } catch (S3Exception $exception) {
@@ -342,12 +376,15 @@ class AwsS3Adapter extends AbstractAdapter
     {
         $visibility = $this->getRawVisibility($path);
 
-        $command = $this->s3Client->getCommand('copyObject', [
-            'Bucket' => $this->bucket,
-            'Key' => $this->applyPathPrefix($newpath),
-            'CopySource' => $this->bucket.'/'.$this->applyPathPrefix($path),
-            'ACL' => $visibility === AdapterInterface::VISIBILITY_PUBLIC ? 'public-read' : 'private',
-        ]);
+        $command = $this->s3Client->getCommand(
+            'copyObject',
+            [
+                'Bucket' => $this->bucket,
+                'Key' => $this->applyPathPrefix($newpath),
+                'CopySource' => urlencode($this->bucket.'/'.$this->applyPathPrefix($path)),
+                'ACL' => $visibility === AdapterInterface::VISIBILITY_PUBLIC ? 'public-read' : 'private',
+            ]
+        );
 
         try {
             $this->s3Client->execute($command);
@@ -387,10 +424,13 @@ class AwsS3Adapter extends AbstractAdapter
      */
     protected function readObject($path)
     {
-        $command = $this->s3Client->getCommand('getObject', [
-            'Bucket' => $this->bucket,
-            'Key'    => $this->applyPathPrefix($path),
-        ]);
+        $command = $this->s3Client->getCommand(
+            'getObject',
+            [
+                'Bucket' => $this->bucket,
+                'Key' => $this->applyPathPrefix($path),
+            ]
+        );
 
         try {
             /** @var Result $response */
@@ -412,11 +452,14 @@ class AwsS3Adapter extends AbstractAdapter
      */
     public function setVisibility($path, $visibility)
     {
-        $command = $this->s3Client->getCommand('putObjectAcl', [
-            'Bucket' => $this->bucket,
-            'Key' => $this->applyPathPrefix($path),
-            'ACL' => $visibility === AdapterInterface::VISIBILITY_PUBLIC ? 'public-read' : 'private',
-        ]);
+        $command = $this->s3Client->getCommand(
+            'putObjectAcl',
+            [
+                'Bucket' => $this->bucket,
+                'Key' => $this->applyPathPrefix($path),
+                'ACL' => $visibility === AdapterInterface::VISIBILITY_PUBLIC ? 'public-read' : 'private',
+            ]
+        );
 
         try {
             $this->s3Client->execute($command);
@@ -447,6 +490,9 @@ class AwsS3Adapter extends AbstractAdapter
         return ltrim(parent::applyPathPrefix($prefix), '/');
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function setPathPrefix($prefix)
     {
         $prefix = ltrim($prefix, '/');
@@ -463,10 +509,13 @@ class AwsS3Adapter extends AbstractAdapter
      */
     protected function getRawVisibility($path)
     {
-        $command = $this->s3Client->getCommand('getObjectAcl', [
-            'Bucket' => $this->bucket,
-            'Key' => $this->applyPathPrefix($path),
-        ]);
+        $command = $this->s3Client->getCommand(
+            'getObjectAcl',
+            [
+                'Bucket' => $this->bucket,
+                'Key' => $this->applyPathPrefix($path),
+            ]
+        );
 
         $result = $this->s3Client->execute($command);
         $visibility = AdapterInterface::VISIBILITY_PRIVATE;
@@ -500,11 +549,11 @@ class AwsS3Adapter extends AbstractAdapter
         $options = $this->getOptionsFromConfig($config);
         $acl = isset($options['ACL']) ? $options['ACL'] : 'private';
 
-        if (! isset($options['ContentType']) && is_string($body)) {
+        if (!isset($options['ContentType']) && is_string($body)) {
             $options['ContentType'] = Util::guessMimeType($path, $body);
         }
 
-        if (! isset($options['ContentLength'])) {
+        if (!isset($options['ContentLength'])) {
             $options['ContentLength'] = is_string($body) ? Util::contentSize($body) : Util::getStreamSize($body);
         }
 
@@ -522,7 +571,7 @@ class AwsS3Adapter extends AbstractAdapter
      */
     protected function getOptionsFromConfig(Config $config)
     {
-        $options = [];
+        $options = $this->options;
 
         if ($visibility = $config->get('visibility')) {
             // For local reference
@@ -539,7 +588,7 @@ class AwsS3Adapter extends AbstractAdapter
         }
 
         foreach (static::$metaOptions as $option) {
-            if (! $config->has($option)) {
+            if (!$config->has($option)) {
                 continue;
             }
             $options[$option] = $config->get($option);
@@ -551,13 +600,14 @@ class AwsS3Adapter extends AbstractAdapter
     /**
      * Normalize the object result array.
      *
-     * @param array $response
+     * @param array  $response
+     * @param string $path
      *
      * @return array
      */
     protected function normalizeResponse(array $response, $path = null)
     {
-        $result = ['path' => $path ?: $this->removePathPrefix($response['Key'])];
+        $result = ['path' => $path ?: $this->removePathPrefix(isset($response['Key']) ? $response['Key'] : $response['Prefix'])];
         $result = array_merge($result, Util::pathinfo($result['path']));
 
         if (isset($response['LastModified'])) {
