@@ -30,7 +30,7 @@
 		      minlength: 2,
 		      maxlength: 12,
 		      remote:{
-                      url: '/auth/check-nickname',
+                      url: '/public/auth/check-nickname',
                       type: "post",
                       async: false,
                       data:
@@ -121,7 +121,7 @@
 	  			} else {
 	  				var flag = 0;
 					$.ajax({
-						    url: "/auth/check-email",
+						    url: "/public/auth/check-email",
 		                    type: "post",
 		                    data: {email: $('.input-email-register').val()},
 		                    async: false

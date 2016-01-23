@@ -11,16 +11,16 @@
     <!-- Ionicons -->
     <link href="http://code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css" rel="stylesheet" type="text/css" />
     <!-- Morris chart -->
-    <link href="/assets/admin/css/plugins/morris/morris.css" rel="stylesheet" type="text/css" />
+    <link href="/public/assets/admin/css/plugins/morris/morris.css" rel="stylesheet" type="text/css" />
     <!-- jvectormap -->
-    <link href="/assets/admin/css/plugins/jvectormap/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css" />
+    <link href="/public/assets/admin/css/plugins/jvectormap/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css" />
     <!-- Daterange picker -->
-    <link href="/assets/admin/css/plugins/daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css" />
+    <link href="/public/assets/admin/css/plugins/daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css" />
     <!-- Theme style -->
-    <link href="/assets/admin/css/AdminLTE.css" rel="stylesheet" type="text/css" />
+    <link href="/public/assets/admin/css/AdminLTE.css" rel="stylesheet" type="text/css" />
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
-    <link href="/assets/admin/css/skins/_all-skins.min.css" rel="stylesheet" type="text/css" />
+    <link href="/public/assets/admin/css/skins/_all-skins.min.css" rel="stylesheet" type="text/css" />
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -53,7 +53,7 @@
                 <ul class="dropdown-menu">
                   <!-- User image -->
                   <li class="user-header">
-                    <img src="/assets/admin/img/user2-160x160.jpg" class="img-circle" alt="User Image" />
+                    <img src="/public/assets/admin/img/user2-160x160.jpg" class="img-circle" alt="User Image" />
                     <p>
                       {{ Auth::admin()->user()->name }}
                     </p>
@@ -94,14 +94,6 @@
                     <li><a href="/admin/awards"><i class="fa fa-trophy"></i>Gears</a></li>
                 </ul>
             </li>
-
-
-
-
-
-
-
-
           </ul>
         </section>
         <!-- /.sidebar -->
@@ -133,12 +125,12 @@
     <!-- Bootstrap 3.3.2 JS -->
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js" type="text/javascript"></script>
     <!-- FastClick -->
-    <script src='/assets/admin/css/plugins/fastclick/fastclick.min.js'></script>
+    <script src='/public/assets/admin/css/plugins/fastclick/fastclick.min.js'></script>
 
-    <script src="/assets/admin/js/jquery-upload/js/vendor/jquery.ui.widget.js"></script>
-    <script src="/assets/admin/js/jquery-upload/js/jquery.iframe-transport.js"></script>
-    <script src="/assets/admin/js/jquery-upload/js/jquery.fileupload.js"></script>
+    <script src="/public/assets/admin/js/jquery-upload/js/vendor/jquery.ui.widget.js"></script>
+    <script src="/public/assets/admin/js/jquery-upload/js/jquery.iframe-transport.js"></script>
+    <script src="/public/assets/admin/js/jquery-upload/js/jquery.fileupload.js"></script>
 
-    <script src="/assets/admin/js/app.js" type="text/javascript"></script>
+    <script src="/public/assets/admin/js/app.js" type="text/javascript"></script>
   </body>
 </html>
