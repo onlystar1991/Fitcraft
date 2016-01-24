@@ -36,8 +36,6 @@ class AuthController extends Controller
      */
     public function getLogin()
     {
-        echo "This";
-        exit;
         return view('auth/login');
     }
 
