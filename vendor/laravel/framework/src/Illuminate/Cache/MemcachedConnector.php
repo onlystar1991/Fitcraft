@@ -8,7 +8,7 @@ class Memcached {
     /**
      * Libmemcached behavior options.
      */
-    const OPT_HASH;
+    const OPT_HASH = 0;
     
     const OPT_HASH_DEFAULT;
 
