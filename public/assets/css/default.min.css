@@ -1,18 +1,18 @@
 @font-face {
   font-family: 'HelveticaNeueLTStd-BlkExO';
-  src: url('/public/assets/fonts/HelveticaNeueLTStd-BlkExO.eot?#iefix') format('embedded-opentype'), url('/public/assets/fonts/HelveticaNeueLTStd-BlkExO.otf') format('opentype'), url('/public/assets/fonts/HelveticaNeueLTStd-BlkExO.woff') format('woff'), url('/public/assets/fonts/HelveticaNeueLTStd-BlkExO.ttf') format('truetype'), url('/public/assets/fonts/HelveticaNeueLTStd-BlkExO.svg#HelveticaNeueLTStd-BlkExO') format('svg');
+  src: url('/assets/fonts/HelveticaNeueLTStd-BlkExO.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/HelveticaNeueLTStd-BlkExO.otf') format('opentype'), url('/assets/fonts/HelveticaNeueLTStd-BlkExO.woff') format('woff'), url('/assets/fonts/HelveticaNeueLTStd-BlkExO.ttf') format('truetype'), url('/assets/fonts/HelveticaNeueLTStd-BlkExO.svg#HelveticaNeueLTStd-BlkExO') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'HelveticaNeueLTStd-Bd';
-  src: url('/public/assets/fonts/HelveticaNeueLTStd-Bd.eot?#iefix') format('embedded-opentype'), url('/public/assets/fonts/HelveticaNeueLTStd-Bd.otf') format('opentype'), url('/public/assets/fonts/HelveticaNeueLTStd-Bd.woff') format('woff'), url('HelveticaNeueLTStd-Bd.ttf') format('truetype'), url('/public/assets/fonts/HelveticaNeueLTStd-Bd.svg#HelveticaNeueLTStd-Bd') format('svg');
+  src: url('/assets/fonts/HelveticaNeueLTStd-Bd.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/HelveticaNeueLTStd-Bd.otf') format('opentype'), url('/assets/fonts/HelveticaNeueLTStd-Bd.woff') format('woff'), url('HelveticaNeueLTStd-Bd.ttf') format('truetype'), url('/assets/fonts/HelveticaNeueLTStd-Bd.svg#HelveticaNeueLTStd-Bd') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'HelveticaNeueLTStd-Md';
-  src: url('/public/assets/fonts/HelveticaNeueLTStd-Md.eot?#iefix') format('embedded-opentype'), url('/public/assets/fonts/HelveticaNeueLTStd-Md.otf') format('opentype'), url('/public/assets/fonts/HelveticaNeueLTStd-Md.woff') format('woff'), url('/public/assets/fonts/HelveticaNeueLTStd-Md.ttf') format('truetype'), url('/public/assets/fonts/HelveticaNeueLTStd-Md.svg#HelveticaNeueLTStd-Md') format('svg');
+  src: url('/assets/fonts/HelveticaNeueLTStd-Md.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/HelveticaNeueLTStd-Md.otf') format('opentype'), url('/assets/fonts/HelveticaNeueLTStd-Md.woff') format('woff'), url('/assets/fonts/HelveticaNeueLTStd-Md.ttf') format('truetype'), url('/assets/fonts/HelveticaNeueLTStd-Md.svg#HelveticaNeueLTStd-Md') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -1191,7 +1191,7 @@ ul.dropdown-custom li a:hover {
   height: 197px;
 }
 .upload_file_modal .upload_file_modal_header .bg-phone {
-  background: url('/public/assets/img/phone.png') no-repeat;
+  background: url('/assets/img/phone.png') no-repeat;
   background-position: 145px 7px;
 }
 .upload_file_modal .upload_file_modal_header .device_container {
@@ -1247,12 +1247,12 @@ input[type="checkbox"] + label span {
   height: 24px;
   margin: -1px 4px 0 0;
   vertical-align: middle;
-  background: url('/public/assets/img/checkbox.png') left bottom no-repeat;
+  background: url('/assets/img/checkbox.png') left bottom no-repeat;
   cursor: pointer;
 }
 input[type="checkbox"]:checked + label span {
   margin: -1px 4px 0 0;
-  background: url('/public/assets/img/checkbox.png') 0px -1px no-repeat;
+  background: url('/assets/img/checkbox.png') 0px -1px no-repeat;
 }
 .users__arrow_down {
   position: absolute !important;
@@ -1367,8 +1367,8 @@ input[type="checkbox"]:checked + label span {
   display: inline-block;
 }
 .account__menu_icon {
-  background: url(/public/assets/img/sprites.png) no-repeat;
-  background: url(/public/assets/img/sprites_1350.png) no-repeat;
+  background: url(/assets/img/sprites.png) no-repeat;
+  background: url(/assets/img/sprites_1350.png) no-repeat;
   width: 31px;
   height: 31px;
   display: block;
@@ -1599,7 +1599,7 @@ btn:focus {
   background-color: #7f7f7f;
 }
 .btn-save {
-  background: url(/public/assets/img/edit-btn.png) no-repeat;
+  background: url(/assets/img/edit-btn.png) no-repeat;
   background-size: 32px 32px;
   width: 32px !important;
   height: 32px !important;
@@ -2239,10 +2239,10 @@ btn:focus {
   color: #fff;
   padding: 143px 0 0 303px;
   min-height: 495px;
-  background: url(/public/assets/img/report-help.jpg) no-repeat #252525;
+  background: url(/assets/img/report-help.jpg) no-repeat #252525;
 }
 .report_help_form.report_help_form_bug {
-  background: url(/public/assets/img/report-bug.jpg) no-repeat #252525;
+  background: url(/assets/img/report-bug.jpg) no-repeat #252525;
 }
 .report_help_form label {
   display: block;
@@ -2320,7 +2320,7 @@ btn:focus {
 .rankings-user-search input[type=submit] {
   width: 29px;
   height: 29px;
-  background: url(/public/assets/img/search-sbmt.png) 50% 50% no-repeat;
+  background: url(/assets/img/search-sbmt.png) 50% 50% no-repeat;
   border: none;
   position: absolute;
   right: 5px;
@@ -2347,14 +2347,14 @@ ul.athlete_communication li {
   list-style-type: none;
 }
 ul.athlete_communication li.athlete_communication_forum {
-  background: url(/public/assets/img/athlete-communicate-sprite.png) 50% 16px no-repeat;
+  background: url(/assets/img/athlete-communicate-sprite.png) 50% 16px no-repeat;
   background-size: 28px 150px;
 }
 ul.athlete_communication li.athlete_communication_forum:hover {
   background-position: 50% -22px;
 }
 ul.athlete_communication li.athlete_communication_cheat {
-  background: url(/public/assets/img/athlete-communicate-sprite.png) 50% -59px no-repeat;
+  background: url(/assets/img/athlete-communicate-sprite.png) 50% -59px no-repeat;
   background-size: 28px 150px;
 }
 ul.athlete_communication li.athlete_communication_cheat:hover {
@@ -2546,7 +2546,7 @@ ul.athlete_communication li > div a:hover {
 input[type="checkbox"] + label span.check-vis {
   display: inline-block;
   vertical-align: middle;
-  background: url(/public/assets/img/ch-box.png) no-repeat;
+  background: url(/assets/img/ch-box.png) no-repeat;
   background-size: 100% auto;
   width: 32px !important;
   height: 32px !important;
@@ -2556,7 +2556,7 @@ input[type="checkbox"]:checked + label span.check-vis {
   background-position: 0 100% !important;
 }
 .earned-modal {
-  background: url(/public/assets/img/earned-modal.jpg) no-repeat;
+  background: url(/assets/img/earned-modal.jpg) no-repeat;
   background-size: 100% auto;
   padding: 70px 0 0 211px;
   min-height: 380px;
@@ -2603,26 +2603,26 @@ input[type="checkbox"]:checked + label span.check-vis {
   background-size: auto 20px !important;
 }
 .achievement_star.achievement_star_1 {
-  background: url(/public/assets/img/stars_green.png) repeat-x;
+  background: url(/assets/img/stars_green.png) repeat-x;
 }
 .achievement_star.achievement_star_2 {
-  background: url(/public/assets/img/stars_blue.png) repeat-x;
+  background: url(/assets/img/stars_blue.png) repeat-x;
   width: 46px;
 }
 .achievement_star.achievement_star_3 {
-  background: url(/public/assets/img/stars_bronze.png) repeat-x;
+  background: url(/assets/img/stars_bronze.png) repeat-x;
   width: 69px;
 }
 .achievement_star.achievement_star_4 {
-  background: url(/public/assets/img/stars_silver.png) repeat-x;
+  background: url(/assets/img/stars_silver.png) repeat-x;
   width: 92px;
 }
 .achievement_star.achievement_star_5 {
-  background: url(/public/assets/img/stars_gold.png) repeat-x;
+  background: url(/assets/img/stars_gold.png) repeat-x;
   width: 115px;
 }
 .inactive_block .achievement_star {
-  background: url(/public/assets/img/stars_grey.png) repeat-x !important;
+  background: url(/assets/img/stars_grey.png) repeat-x !important;
   background-size: auto 20px !important;
 }
 .trophy-block__header {
@@ -2679,7 +2679,7 @@ label[for=indoorActivity] span.check-vis {
   background-color: #111;
   border-radius: 0;
   border: none;
-  background: #111111 url(/public/assets/img/arr_down-pad.png) no-repeat 100% 50% !important;
+  background: #111111 url(/assets/img/arr_down-pad.png) no-repeat 100% 50% !important;
   margin-right: 5px;
 }
 .select-style-arr.w80 {
@@ -2770,7 +2770,7 @@ label[for=indoorActivity] span.check-vis {
   position: absolute;
 }
 .tooltip_message.player_card_1 {
-  background: url(/public/assets/img/tooltips/player-card-1.png) no-repeat;
+  background: url(/assets/img/tooltips/player-card-1.png) no-repeat;
   width: 865px;
   height: 490px;
   left: 20px;
@@ -2779,7 +2779,7 @@ label[for=indoorActivity] span.check-vis {
 .tooltip_message.card_popup_left {
   width: 349px;
   height: 314px;
-  background: url(/public/assets/img/tooltips/player-card-2.png) no-repeat;
+  background: url(/assets/img/tooltips/player-card-2.png) no-repeat;
   top: 353px;
   left: -312px;
 }
@@ -2795,35 +2795,35 @@ label[for=indoorActivity] span.check-vis {
 .tooltip_message.card_popup_right {
   width: 548px;
   height: 134px;
-  background: url(/public/assets/img/tooltips/player-card-3.png) no-repeat;
+  background: url(/assets/img/tooltips/player-card-3.png) no-repeat;
   top: 465px;
   right: -542px;
 }
 .tooltip_message.achievements_popup_left_1 {
   width: 409px;
   height: 148px;
-  background: url(/public/assets/img/tooltips/achievements-card-1.png) no-repeat;
+  background: url(/assets/img/tooltips/achievements-card-1.png) no-repeat;
   top: 20px;
   left: -200px;
 }
 .tooltip_message.achievements_popup_right_1 {
   width: 409px;
   height: 309px;
-  background: url(/public/assets/img/tooltips/achievements-card-2.png) no-repeat;
+  background: url(/assets/img/tooltips/achievements-card-2.png) no-repeat;
   top: -40px;
   right: -106px;
 }
 .tooltip_message.achievements_popup_left_2 {
   width: 412px;
   height: 222px;
-  background: url(/public/assets/img/tooltips/achievements-card-3.png) no-repeat;
+  background: url(/assets/img/tooltips/achievements-card-3.png) no-repeat;
   top: 600px;
   left: -231px;
 }
 .tooltip_message.achievements_popup_right_2 {
   width: 409px;
   height: 327px;
-  background: url(/public/assets/img/tooltips/achievements-card-4.png) no-repeat;
+  background: url(/assets/img/tooltips/achievements-card-4.png) no-repeat;
   top: 325px;
   right: -392px;
 }
@@ -2839,28 +2839,28 @@ label[for=indoorActivity] span.check-vis {
 .tooltip_message.objectives_popup_left_1 {
   width: 409px;
   height: 156px;
-  background: url(/public/assets/img/tooltips/objectives-card-1.png) no-repeat;
+  background: url(/assets/img/tooltips/objectives-card-1.png) no-repeat;
   top: 74px;
   left: -200px;
 }
 .tooltip_message.objectives_popup_right_1 {
   width: 409px;
   height: 405px;
-  background: url(/public/assets/img/tooltips/objectives-card-2.png) no-repeat;
+  background: url(/assets/img/tooltips/objectives-card-2.png) no-repeat;
   top: -20px;
   right: -106px;
 }
 .tooltip_message.objectives_popup_left_2 {
   width: 412px;
   height: 248px;
-  background: url(/public/assets/img/tooltips/objectives-card-3.png) no-repeat;
+  background: url(/assets/img/tooltips/objectives-card-3.png) no-repeat;
   top: 530px;
   left: -224px;
 }
 .tooltip_message.objectives_popup_right_2 {
   width: 409px;
   height: 327px;
-  background: url(/public/assets/img/tooltips/objectives-card-4.png) no-repeat;
+  background: url(/assets/img/tooltips/objectives-card-4.png) no-repeat;
   top: 427px;
   right: -392px;
 }
@@ -2876,7 +2876,7 @@ label[for=indoorActivity] span.check-vis {
 .tooltip_message.gear_popup_left {
   width: 349px;
   height: 344px;
-  background: url(/public/assets/img/tooltips/gear-card-left.png) no-repeat;
+  background: url(/assets/img/tooltips/gear-card-left.png) no-repeat;
   top: 49px;
   left: -344px;
 }
@@ -2892,21 +2892,21 @@ label[for=indoorActivity] span.check-vis {
 .tooltip_message.gear_popup_right {
   width: 548px;
   height: 134px;
-  background: url(/public/assets/img/tooltips/gear-card-right.png) no-repeat;
+  background: url(/assets/img/tooltips/gear-card-right.png) no-repeat;
   top: 214px;
   right: -542px;
 }
 .tooltip_message.ride_popup_search {
   width: 409px;
   height: 213px;
-  background: url(/public/assets/img/tooltips/ride-card-search.png) no-repeat;
+  background: url(/assets/img/tooltips/ride-card-search.png) no-repeat;
   top: 11px;
   right: -394px;
 }
 .tooltip_message.ride_popup_map {
   width: 409px;
   height: 278px;
-  background: url(/public/assets/img/tooltips/ride-card-right.png) no-repeat;
+  background: url(/assets/img/tooltips/ride-card-right.png) no-repeat;
   top: 14px;
   right: -394px;
 }
@@ -2922,21 +2922,21 @@ label[for=indoorActivity] span.check-vis {
 .tooltip_message.ride_popup_current {
   width: 377px;
   height: 162px;
-  background: url(/public/assets/img/tooltips/ride-card-bottom.png) no-repeat;
+  background: url(/assets/img/tooltips/ride-card-bottom.png) no-repeat;
   top: 100%;
   left: -15px;
 }
 .tooltip_message.upload_card_1 {
   width: 811px;
   height: 498px;
-  background: url(/public/assets/img/tooltips/upload-card-1.png) no-repeat;
+  background: url(/assets/img/tooltips/upload-card-1.png) no-repeat;
   top: 110%;
   left: -841px;
 }
 .tooltip_message.activity_card_1 {
   width: 855px;
   height: 490px;
-  background: url(/public/assets/img/tooltips/activity-card-1.png) no-repeat;
+  background: url(/assets/img/tooltips/activity-card-1.png) no-repeat;
   top: 70px;
   right: 10px;
 }
@@ -2952,21 +2952,21 @@ label[for=indoorActivity] span.check-vis {
 .tooltip_message.ath_prof_card_1 {
   width: 360px;
   height: 315px;
-  background: url(/public/assets/img/tooltips/ath_prof-card-1.png) no-repeat;
+  background: url(/assets/img/tooltips/ath_prof-card-1.png) no-repeat;
   top: 40px;
   right: -30px;
 }
 .tooltip_message.ath_prof_card_2 {
   width: 544px;
   height: 159px;
-  background: url(/public/assets/img/tooltips/ath_prof-card-2.png) no-repeat;
+  background: url(/assets/img/tooltips/ath_prof-card-2.png) no-repeat;
   top: 70px;
   right: 10px;
 }
 .tooltip_message.ath_prof_card_3 {
   width: 494px;
   height: 270px;
-  background: url(/public/assets/img/tooltips/ath_prof-card-3.png) no-repeat;
+  background: url(/assets/img/tooltips/ath_prof-card-3.png) no-repeat;
   top: 97%;
   right: 679px;
 }
@@ -2982,21 +2982,21 @@ label[for=indoorActivity] span.check-vis {
 .tooltip_message.upload_popup_1 {
   width: 544px;
   height: 122px;
-  background: url(/public/assets/img/tooltips/upload-card-pop-1.png) no-repeat;
+  background: url(/assets/img/tooltips/upload-card-pop-1.png) no-repeat;
   top: 45px;
   right: -371px;
 }
 .tooltip_message.upload_popup_2 {
   width: 544px;
   height: 159px;
-  background: url(/public/assets/img/tooltips/upload-card-pop-2.png) no-repeat;
+  background: url(/assets/img/tooltips/upload-card-pop-2.png) no-repeat;
   top: 263px;
   right: -521px;
 }
 .tooltip_message.upload_popup_3 {
   width: 544px;
   height: 259px;
-  background: url(/public/assets/img/tooltips/activity-card-3.png) no-repeat;
+  background: url(/assets/img/tooltips/activity-card-3.png) no-repeat;
   top: 166px;
   left: 100%;
   margin-left: -20px;
@@ -3013,21 +3013,21 @@ label[for=indoorActivity] span.check-vis {
 .tooltip_message.leaderboard_card_1 {
   width: 288px;
   height: 299px;
-  background: url(/public/assets/img/tooltips/leaderboard-card-1.png) no-repeat;
+  background: url(/assets/img/tooltips/leaderboard-card-1.png) no-repeat;
   top: 174px;
   right: -40px;
 }
 .tooltip_message.leaderboard_card_2 {
   width: 450px;
   height: 131px;
-  background: url(/public/assets/img/tooltips/leaderboard-card-2.png) no-repeat;
+  background: url(/assets/img/tooltips/leaderboard-card-2.png) no-repeat;
   top: 32px;
   right: -21px;
 }
 .tooltip_message.leaderboard_card_3 {
   width: 450px;
   height: 334px;
-  background: url(/public/assets/img/tooltips/leaderboard-card-3.png) no-repeat;
+  background: url(/assets/img/tooltips/leaderboard-card-3.png) no-repeat;
   top: 266px;
   right: -21px;
 }
@@ -3043,14 +3043,14 @@ label[for=indoorActivity] span.check-vis {
 .tooltip_message.ach_card_2 {
   width: 861px;
   height: 490px;
-  background: url(/public/assets/img/tooltips/ach-card-1.png) no-repeat;
+  background: url(/assets/img/tooltips/ach-card-1.png) no-repeat;
   top: -384px;
   left: -21px;
 }
 .tooltip_message.finish_card {
   width: 811px;
   height: 589px;
-  background: url(/public/assets/img/tooltips/fin-card.png) no-repeat;
+  background: url(/assets/img/tooltips/fin-card.png) no-repeat;
   top: 100%;
   left: -623px;
 }
@@ -3113,7 +3113,7 @@ label[for=indoorActivity] span.check-vis {
   margin: -22px 0 0 -22px;
   width: 45px;
   height: 45px;
-  background: url(/public/assets/img/preloader-big.png) no-repeat;
+  background: url(/assets/img/preloader-big.png) no-repeat;
   -webkit-animation: spin 2s infinite linear;
   -moz-animation: spin 2s infinite linear;
   -ms-animation: spin 2s infinite linear;
@@ -3181,8 +3181,8 @@ label[for=indoorActivity] span.check-vis {
   margin: 0;
 }
 .icon {
-  background: url(/public/assets/img/sprites.png) no-repeat;
-  background: url(/public/assets/img/sprites_1350.png) no-repeat;
+  background: url(/assets/img/sprites.png) no-repeat;
+  background: url(/assets/img/sprites_1350.png) no-repeat;
   width: 54px;
   height: 54px;
   display: block;
@@ -3192,8 +3192,8 @@ label[for=indoorActivity] span.check-vis {
   height: 65px;
 }
 .icon.disabled_aside {
-  background-image: url(/public/assets/img/sprites_d.png);
-  background-image: url(/public/assets/img/sprites_1350_d.png);
+  background-image: url(/assets/img/sprites_d.png);
+  background-image: url(/assets/img/sprites_1350_d.png);
   cursor: default !important;
 }
 .icon.disabled_aside + a {
@@ -3404,8 +3404,8 @@ label[for=indoorActivity] span.check-vis {
   background-position: -288px -287px;
 }
 .icon__arrow {
-  background: url(/public/assets/img/sprites.png) no-repeat;
-  background: url(/public/assets/img/sprites_1350.png) no-repeat;
+  background: url(/assets/img/sprites.png) no-repeat;
+  background: url(/assets/img/sprites_1350.png) no-repeat;
   width: 13px;
   height: 12px;
   display: inline-block;
@@ -3470,8 +3470,8 @@ label[for=indoorActivity] span.check-vis {
   background-position: -858px -15px;
 }
 .icon__add {
-  background: url(/public/assets/img/sprites.png) no-repeat;
-  background: url(/public/assets/img/sprites_1350.png) no-repeat;
+  background: url(/assets/img/sprites.png) no-repeat;
+  background: url(/assets/img/sprites_1350.png) no-repeat;
   background-position: -255px -60px;
   width: 25px;
   height: 25px;
@@ -3485,8 +3485,8 @@ label[for=indoorActivity] span.check-vis {
   background-position: -952px -27px;
 }
 .icon__modal_close {
-  background: url(/public/assets/img/sprites.png) no-repeat;
-  background: url(/public/assets/img/sprites_1350.png) no-repeat;
+  background: url(/assets/img/sprites.png) no-repeat;
+  background: url(/assets/img/sprites_1350.png) no-repeat;
   background-position: -12px -532px;
   width: 23px;
   height: 22px;
@@ -3500,8 +3500,8 @@ label[for=indoorActivity] span.check-vis {
 }
 .trophy_empty,
 .holder-empty {
-  background: url(/public/assets/img/sprites.png) no-repeat;
-  background: url(/public/assets/img/sprites_1350.png) no-repeat;
+  background: url(/assets/img/sprites.png) no-repeat;
+  background: url(/assets/img/sprites_1350.png) no-repeat;
   background-position: -233px -281px;
   width: 54px;
   height: 54px;
@@ -3514,8 +3514,8 @@ label[for=indoorActivity] span.check-vis {
   margin: 4px 6px;
 }
 .icon_star {
-  background: url(/public/assets/img/sprites.png) no-repeat;
-  background: url(/public/assets/img/sprites_1350.png) no-repeat;
+  background: url(/assets/img/sprites.png) no-repeat;
+  background: url(/assets/img/sprites_1350.png) no-repeat;
   width: 15px;
   height: 15px;
   width: 17px;
@@ -3685,7 +3685,7 @@ label[for=indoorActivity] span.check-vis {
   border-radius: 0;
   height: 34px;
   -webkit-appearance: none;
-  background: url(/public/assets/img/sprites.png) no-repeat;
+  background: url(/assets/img/sprites.png) no-repeat;
   background-position: -155px -289px;
   background-color: #111;
   cursor: pointer;
@@ -3711,7 +3711,7 @@ label[for=indoorActivity] span.check-vis {
   padding-top: 9px;
 }
 .cs-select span::after {
-  background: url(/public/assets/img/arr_down.png) no-repeat;
+  background: url(/assets/img/arr_down.png) no-repeat;
   right: 1em;
   height: 34px;
 }
@@ -4047,7 +4047,7 @@ label[for=indoorActivity] span.check-vis {
 }
 .logo {
   margin: 0 auto;
-  background: url('/public/assets/img/logo_1024.png');
+  background: url('/assets/img/logo_1024.png');
   width: 281px;
   height: 307px;
   margin-top: 100px;
@@ -4296,12 +4296,12 @@ label[for=indoorActivity] span.check-vis {
   margin-right: 0;
 }
 .register-from-area .tab-pane {
-  background: url(/public/assets/img/register-step-1.jpg) no-repeat;
+  background: url(/assets/img/register-step-1.jpg) no-repeat;
   padding: 160px 0 0 334px;
   min-height: 493px;
 }
 .register-from-area .tab-pane.register-form--step2 {
-  background: url(/public/assets/img/register-step-2.jpg) no-repeat;
+  background: url(/assets/img/register-step-2.jpg) no-repeat;
 }
 .register-from-area .tab-pane.register-form--step2 .label-register {
   width: 100px;
@@ -4309,7 +4309,7 @@ label[for=indoorActivity] span.check-vis {
 }
 .register-from-area .tab-pane.register-form--step3 {
   padding-top: 306px;
-  background: url(/public/assets/img/register-step-3.jpg) no-repeat;
+  background: url(/assets/img/register-step-3.jpg) no-repeat;
 }
 .register-from-area .tab-pane.register-form--step3 .lh-25 {
   padding-top: 7px;

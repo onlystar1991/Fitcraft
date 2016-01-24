@@ -161,7 +161,7 @@ app.controller('UploadModalCtrl',function($scope, $http, $modalInstance, $modal,
 
     $scope.openUploadCompleted = function() {
         modalInstance = $modal.open({
-            templateUrl: '/public/assets/js/ng/views/modal/upload_completed.html',
+            templateUrl: '/assets/js/ng/views/modal/upload_completed.html',
             controller: 'UploadCompletedModalCtrl',
             resolve: {
                 file: function(){

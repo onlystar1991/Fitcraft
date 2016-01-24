@@ -252,7 +252,7 @@ function timeRide($seconds,$digit_2 = '')
 }
 
 function cardsPath($filename) {
-    return '/public/assets/img/cards/'.$filename;
+    return '/assets/img/cards/'.$filename;
 }
 
 function iconPath($filename = null)  {
@@ -260,7 +260,7 @@ function iconPath($filename = null)  {
         return config('bike.cloudfront').'/icons/'.$filename;
     }
 
-    return '/public/assets/img/icon-empty.png';
+    return '/assets/img/icon-empty.png';
 }
 
 function distanceTwoPoints($lat1, $lon1, $lat2, $lon2, $unit)

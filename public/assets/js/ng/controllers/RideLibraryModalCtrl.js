@@ -255,7 +255,7 @@ app.controller('RideLibraryModalCtrl',function($scope, $http, $modalInstance, $t
             //set start marker
             var markerStart = L.marker([response[0][0], response[0][1]], {
                     icon: L.icon({
-                            iconUrl: '/public/assets/img/pin_start.png',
+                            iconUrl: '/assets/img/pin_start.png',
                             iconSize: [25, 38],
                             iconAnchor: [12, 36],
                             popupAnchor: [0, 0]
@@ -268,7 +268,7 @@ app.controller('RideLibraryModalCtrl',function($scope, $http, $modalInstance, $t
             //set fin marker
             var markerFin = L.marker([response[response.length - 1][0], response[response.length -1 ][1]], {
                     icon: L.icon({
-                            iconUrl: '/public/assets/img/pin_end.png',
+                            iconUrl: '/assets/img/pin_end.png',
                             iconSize: [25, 38],
                             iconAnchor: [12, 36],
                             popupAnchor: [0, 0]
@@ -281,7 +281,7 @@ app.controller('RideLibraryModalCtrl',function($scope, $http, $modalInstance, $t
             //add current pin
             $scope.currentPointMapBox[id] = L.marker([response[0][0], response[0][1]], {
                     icon: L.icon({
-                            iconUrl: '/public/assets/img/pin_current.png',
+                            iconUrl: '/assets/img/pin_current.png',
                             iconSize: [25, 38],
                             iconAnchor: [12, 36],
                             popupAnchor: [0, 0]

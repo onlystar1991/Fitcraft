@@ -75,11 +75,11 @@ class UsersCards extends Model
                 $vard_image = $all_cart->toArray();
                 return iconPath($vard_image["icon"]);
             } else {
-                return iconPath('/public/assets/img/user_1.png');
+                return iconPath('/assets/img/user_1.png');
             }
 
         } else {
-            return iconPath('/public/assets/img/user_1.png');
+            return iconPath('/assets/img/user_1.png');
         }
 
     }
@@ -95,7 +95,7 @@ class UsersCards extends Model
             if (isset($all_cart)) {
                 return iconPath($all_cart->icon);
             } else {
-                return '/public/assets/img/icon-empty.png';
+                return '/assets/img/icon-empty.png';
             }
         } else {
             return ;

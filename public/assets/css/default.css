@@ -1,18 +1,18 @@
 @font-face {
   font-family: 'HelveticaNeueLTStd-BlkExO';
-  src: url('/public/assets/fonts/HelveticaNeueLTStd-BlkExO.eot?#iefix') format('embedded-opentype'), url('/public/assets/fonts/HelveticaNeueLTStd-BlkExO.otf') format('opentype'), url('/public/assets/fonts/HelveticaNeueLTStd-BlkExO.woff') format('woff'), url('/public/assets/fonts/HelveticaNeueLTStd-BlkExO.ttf') format('truetype'), url('/public/assets/fonts/HelveticaNeueLTStd-BlkExO.svg#HelveticaNeueLTStd-BlkExO') format('svg');
+  src: url('/assets/fonts/HelveticaNeueLTStd-BlkExO.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/HelveticaNeueLTStd-BlkExO.otf') format('opentype'), url('/assets/fonts/HelveticaNeueLTStd-BlkExO.woff') format('woff'), url('/assets/fonts/HelveticaNeueLTStd-BlkExO.ttf') format('truetype'), url('/assets/fonts/HelveticaNeueLTStd-BlkExO.svg#HelveticaNeueLTStd-BlkExO') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'HelveticaNeueLTStd-Bd';
-  src: url('/public/assets/fonts/HelveticaNeueLTStd-Bd.eot?#iefix') format('embedded-opentype'), url('/public/assets/fonts/HelveticaNeueLTStd-Bd.otf') format('opentype'), url('/public/assets/fonts/HelveticaNeueLTStd-Bd.woff') format('woff'), url('HelveticaNeueLTStd-Bd.ttf') format('truetype'), url('/public/assets/fonts/HelveticaNeueLTStd-Bd.svg#HelveticaNeueLTStd-Bd') format('svg');
+  src: url('/assets/fonts/HelveticaNeueLTStd-Bd.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/HelveticaNeueLTStd-Bd.otf') format('opentype'), url('/assets/fonts/HelveticaNeueLTStd-Bd.woff') format('woff'), url('HelveticaNeueLTStd-Bd.ttf') format('truetype'), url('/assets/fonts/HelveticaNeueLTStd-Bd.svg#HelveticaNeueLTStd-Bd') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'HelveticaNeueLTStd-Md';
-  src: url('/public/assets/fonts/HelveticaNeueLTStd-Md.eot?#iefix') format('embedded-opentype'), url('/public/assets/fonts/HelveticaNeueLTStd-Md.otf') format('opentype'), url('/public/assets/fonts/HelveticaNeueLTStd-Md.woff') format('woff'), url('/public/assets/fonts/HelveticaNeueLTStd-Md.ttf') format('truetype'), url('/public/assets/fonts/HelveticaNeueLTStd-Md.svg#HelveticaNeueLTStd-Md') format('svg');
+  src: url('/assets/fonts/HelveticaNeueLTStd-Md.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/HelveticaNeueLTStd-Md.otf') format('opentype'), url('/assets/fonts/HelveticaNeueLTStd-Md.woff') format('woff'), url('/assets/fonts/HelveticaNeueLTStd-Md.ttf') format('truetype'), url('/assets/fonts/HelveticaNeueLTStd-Md.svg#HelveticaNeueLTStd-Md') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -1844,12 +1844,12 @@ body {
   }
 }
 .upload_file_modal .upload_file_modal_header .bg-phone {
-  background: url('/public/assets/img/phone.png') no-repeat;
+  background: url('/assets/img/phone.png') no-repeat;
   background-position: 145px 7px;
 }
 @media only screen and (min-width: 2556px) {
   .upload_file_modal .upload_file_modal_header .bg-phone {
-    background: url('/public/assets/img/phone_1920.png') no-repeat;
+    background: url('/assets/img/phone_1920.png') no-repeat;
     background-position: 268px 0px;
   }
 }
@@ -1942,12 +1942,12 @@ input[type="checkbox"] + label span {
   height: 24px;
   margin: -1px 4px 0 0;
   vertical-align: middle;
-  background: url('/public/assets/img/checkbox.png') left bottom no-repeat;
+  background: url('/assets/img/checkbox.png') left bottom no-repeat;
   cursor: pointer;
 }
 input[type="checkbox"]:checked + label span {
   margin: -1px 4px 0 0;
-  background: url('/public/assets/img/checkbox.png') 0px -1px no-repeat;
+  background: url('/assets/img/checkbox.png') 0px -1px no-repeat;
 }
 .users__arrow_down {
   position: absolute !important;
@@ -2121,7 +2121,7 @@ input[type="checkbox"]:checked + label span {
   }
 }
 .account__menu_icon {
-  background: url(/public/assets/img/sprites.png) no-repeat;
+  background: url(/assets/img/sprites.png) no-repeat;
   width: 31px;
   height: 31px;
   display: block;
@@ -2129,12 +2129,12 @@ input[type="checkbox"]:checked + label span {
 }
 @media only screen and (min-width: 1920px) {
   .account__menu_icon {
-    background: url(/public/assets/img/sprites_1350.png) no-repeat;
+    background: url(/assets/img/sprites_1350.png) no-repeat;
   }
 }
 @media only screen and (min-width: 2556px) {
   .account__menu_icon {
-    background: url(/public/assets/img/sprites_1920.png) no-repeat;
+    background: url(/assets/img/sprites_1920.png) no-repeat;
   }
 }
 @media only screen and (min-width: 1920px) {
@@ -3681,7 +3681,7 @@ btn:focus {
   }
 }
 .icon {
-  background: url(/public/assets/img/sprites.png) no-repeat;
+  background: url(/assets/img/sprites.png) no-repeat;
   width: 54px;
   height: 54px;
   display: block;
@@ -3690,12 +3690,12 @@ btn:focus {
 }
 @media only screen and (min-width: 1920px) {
   .icon {
-    background: url(/public/assets/img/sprites_1350.png) no-repeat;
+    background: url(/assets/img/sprites_1350.png) no-repeat;
   }
 }
 @media only screen and (min-width: 2556px) {
   .icon {
-    background: url(/public/assets/img/sprites_1920.png) no-repeat;
+    background: url(/assets/img/sprites_1920.png) no-repeat;
   }
 }
 .icon .avatar--cards {
@@ -4347,7 +4347,7 @@ btn:focus {
   }
 }
 .icon__arrow {
-  background: url(/public/assets/img/sprites.png) no-repeat;
+  background: url(/assets/img/sprites.png) no-repeat;
   width: 13px;
   height: 12px;
   display: inline-block;
@@ -4356,12 +4356,12 @@ btn:focus {
 }
 @media only screen and (min-width: 1920px) {
   .icon__arrow {
-    background: url(/public/assets/img/sprites_1350.png) no-repeat;
+    background: url(/assets/img/sprites_1350.png) no-repeat;
   }
 }
 @media only screen and (min-width: 2556px) {
   .icon__arrow {
-    background: url(/public/assets/img/sprites_1920.png) no-repeat;
+    background: url(/assets/img/sprites_1920.png) no-repeat;
   }
 }
 .icon__arrow--top-4 {
@@ -4469,7 +4469,7 @@ btn:focus {
   }
 }
 .icon__add {
-  background: url(/public/assets/img/sprites.png) no-repeat;
+  background: url(/assets/img/sprites.png) no-repeat;
   background-position: -255px -60px;
   width: 25px;
   height: 25px;
@@ -4480,12 +4480,12 @@ btn:focus {
 }
 @media only screen and (min-width: 1920px) {
   .icon__add {
-    background: url(/public/assets/img/sprites_1350.png) no-repeat;
+    background: url(/assets/img/sprites_1350.png) no-repeat;
   }
 }
 @media only screen and (min-width: 2556px) {
   .icon__add {
-    background: url(/public/assets/img/sprites_1920.png) no-repeat;
+    background: url(/assets/img/sprites_1920.png) no-repeat;
   }
 }
 @media only screen and (min-width: 1920px) {
@@ -4505,7 +4505,7 @@ btn:focus {
   }
 }
 .icon__modal_close {
-  background: url(/public/assets/img/sprites.png) no-repeat;
+  background: url(/assets/img/sprites.png) no-repeat;
   background-position: -12px -532px;
   width: 23px;
   height: 22px;
@@ -4516,12 +4516,12 @@ btn:focus {
 }
 @media only screen and (min-width: 1920px) {
   .icon__modal_close {
-    background: url(/public/assets/img/sprites_1350.png) no-repeat;
+    background: url(/assets/img/sprites_1350.png) no-repeat;
   }
 }
 @media only screen and (min-width: 2556px) {
   .icon__modal_close {
-    background: url(/public/assets/img/sprites_1920.png) no-repeat;
+    background: url(/assets/img/sprites_1920.png) no-repeat;
   }
 }
 @media only screen and (min-width: 1920px) {
@@ -4540,7 +4540,7 @@ btn:focus {
 }
 .trophy_empty,
 .holder-empty {
-  background: url(/public/assets/img/sprites.png) no-repeat;
+  background: url(/assets/img/sprites.png) no-repeat;
   background-position: -233px -281px;
   width: 54px;
   height: 54px;
@@ -4551,13 +4551,13 @@ btn:focus {
 @media only screen and (min-width: 1920px) {
   .trophy_empty,
   .holder-empty {
-    background: url(/public/assets/img/sprites_1350.png) no-repeat;
+    background: url(/assets/img/sprites_1350.png) no-repeat;
   }
 }
 @media only screen and (min-width: 2556px) {
   .trophy_empty,
   .holder-empty {
-    background: url(/public/assets/img/sprites_1920.png) no-repeat;
+    background: url(/assets/img/sprites_1920.png) no-repeat;
   }
 }
 @media only screen and (min-width: 1920px) {
@@ -4579,18 +4579,18 @@ btn:focus {
   }
 }
 .icon_star {
-  background: url(/public/assets/img/sprites.png) no-repeat;
+  background: url(/assets/img/sprites.png) no-repeat;
   width: 15px;
   height: 15px;
 }
 @media only screen and (min-width: 1920px) {
   .icon_star {
-    background: url(/public/assets/img/sprites_1350.png) no-repeat;
+    background: url(/assets/img/sprites_1350.png) no-repeat;
   }
 }
 @media only screen and (min-width: 2556px) {
   .icon_star {
-    background: url(/public/assets/img/sprites_1920.png) no-repeat;
+    background: url(/assets/img/sprites_1920.png) no-repeat;
   }
 }
 @media only screen and (min-width: 1920px) {
@@ -5277,20 +5277,20 @@ btn:focus {
 }
 .logo {
   margin: 0 auto;
-  background: url('/public/assets/img/logo_1024.png');
+  background: url('/assets/img/logo_1024.png');
   width: 281px;
   height: 307px;
 }
 @media only screen and (min-width: 1920px) {
   .logo {
-    background: url('/public/assets/img/logo.png');
+    background: url('/assets/img/logo.png');
     width: 529px;
     height: 575px;
   }
 }
 @media only screen and (min-width: 2556px) {
   .logo {
-    background: url('/public/assets/img/logo.png');
+    background: url('/assets/img/logo.png');
     width: 529px;
     height: 575px;
   }

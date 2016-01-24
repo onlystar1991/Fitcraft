@@ -9,9 +9,9 @@
     <!-- Font Awesome Icons -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <!-- Theme style -->
-    <link href="/public/assets/admin/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/admin/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
     <!-- iCheck -->
-    <link href="/public/assets/admin/css/plugins/iCheck/square/blue.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/admin/css/plugins/iCheck/square/blue.css" rel="stylesheet" type="text/css" />
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -62,7 +62,7 @@
    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js" type="text/javascript"></script>
     <!-- iCheck -->
-    <script src="/public/assets/admin/css/plugins/iCheck/icheck.min.js" type="text/javascript"></script>
+    <script src="/assets/admin/css/plugins/iCheck/icheck.min.js" type="text/javascript"></script>
     <script>
       $(function () {
         $('input').iCheck({
