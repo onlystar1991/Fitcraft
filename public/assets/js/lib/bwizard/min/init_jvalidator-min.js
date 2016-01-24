@@ -20,7 +20,7 @@
 		      required: true,
 		      email: true
 		      ,remote:{
-                      url: '/public/auth/check-email',
+                      url: '/auth/check-email',
                       type: "post",
                       async: false,
                       data:
@@ -41,7 +41,7 @@
 		      minlength: 2,
 		      maxlength: 12,
 		      remote:{
-                      url: '/public/auth/check-nickname',
+                      url: '/auth/check-nickname',
                       type: "post",
                       async: false,
                       data:
