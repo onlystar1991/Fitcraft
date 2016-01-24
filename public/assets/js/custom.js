@@ -465,7 +465,7 @@ function changeWH(){
 
 $(document).on('keypress','.input-athlete-name',function(){
     var nickname = $(this).val();
-    $.post('/auth/check-nickname', {nickname: nickname}, function(data) {    
+    $.post('/public/auth/check-nickname', {nickname: nickname}, function(data) {    
 
         if (data == 'true')
         {                          
