@@ -13,7 +13,7 @@ return [
 	|
 	*/
 
-	'default' =>(getenv('APPLICATION_ENV') == 'development' || getenv('APPLICATION_ENV') == 'testing')?env('CACHE_DRIVER', 'file'):env('CACHE_DRIVER', 'memcached'),
+	'default' =>(getenv('APPLICATION_ENV') == 'development' || getenv('APPLICATION_ENV') == 'testing')?env('CACHE_DRIVER', 'file'):env('CACHE_DRIVER', 'file'),
 
 	/*
 	|--------------------------------------------------------------------------
