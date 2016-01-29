@@ -21,6 +21,8 @@ class HomeController extends Controller {
 	 */
 	public function index()
 	{
+		echo Auth::client()->user()->id;
+		die;
 		return view('home',User::getUserProfileInfo(Auth::client()->user()->id));
 	}
 
