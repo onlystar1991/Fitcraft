@@ -16,8 +16,8 @@ class CreateUsersSeasonTable extends Migration {
 		{
 			$table->increments('id');
             $table->integer('user_id');
-            $table->timestamp('start');
-            $table->timestamp('end');
+            $table->dateTime('start');
+            $table->dateTime('end');
             $table->tinyInteger('active')->default(1)->comment = '1-Yes; 0-No';
 			$table->timestamps();
 		});

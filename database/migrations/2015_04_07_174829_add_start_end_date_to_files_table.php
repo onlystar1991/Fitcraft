@@ -14,8 +14,8 @@ class AddStartEndDateToFilesTable extends Migration {
 	{
 		Schema::table('files', function(Blueprint $table)
 		{
-			$table->timestamp('start');
-            $table->timestamp('end');
+			$table->dateTime('start');
+            $table->dateTime('end');
 		});
 	}
 
@@ -28,8 +28,8 @@ class AddStartEndDateToFilesTable extends Migration {
 	{
 		Schema::table('files', function(Blueprint $table)
 		{
-            $table->timestamp('start');
-            $table->timestamp('end');
+            $table->dateTime('start');
+            $table->dateTime('end');
 		});
 	}
 

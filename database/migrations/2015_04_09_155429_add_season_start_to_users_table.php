@@ -14,7 +14,7 @@ class AddSeasonStartToUsersTable extends Migration {
 	{
 		Schema::table('users', function(Blueprint $table)
 		{
-			$table->timestamp('season_start')->default(DB::raw('CURRENT_TIMESTAMP'));
+			$table->dateTime('season_start')->default(DB::raw('CURRENT_TIMESTAMP'));
 		});
 	}
 
@@ -27,7 +27,7 @@ class AddSeasonStartToUsersTable extends Migration {
 	{
 		Schema::table('users', function(Blueprint $table)
 		{
-            $table->timestamp('season_start');
+            $table->date('season_start');
 		});
 	}
 
