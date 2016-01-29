@@ -14,7 +14,7 @@ class ChangeStartUsersSeasonTable extends Migration {
 	{
 		Schema::table('users_season', function(Blueprint $table)
 		{
-            $table->dateTime('start')->default(DB::raw('CURRENT_TIMESTAMP'))->change();
+            $table->timestamp('start')->default(DB::raw('CURRENT_TIMESTAMP'))->change();
 		});
 	}
 
@@ -27,7 +27,7 @@ class ChangeStartUsersSeasonTable extends Migration {
 	{
 		Schema::table('users_season', function(Blueprint $table)
 		{
-            $table->dateTime('start');
+            $table->timestamp('start');
 		});
 	}
 
