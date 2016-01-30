@@ -128,20 +128,10 @@ class User extends Model implements AuthenticatableContract,
         $cards_find = Cards::find($profile->cards_id);
         $profile->avatar = (!empty($cards_find))? iconPath($cards_find->path):'';
 
-
         // Level
         $table_levels = new Levels();
         $levels  = $table_levels->where('level',$profile->level)->first();
         $levels_count = $table_levels->maxLevel();
-
-        var_dump($profile->level);
-        echo '<br>';
-        echo '<br>';
-        echo '<br>';
-        echo '<br>';
-        var_dump($levels);
-        die;
-
         $progress_level  = round($profile->xp / $levels->xp_required * 100);
         $profile->progress_level  = round($profile->xp / $levels->xp_required * 100);
         $profile->levels_xp = round($levels->xp_required);
