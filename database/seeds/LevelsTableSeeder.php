@@ -106,9 +106,7 @@ class LevelsTableSeeder extends Seeder {
 ['level'=>97, 'xp_second'=>0.404, 'xp_hour'=>1454.626, 'xp_required'=>20447.232,'xp_objective'=>1249.553, 'xp_rival'=>1249.553, 'xp_tournament'=>1249.553,  'hours_required'=>14.05668884,'columative'=>400.972,'hours'=>97],
 ['level'=>98, 'xp_second'=>0.410, 'xp_hour'=>1475.719, 'xp_required'=>21469.593,'xp_objective'=>1312.031, 'xp_rival'=>1312.031, 'xp_tournament'=>1312.031,  'hours_required'=>14.54856903,'columative'=>415.521,'hours'=>98],
 ['level'=>99, 'xp_second'=>0.416, 'xp_hour'=>1497.116, 'xp_required'=>22543.073,'xp_objective'=>1377.632, 'xp_rival'=>1377.632, 'xp_tournament'=>1377.632,  'hours_required'=>15.05766139,'columative'=>430.579,'hours'=>99],
-['level'=>100, 'xp_second'=>0.422, 'xp_hour'=>1518.825, 'xp_required'=>23670.226,'xp_objective'=>1446.514, 'xp_rival'=>1446.514, 'xp_tournament'=>1446.514,  'hours_required'=>15.58456822,'columative'=>446.163,'hours'=>100],
-
-
+['level'=>100, 'xp_second'=>0.422, 'xp_hour'=>1518.825, 'xp_required'=>23670.226,'xp_objective'=>1446.514, 'xp_rival'=>1446.514, 'xp_tournament'=>1446.514,  'hours_required'=>15.58456822,'columative'=>446.163,'hours'=>100]
 ];
 
         foreach($levels as $level) {
