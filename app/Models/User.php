@@ -134,7 +134,7 @@ class User extends Model implements AuthenticatableContract,
         $levels  = $table_levels->where('level',$profile->level)->first();
         $levels_count = $table_levels->maxLevel();
 
-        var_dump($profile->xp);
+        var_dump($profile->level);
         echo '<br>';
         echo '<br>';
         echo '<br>';
