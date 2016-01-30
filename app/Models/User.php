@@ -123,7 +123,8 @@ class User extends Model implements AuthenticatableContract,
                 User::where('id','=',$user_id)->update(['forum_user_id' => $forum_user->user_id]);
             }
         }
-
+        var_dump($profile);
+        die;
         // Card
         $cards_find = Cards::find($profile->cards_id);
         $profile->avatar = (!empty($cards_find))? iconPath($cards_find->path):'';
