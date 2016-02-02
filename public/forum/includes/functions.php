@@ -4976,6 +4976,15 @@ function page_header($page_title = '', $display_online_list = false, $item_id = 
 		$l_login_logout = $user->lang['LOGIN'];
 	}
 
+
+	var_dump($user->lang);
+	echo "<br>";
+	var_dump($u_login_logout);
+	echo "<br>";
+	var_dump($l_login_logout);
+	die;
+
+
 	// Last visit date/time
 	$s_last_visit = ($user->data['user_id'] != ANONYMOUS) ? $user->format_date($user->data['session_last_visit']) : '';
 
@@ -5371,8 +5380,6 @@ function page_footer($run_cron = true, $display_template = true, $exit_handler =
 	global $request, $phpbb_dispatcher, $phpbb_admin_path;
 
 	// A listener can set this variable to `true` when it overrides this function
-	var_dump($user);
-	die;
 	$page_footer_override = false;
 
 	/**
