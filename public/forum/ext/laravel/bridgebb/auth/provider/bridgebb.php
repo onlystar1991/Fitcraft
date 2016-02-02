@@ -10,7 +10,7 @@ namespace {
     if (APPLICATION_ENV == 'development') {
         define('LARAVEL_URL', 'http://localhost:8888');
     } else {
-        define('LARAVEL_URL', 'http://fitcraft.alterplay.com');
+        define('LARAVEL_URL', 'http://ec2-54-183-87-205.us-west-1.compute.amazonaws.com');
     }
     define('BRIDGEBB_API_KEY', '3lOlVlJio3AFdndaMkg'); // Api key
 
