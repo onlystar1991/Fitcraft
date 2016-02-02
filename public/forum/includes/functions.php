@@ -4976,15 +4976,6 @@ function page_header($page_title = '', $display_online_list = false, $item_id = 
 		$l_login_logout = $user->lang['LOGIN'];
 	}
 
-
-	var_dump($user->data);
-	echo "<br>";
-	var_dump($u_login_logout);
-	echo "<br>";
-	var_dump($l_login_logout);
-	die;
-
-
 	// Last visit date/time
 	$s_last_visit = ($user->data['user_id'] != ANONYMOUS) ? $user->format_date($user->data['session_last_visit']) : '';
 
@@ -5251,6 +5242,8 @@ function page_header($page_title = '', $display_online_list = false, $item_id = 
 		'SITE_LOGO_IMG'			=> $user->img('site_logo'),
 	));
 
+	echo $l_login_logout; echo "<br>"; echo $u_login_logout;
+	die;
 	// An array of http headers that phpbb will set. The following event may override these.
 	$http_headers = array(
 		// application/xhtml+xml not used because of IE
