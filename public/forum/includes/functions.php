@@ -5371,6 +5371,8 @@ function page_footer($run_cron = true, $display_template = true, $exit_handler =
 	global $request, $phpbb_dispatcher, $phpbb_admin_path;
 
 	// A listener can set this variable to `true` when it overrides this function
+	var_dump($user);
+	die;
 	$page_footer_override = false;
 
 	/**
