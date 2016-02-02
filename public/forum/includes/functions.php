@@ -4977,7 +4977,7 @@ function page_header($page_title = '', $display_online_list = false, $item_id = 
 	}
 
 
-	var_dump($user->lang);
+	var_dump($user->data);
 	echo "<br>";
 	var_dump($u_login_logout);
 	echo "<br>";
