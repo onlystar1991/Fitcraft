@@ -5241,7 +5241,6 @@ function page_header($page_title = '', $display_online_list = false, $item_id = 
 
 		'SITE_LOGO_IMG'			=> $user->img('site_logo'),
 	));
-
 	// An array of http headers that phpbb will set. The following event may override these.
 	$http_headers = array(
 		// application/xhtml+xml not used because of IE
