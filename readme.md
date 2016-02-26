@@ -1,4 +1,4 @@
-![](https://github.com/onlystar1991/Fitcraft/blob/master/fitcraft1.png =100x20)
+![alt tag](https://github.com/onlystar1991/Fitcraft/blob/master/fitcraft1.png =100x20)
 ![alt tag](https://github.com/onlystar1991/Fitcraft/blob/master/fitcraft1.png)
 ![alt tag](https://github.com/onlystar1991/Fitcraft/blob/master/fitcraft2.png)
 ![alt tag](https://github.com/onlystar1991/Fitcraft/blob/master/fitcraft3.png)
