@@ -1,4 +1,6 @@
-<img src="https://github.com/onlystar1991/Fitcraft/blob/master/fitcraft1.png" alt="alt text" width="100" height="100">
+<img src="https://github.com/onlystar1991/Fitcraft/blob/master/fitcraft1.png" alt="alt text" width="30%">
+<img src="https://github.com/onlystar1991/Fitcraft/blob/master/fitcraft2.png" alt="alt text" width="30%">
+<img src="https://github.com/onlystar1991/Fitcraft/blob/master/fitcraft3.png" alt="alt text" width="30%">
 ![alt tag](https://github.com/onlystar1991/Fitcraft/blob/master/fitcraft1.png)
 ![alt tag](https://github.com/onlystar1991/Fitcraft/blob/master/fitcraft2.png)
 ![alt tag](https://github.com/onlystar1991/Fitcraft/blob/master/fitcraft3.png)
